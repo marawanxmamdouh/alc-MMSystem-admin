@@ -114,3 +114,4 @@ To use and contribute to the project, do the following:
 eg new feature or bug but follow this pattern `type/branch-description` eg `feature/add-login-functionality`
 3. Open a pull request against the develop branch and request a review from others.
 4. Merge the PR to develop and proceed
+5. 
