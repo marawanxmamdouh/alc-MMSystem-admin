@@ -102,3 +102,7 @@ eg new feature or bug but follow this pattern `type/branch-description` eg `feat
 - The design can be find [here](https://www.figma.com/file/JNZKj3lachPypSOMBOhC1e/MMS-ALC-Mobile-Project?node-id=0%3A1) 
 - Work on your Team assigned task eg. Team 1, Team 2 etc.
 - NOTE: Stickly adhere to the style guide on the design, buttons, texts etc. 
+
+# Creating issue for your Teams
+- Your Issues should take this simple pattern for easy identification by your team members: feature or bug name-mmm-team-9
+- Find a sample [here](https://github.com/ALCOpenSource/alc-MMSystem-admin/issues/6) 
