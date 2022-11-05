@@ -74,7 +74,6 @@ and your certification will be on them. You can read about them [here](https://d
 - Coroutines
 - Navigation Components
 - etc.
-##### MVVM Architecture is highly recommended
 
 # How to use this repo
 
@@ -88,6 +87,7 @@ eg new feature or bug but follow this pattern `type/branch-description` eg `feat
 6. Reference the issue you worked on in your PRReference the issue you worked on in your PR.
 7. Open a pull request against the develop branch and request a review from your Team Lead.
 
-#### Design
+## Design
 - The design can be find [here](https://www.figma.com/file/JNZKj3lachPypSOMBOhC1e/MMS-ALC-Mobile-Project?node-id=0%3A1) 
-- Work on your Team assigned task eg. Team 1, Team 2 etc. 
+- Work on your Team assigned task eg. Team 1, Team 2 etc.
+- NOTE: Stickly adhere to the style guide on the design, buttons, texts etc. 
