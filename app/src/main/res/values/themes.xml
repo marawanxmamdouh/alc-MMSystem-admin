@@ -39,10 +39,10 @@
 
     <style name="ChipProfile" parent="Widget.MaterialComponents.Chip.Action">
         <item name="chipStrokeColor">@color/chip_stroke</item>
-        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipBackgroundColor">@color/green11</item>
         <item name="chipCornerRadius">5dp</item>
         <item name="chipStrokeWidth">1dp</item>
-        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:textColor">@color/pry2</item>
         <item name="android:textSize">@dimen/font_small</item>
         <item name="android:textAlignment">center</item>
     </style>
