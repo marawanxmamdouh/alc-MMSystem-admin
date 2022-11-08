@@ -8,6 +8,10 @@
     <dimen name="spacing_extra_small">3dp</dimen>
 
     <!--  ************* fonts Size ************ -->
-    <dimen name="font_regular">12sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_regular">14sp</dimen>
     <dimen name="font_medium">16sp</dimen>
+
+    <!-- ************** dimension *********** -->
+    <dimen name="profile_width">112dp</dimen>
 </resources>

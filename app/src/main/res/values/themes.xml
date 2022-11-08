@@ -16,14 +16,36 @@
 
     <style name="regularB">
         <item name="android:fontFamily">@font/mukta_regular</item>
-        <item name="android:textColor">@color/mms_black2</item>
+        <item name="android:textColor">@color/black2</item>
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="mediumMukta">
+        <item name="android:fontFamily">@font/mukta_bold</item>
+        <item name="android:textColor">@color/black2</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+
+    <style name="mediumRoboto">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/black2</item>
         <item name="android:textSize">@dimen/font_regular</item>
     </style>
 
-    <style name="mediumB">
-        <item name="android:fontFamily">@font/mukta_bold</item>
-        <item name="android:textColor">@color/mms_black2</item>
-        <item name="android:textSize">@dimen/font_medium</item>
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
     </style>
+
+    <style name="ChipProfile" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipCornerRadius">5dp</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 
 </resources>

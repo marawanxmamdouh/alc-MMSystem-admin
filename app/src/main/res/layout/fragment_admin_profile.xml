@@ -12,21 +12,50 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/spacing_large">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image_profile"
-            android:layout_width="112dp"
-            android:layout_height="112dp"
+            android:layout_width="@dimen/profile_width"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
 
+        <TextView
+            android:id="@+id/text_name"
+            style="@style/mediumRoboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:drawableEnd="@drawable/flag_nigeria"
+            android:drawablePadding="@dimen/spacing_small"
+            android:text="Peculiah C. Umeh"
+            app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/image_profile"
+            app:layout_constraintTop_toTopOf="@+id/image_profile" />
+
+        <TextView
+            android:id="@+id/text_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/text_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_name" />
 
         <TextView
             android:id="@+id/text_title_about"
-            style="@style/mediumB"
+            style="@style/mediumMukta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/title_about"
+            android:textColor="@color/black5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_profile" />
 
@@ -81,7 +110,7 @@
 
         <TextView
             android:id="@+id/text_social"
-            style="@style/mediumB"
+            style="@style/mediumMukta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_extra_large"
@@ -92,11 +121,51 @@
 
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
+            android:id="@+id/chip_github"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_large"
             android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/github_icon"
+            app:layout_constraintEnd_toStartOf="@+id/chip_instagram"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_social" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_instagram"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/instagram_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip_github"
+            app:layout_constraintTop_toBottomOf="@+id/text_social" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_linkedIn"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/linkedin_icon"
+            app:layout_constraintEnd_toStartOf="@+id/chip_twitter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_github" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_twitter"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/linkedin_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip_linkedIn"
+            app:layout_constraintTop_toBottomOf="@+id/chip_github" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
