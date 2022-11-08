@@ -1,7 +1,8 @@
-package com.peculiaruc.alc_mmsystem_admin
+package com.peculiaruc.alc_mmsystem_admin.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.peculiaruc.alc_mmsystem_admin.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

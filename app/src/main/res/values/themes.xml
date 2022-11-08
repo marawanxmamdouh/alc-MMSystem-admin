@@ -13,4 +13,17 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="regularB">
+        <item name="android:fontFamily">@font/mukta_regular</item>
+        <item name="android:textColor">@color/mms_black2</item>
+        <item name="android:textSize">@dimen/font_regular</item>
+    </style>
+
+    <style name="mediumB">
+        <item name="android:fontFamily">@font/mukta_bold</item>
+        <item name="android:textColor">@color/mms_black2</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+
 </resources>
