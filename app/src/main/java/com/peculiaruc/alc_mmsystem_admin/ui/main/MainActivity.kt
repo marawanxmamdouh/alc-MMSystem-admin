@@ -14,20 +14,13 @@ import com.peculiaruc.alc_mmsystem_admin.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val appBarConfiguration = AppBarConfiguration(
-        setOf(
-            R.id.homeFragment,
-            R.id.searchFragment,
-            R.id.programsFragment,
-            R.id.messagesFragment,
-            R.id.adminProfileFragment
-        )
-    )
+    private val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.elevation = 0F
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment

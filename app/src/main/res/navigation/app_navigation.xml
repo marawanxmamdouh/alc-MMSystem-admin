@@ -8,30 +8,30 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="@string/home_title"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.search.SearchFragment"
-        android:label="fragment_search"
+        android:label="@string/search_title"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/programsFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.programs.ProgramsFragment"
-        android:label="fragment_programs"
+        android:label="@string/programs_title"
         tools:layout="@layout/fragment_programs" />
     <fragment
         android:id="@+id/messagesFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.messages.MessagesFragment"
-        android:label="fragment_messages"
+        android:label="@string/messages_title"
         tools:layout="@layout/fragment_messages" />
 
     <fragment
         android:id="@+id/adminProfileFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.AdminProfileFragment"
-        android:label="fragment_admin_profile"
+        android:label="@string/profile_title"
         tools:layout="@layout/fragment_admin_profile" />
 
 </navigation>
