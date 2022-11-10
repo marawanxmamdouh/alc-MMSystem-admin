@@ -12,6 +12,6 @@
     <color name="black2">#333333</color>
     <color name="black5">#808080</color>
     <color name="chip_stroke">#E6FDFE</color>
-    <color name="chip_background">#F7FEFF</color>
-    <color name="chip_text_color">#035D63</color>
+    <color name="green11">#F7FEFF</color>
+    <color name="pry2">#035D63</color>
 </resources>
