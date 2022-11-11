@@ -3,6 +3,8 @@
 
     <dimen name="spacing_extra_large">24dp</dimen>
     <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_default">16dp</dimen>
+    <dimen name="spacing_medium">12dp</dimen>
     <dimen name="spacing_small">8dp</dimen>
 
     <dimen name="spacing_extra_small">3dp</dimen>
@@ -11,6 +13,7 @@
     <dimen name="font_small">12sp</dimen>
     <dimen name="font_regular">14sp</dimen>
     <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_large">18sp</dimen>
 
     <!-- ************** dimension *********** -->
     <dimen name="profile_width">112dp</dimen>

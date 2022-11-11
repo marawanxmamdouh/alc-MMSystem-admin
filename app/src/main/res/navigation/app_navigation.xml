@@ -32,6 +32,16 @@
         android:id="@+id/adminProfileFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.AdminProfileFragment"
         android:label="@string/profile_title"
-        tools:layout="@layout/fragment_admin_profile" />
+        tools:layout="@layout/fragment_admin_profile">
+        <action
+            android:id="@+id/action_adminProfileFragment_to_editAdminProfileFragment"
+            app:destination="@id/editAdminProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editAdminProfileFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.editAdminProfile.EditAdminProfileFragment"
+        android:label="@string/edit_profile_title"
+        tools:layout="@layout/fragment_edit_admin_profile" />
 
 </navigation>
