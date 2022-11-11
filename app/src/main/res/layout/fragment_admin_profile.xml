@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.AdminProfileViewModel" />
 
     </data>
 
@@ -55,17 +58,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/title_about"
-            android:textColor="@color/black5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_profile" />
 
         <TextView
             android:id="@+id/text_description"
-            style="@style/regularB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_extra_small"
+            android:fontFamily="@font/mukta_regular"
             android:text="@string/text_description"
+            android:textColor="@color/black5"
+            android:textFontWeight="400"
+            android:textSize="@dimen/font_small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_title_about" />
@@ -77,8 +82,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_extra_large"
             android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_regular"
             android:gravity="center_vertical"
             android:text="peculiah@andela.com"
+            android:textColor="@color/black5"
+            android:textSize="@dimen/font_small"
             app:drawableStartCompat="@drawable/email_message_inbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +98,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_small"
             android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_regular"
+            android:gravity="center_vertical"
             android:text="Lagos, Nigeria"
+            android:textColor="@color/black5"
+            android:textSize="@dimen/font_small"
             app:drawableStartCompat="@drawable/location_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +114,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_small"
             android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_regular"
+            android:gravity="center_vertical"
             android:text="Member since June 22, 2021"
+            android:textColor="@color/black5"
+            android:textSize="@dimen/font_small"
             app:drawableStartCompat="@drawable/calender_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,6 +142,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/spacing_large"
+            android:onClick="@{()->viewModel.onClickGithub()}"
             android:text="\@peculiar.umeh"
             app:chipIcon="@drawable/github_icon"
             app:layout_constraintEnd_toStartOf="@+id/chip_instagram"
@@ -137,6 +154,7 @@
             style="@style/ChipProfile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.onClickInstagram()}"
             android:text="\@peculiar.umeh"
             app:chipIcon="@drawable/instagram_icon"
             app:layout_constraintEnd_toEndOf="parent"
@@ -149,6 +167,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/spacing_large"
+            android:onClick="@{()->viewModel.onClickLinkedIn()}"
             android:text="\@peculiar.umeh"
             app:chipIcon="@drawable/linkedin_icon"
             app:layout_constraintEnd_toStartOf="@+id/chip_twitter"
@@ -160,8 +179,9 @@
             style="@style/ChipProfile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.onClickTwitter()}"
             android:text="\@peculiar.umeh"
-            app:chipIcon="@drawable/linkedin_icon"
+            app:chipIcon="@drawable/twitter_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/chip_linkedIn"
             app:layout_constraintTop_toBottomOf="@+id/chip_github" />

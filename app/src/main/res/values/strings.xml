@@ -4,12 +4,29 @@
     <!--  ************ Admin Profile ****************** -->
     <string name="title_about">About</string>
     <string name="title_social">Social</string>
-
-
     <string name="text_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissimpharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. </string>
 
-    <!--  ********************************************** -->
+    <!--  ********************Edit Admin Profile************************** -->
+    <string name="menu_edit_profile">Edit Profile</string>
+    <string name="set_profile_pic">Set a profile picture</string>
+    <string name="button_select_file">Select file</string>
+    <string name="hint_full_name">Full Name *</string>
+    <string name="hint_headline">Headline</string>
+    <string name="hint_about">About</string>
+    <string name="hint_website">Website</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_city">City</string>
+    <string name="hint_github">Github</string>
+    <string name="hint_instagram">Instagram</string>
+    <string name="hint_linkdein">LinkedIn</string>
+    <string name="hint_twitter">Twitter</string>
+    <string name="button_save">Save</string>
 
+    <array name="countries">
+        <item>Egypt</item>
+        <item>Ethiopia</item>
+        <item>Sudan</item>
+    </array>
     <!--  ******************* Bottom Navigation Titles ********************** -->
 
     <string name="home_title">Home</string>
@@ -17,5 +34,6 @@
     <string name="programs_title">Programs</string>
     <string name="messages_title">Messages</string>
     <string name="profile_title">Profile</string>
+    <string name="edit_profile_title">Edit Profile</string>
 
 </resources>
