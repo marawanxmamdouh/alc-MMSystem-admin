@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -13,18 +12,9 @@
         android:layout_height="match_parent"
         tools:context="com.peculiaruc.alc_mmsystem_admin.ui.main.MainActivity">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@color/pry2"
-                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/nav_host_fragment"
