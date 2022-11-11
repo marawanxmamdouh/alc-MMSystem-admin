@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">alc-MMSystem-admin</string>
+
+    <!--  ************ Admin Profile ****************** -->
+    <string name="title_about">About</string>
+    <string name="title_social">Social</string>
+
+
+    <string name="text_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissimpharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. </string>
+
+    <!--  ********************************************** -->
+
+    <!--  ******************* Bottom Navigation Titles ********************** -->
+
+    <string name="home_title">Home</string>
+    <string name="search_title">Search</string>
+    <string name="programs_title">Programs</string>
+    <string name="messages_title">Messages</string>
+    <string name="profile_title">Profile</string>
+
 </resources>
