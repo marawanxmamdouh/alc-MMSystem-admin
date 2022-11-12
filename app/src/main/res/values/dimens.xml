@@ -17,4 +17,9 @@
 
     <!-- ************** dimension *********** -->
     <dimen name="profile_width">112dp</dimen>
+    <dimen name="chip_mentor_profile_width">90dp</dimen>
+    <dimen name="chip_mentor_profile_height">32dp</dimen>
+
+    <!-- ************** radius *********** -->
+    <dimen name="cardCornerRadius">5dp</dimen>
 </resources>

@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="green11">#F7FEFF</color>
-    <color name="grey">#D9D9D9</color>
 
-    <color name="black1">#141414</color>
-    <color name="black2">#333333</color>
-    <color name="black5">#808080</color>
-    <color name="black10">#F2F2F2</color>
+    <!--  App Colors  -->
+    <color name="mms_green_11">#F7FEFF</color>
 
-    <color name="pry2">#035D63</color>
-    <color name="pry10">#E6FDFE</color>
+    <color name="mms_black_1">#141414</color>
+    <color name="mms_black_2">#333333</color>
+    <color name="mms_black_3">#4D4D4D</color>
+    <color name="mms_black_4">#666666</color>
+    <color name="mms_black_5">#808080</color>
+    <color name="mms_black_6">#999999</color>
+    <color name="mms_black_7">#B3B3B3</color>
+    <color name="mms_black_8">#CCCCCC</color>
+    <color name="mms_black_9">#E6E6E6</color>
+    <color name="mms_black_10">#F2F2F2</color>
+
+    <color name="mms_pry_1">#023C40</color>
+    <color name="mms_pry_2">#035D63</color>
+    <color name="mms_pry_3">#058B94</color>
+    <color name="mms_pry_4">#06B9C6</color>
+    <color name="mms_pry_5">#08E8F7</color>
+    <color name="mms_pry_6">#39ECF9</color>
+    <color name="mms_pry_7">#6BF1FA</color>
+    <color name="mms_pry_8">#9CF6FC</color>
+    <color name="mms_pry_9">#CEFAFD</color>
+    <color name="mms_pry_10">#E6FDFE</color>
+
+    <color name="mms_sec_1">#660007</color>
+    <color name="mms_sec_2">#99000A</color>
+    <color name="mms_sec_3">#CC000E</color>
+    <color name="mms_sec_5">#FF0011</color>
+    <color name="mms_sec_6">#FF5964</color>
+    <color name="mms_sec_7">#FF99A0</color>
+    <color name="mms_sec_8">#FFCCCF</color>
+    <color name="mms_sec_9">#FFE5E7</color>
 
 </resources>

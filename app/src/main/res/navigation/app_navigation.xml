@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.home.HomeFragment"
         android:label="@string/home_title"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_mentorManagerFragment"
+            app:destination="@id/mentorManagerFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/searchFragment"
@@ -43,5 +47,10 @@
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.editAdminProfile.EditAdminProfileFragment"
         android:label="@string/edit_profile_title"
         tools:layout="@layout/fragment_edit_admin_profile" />
+
+    <fragment
+        android:id="@+id/mentorManagerFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.MentorManagerFragment"
+        tools:layout="@layout/fragment_mentor_manager" />
 
 </navigation>
