@@ -35,10 +35,12 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_margin="@dimen/spacing_default"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_certificate"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="2:1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +48,7 @@
                 android:id="@+id/text_certificate_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginStart="11dp"
                 android:fontFamily="@font/mukta_bold"
                 android:lines="2"
                 android:text="GADS CLOUD 2022 - \n COMPLETION"
