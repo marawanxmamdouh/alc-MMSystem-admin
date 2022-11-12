@@ -42,5 +42,6 @@
     <string name="tasks">Tasks</string>
     <string name="reports">Reports</string>
     <string name="certificates">Certificates</string>
+    <string name="image_certificate_content_description">Mentor Manager Certificate</string>
 
 </resources>
