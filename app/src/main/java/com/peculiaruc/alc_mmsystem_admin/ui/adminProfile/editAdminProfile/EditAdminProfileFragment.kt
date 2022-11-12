@@ -14,7 +14,7 @@ class EditAdminProfileFragment : BaseFragment<FragmentEditAdminProfileBinding>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        setTitle(true, getString(R.string.edit_profile_title))
         observeEvents()
     }
 
