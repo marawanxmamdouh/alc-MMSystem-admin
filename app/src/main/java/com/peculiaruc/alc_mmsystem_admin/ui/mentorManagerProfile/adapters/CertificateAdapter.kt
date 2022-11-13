@@ -1,4 +1,4 @@
-package com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile
+package com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters
 
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate

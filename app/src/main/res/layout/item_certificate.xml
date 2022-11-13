@@ -10,7 +10,7 @@
 
         <variable
             name="listener"
-            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.CertificateInteractionListener" />
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.CertificateInteractionListener" />
 
     </data>
 

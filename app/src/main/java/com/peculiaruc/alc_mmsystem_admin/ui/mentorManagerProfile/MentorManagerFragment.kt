@@ -9,7 +9,11 @@ import androidx.fragment.app.viewModels
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentMentorManagerBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
+import com.peculiaruc.alc_mmsystem_admin.domain.models.Task
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
+import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.CertificateAdapter
+import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskAdapter
+import com.peculiaruc.alc_mmsystem_admin.utilities.TaskStatus
 
 
 class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
@@ -45,6 +49,23 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
                     )
                     /////////////////////////////////////
                     binding.recyclerMentor.adapter = CertificateAdapter(list, viewModel)
+                } else if (it == R.id.chip_tasks) {
+                    //******** For Test Only ***********\\
+                    val list = listOf(
+                        Task("", "", TaskStatus.ASSIGN),
+                        Task("", "", TaskStatus.COMPLETED),
+                        Task("", "", TaskStatus.COMPLETED),
+                        Task("", "", TaskStatus.ASSIGNED),
+                        Task("", "", TaskStatus.ASSIGN),
+                        Task("", "", TaskStatus.ASSIGNED),
+                        Task("", "", TaskStatus.ASSIGN),
+                        Task("", "", TaskStatus.ASSIGN),
+                        Task("", "", TaskStatus.COMPLETED),
+                        Task("", "", TaskStatus.ASSIGNED),
+                        Task("", "", TaskStatus.ASSIGNED),
+                    )
+                    /////////////////////////////////////
+                    binding.recyclerMentor.adapter = TaskAdapter(list, viewModel)
                 }
             }
         }
