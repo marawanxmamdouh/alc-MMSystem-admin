@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_empty_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty_notification_background" />
+
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/mukta_bold"
+        android:text="Nothing Found"
+        android:textColor="@color/mms_black_2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_empty_notification" />
+
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mukta_regular"
+        android:text="Notifications are on the way. Check back later when they arrive safely"
+        android:textAlignment="center"
+        android:textColor="@color/mms_black_1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_01" />
+
+    <Spinner
+        android:id="@+id/spinner_notifications"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="21dp"
+        android:entries="@array/filter_notifications"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_all_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:drawablePadding="3dp"
+        android:fontFamily="@font/mukta_regular"
+        android:text="Mark all as read"
+        android:textColor="#CCCCCC"
+        android:textSize="12sp"
+        app:drawableEndCompat="@drawable/ic_check"
+        app:drawableTint="#CCCCCC"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_notifications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner_notifications" />
+</androidx.constraintlayout.widget.ConstraintLayout>
