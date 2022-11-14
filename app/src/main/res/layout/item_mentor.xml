@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.peculiaruc.alc_mmsystem_admin.domain.models.Mentor" />
+
+        <variable
+            name="listener"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.MentorInteractionListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:onClick="@{() -> listener.onItemMentorSelected(item)}"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/mms_pry_10"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_default">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_mentor"
+                android:layout_width="@dimen/mentor_item_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="13dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
+
+            <TextView
+                android:id="@+id/text_mentor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/mukta_regular"
+                android:paddingTop="8dp"
+                android:text="Peculiar C. Umeh"
+                android:textColor="@color/mms_black_2"
+                android:textSize="@dimen/font_medium"
+                app:layout_constraintBottom_toTopOf="@+id/centerItemGuide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/image_mentor" />
+
+            <TextView
+                android:id="@+id/text_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="Program Assistant, Andela, She/her"
+                app:layout_constraintEnd_toStartOf="@+id/image_add_mentor"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_mentor_name" />
+
+            <ImageView
+                android:id="@+id/image_add_mentor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_default"
+                android:src="@drawable/add_circle_plus_1"
+                app:layout_constraintBottom_toBottomOf="@+id/centerItemGuide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/centerItemGuide" />
+
+            <TextView
+                android:id="@+id/text_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tag_bg"
+                android:fontFamily="@font/mukta_regular"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="1dp"
+                android:text="PROGRAM ASST."
+                android:textColor="@color/mms_pry_2"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/image_add_mentor"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_role" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerItemGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

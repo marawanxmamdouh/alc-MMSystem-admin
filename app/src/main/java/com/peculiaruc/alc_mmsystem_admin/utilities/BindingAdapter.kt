@@ -32,9 +32,33 @@ fun setChipsListener(view: ChipGroup?, attChange: InverseBindingListener) {
 @BindingAdapter("app:showIfID")
 fun showIfID(view: View, id: Int?) {
     view.isVisible = id?.let {
-        (id == R.id.chip_certificates) || (it == R.id.chip_tasks)
+        when (it) {
+            R.id.chip_certificates,
+            R.id.chip_tasks,
+            R.id.chip_mentors -> { true }
+            else -> { false }
+        }
     } ?: false
 }
+
+@BindingAdapter("app:showTaskBar")
+fun showTaskBar(view: View, id: Int?) {
+    view.isVisible = id?.let {
+        it == R.id.chip_tasks
+    } ?: false
+}
+
+@BindingAdapter("app:showSearchIcon")
+fun showSearchIcon(view: View, id: Int?) {
+    view.isVisible = id?.let {
+        when (it) {
+            R.id.chip_tasks,
+            R.id.chip_mentors -> { true }
+            else -> { false }
+        }
+    } ?: false
+}
+
 
 @BindingAdapter("app:showTaskSearchBar")
 fun showTaskSearchBar(view: View, id: Int?) {

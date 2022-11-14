@@ -142,7 +142,8 @@
             android:textSize="@dimen/font_medium"
             app:drawableEndCompat="@drawable/down_arrow_icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll" />
+            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:showTaskBar="@{viewModel.checkChip}" />
 
         <ImageView
             android:id="@+id/search_icon"
@@ -152,16 +153,12 @@
             android:paddingBottom="10dp"
             android:src="@drawable/search_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_all_tasks"
+            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:showSearchIcon="@{viewModel.checkChip}"
             app:tint="@color/mms_black_5" />
 
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/taskSearchBar_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:constraint_referenced_ids="text_all_tasks,search_icon"
-            app:showTaskSearchBar="@{viewModel.checkChip}" />
         <!-- ************************************  -->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_mentor"
             android:layout_width="match_parent"
@@ -173,7 +170,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_all_tasks"
+            app:layout_constraintTop_toBottomOf="@+id/search_icon"
             app:showIfID="@{viewModel.checkChip}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
