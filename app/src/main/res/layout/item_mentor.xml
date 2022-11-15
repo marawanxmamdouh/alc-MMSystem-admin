@@ -28,19 +28,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/spacing_default">
+            android:layout_marginVertical="@dimen/spacing_small">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/image_mentor"
-                android:layout_width="@dimen/mentor_item_width"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="13dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/text_tag"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_mentor_name"
                 app:shapeAppearanceOverlay="@style/CircleImage" />
 
             <TextView
@@ -48,26 +48,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/mukta_regular"
-                android:paddingTop="8dp"
+                android:lines="1"
                 android:text="Peculiar C. Umeh"
                 android:textColor="@color/mms_black_2"
                 android:textSize="@dimen/font_medium"
-                app:layout_constraintBottom_toTopOf="@+id/centerItemGuide"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toEndOf="@+id/image_mentor" />
+                app:layout_constraintStart_toEndOf="@+id/image_mentor"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
                 android:lines="1"
                 android:text="Program Assistant, Andela, She/her"
+                app:layout_constraintBottom_toBottomOf="@id/centerItemGuide"
                 app:layout_constraintEnd_toStartOf="@+id/image_add_mentor"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
-                app:layout_constraintTop_toBottomOf="@+id/text_mentor_name" />
+                app:layout_constraintTop_toTopOf="@id/centerItemGuide" />
 
             <ImageView
                 android:id="@+id/image_add_mentor"
@@ -83,10 +86,11 @@
                 android:id="@+id/text_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:background="@drawable/tag_bg"
                 android:fontFamily="@font/mukta_regular"
                 android:paddingHorizontal="6dp"
-                android:paddingVertical="1dp"
+                android:paddingVertical="2dp"
                 android:text="PROGRAM ASST."
                 android:textColor="@color/mms_pry_2"
                 android:textSize="10sp"
@@ -95,13 +99,30 @@
                 app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
                 app:layout_constraintTop_toBottomOf="@+id/text_role" />
 
+            <TextView
+                android:id="@+id/text_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/tag_bg"
+                android:fontFamily="@font/mukta_regular"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="PROGRAM ASST."
+                android:textColor="@color/mms_pry_2"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/image_add_mentor"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/text_tag"
+                app:layout_constraintTop_toBottomOf="@+id/text_role" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/centerItemGuide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent=".5" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
