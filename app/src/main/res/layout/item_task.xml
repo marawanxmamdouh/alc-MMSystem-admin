@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.peculiaruc.alc_mmsystem_admin.domain.models.Task" />
+
+        <variable
+            name="listener"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskInteractionListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:minHeight="80dp"
+        android:onClick="@{() -> listener.onItemTaskSelected(item)}"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="0dp"
+        app:showTaskStatus="@{item.status}"
+        app:strokeColor="@color/mms_pry_10"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:minHeight="64dp">
+
+            <ImageView
+                android:id="@+id/image_certificate"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:contentDescription="@string/image_task_content_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/task"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="24:26"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_task_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_extra_large"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:fontFamily="@font/mukta_semibold"
+                android:text="Debugging in VSCode"
+                android:textColor="@color/mms_black_2"
+                android:textSize="@dimen/font_regular"
+                app:layout_constraintBottom_toTopOf="@+id/centerItemGuide"
+                app:layout_constraintStart_toEndOf="@+id/image_certificate"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/text_time_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="3 days from now"
+                android:textColor="@color/mms_black_5"
+                android:textSize="@dimen/font_small"
+                app:drawableStartCompat="@drawable/calender_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_task_title"
+                app:layout_constraintTop_toTopOf="@+id/centerItemGuide"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerItemGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".5" />
+
+            <TextView
+                android:id="@+id/text_status_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_extra_large"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Assign Task"
+                android:textColor="@color/mms_pry_4"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:setTaskStatus="@{item.status}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

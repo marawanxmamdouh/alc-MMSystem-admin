@@ -62,10 +62,11 @@
             android:id="@+id/chips_Scroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginTop="30dp"
             android:clipToPadding="false"
             android:overScrollMode="never"
             android:paddingHorizontal="@dimen/spacing_medium"
+            android:paddingBottom="24dp"
             android:scrollbars="none"
             app:layout_constraintTop_toBottomOf="@+id/image_profile"
             app:layout_goneMarginTop="@dimen/spacing_large">
@@ -90,7 +91,7 @@
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_program"
                     style="@style/chip"
-                    android:layout_width="@dimen/chip_mentor_profile_width"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/programs_title" />
 
@@ -125,19 +126,51 @@
 
         </HorizontalScrollView>
 
+        <!-- ********* task Search *************   -->
+
+        <TextView
+            android:id="@+id/text_all_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/mukta_medium"
+            android:paddingBottom="10dp"
+            android:text="@string/all_tasks"
+            android:textColor="@color/mms_black_2"
+            android:textSize="@dimen/font_medium"
+            app:drawableEndCompat="@drawable/down_arrow_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:showTaskBar="@{viewModel.checkChip}" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:paddingBottom="10dp"
+            android:src="@drawable/search_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:showSearchIcon="@{viewModel.checkChip}"
+            app:tint="@color/mms_black_5" />
+
+        <!-- ************************************  -->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_mentor"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/spacing_large"
-            android:layout_marginTop="@dimen/spacing_extra_large"
             android:clipToPadding="false"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:layout_constraintTop_toBottomOf="@+id/search_icon"
             app:showIfID="@{viewModel.checkChip}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
