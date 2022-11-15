@@ -49,7 +49,9 @@
     <string name="task_assigned">Assigned</string>
     <string name="task_completed">Completed</string>
     <string name="all_programs">All Programs</string>
-    
+    <string name="add_icon">Add Icon</string>
+    <string name="program_image">Program image</string>
+
 
     <!--    String resource for Notifications Spinner      -->
     <string-array name="filter_notifications">
