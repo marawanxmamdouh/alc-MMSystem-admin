@@ -6,7 +6,7 @@
     android:layout_height="150dp"
     android:id="@+id/drawer_header"
     android:fitsSystemWindows="true"
-    android:background="@color/pry2">
+    android:background="@color/mms_pry_2">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_profile"

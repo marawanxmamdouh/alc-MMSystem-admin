@@ -28,12 +28,20 @@
         <item>Sudan</item>
     </array>
     <!--  ******************* Bottom Navigation Titles ********************** -->
-
     <string name="home_title">Home</string>
     <string name="search_title">Search</string>
     <string name="programs_title">Programs</string>
     <string name="messages_title">Messages</string>
     <string name="profile_title">Profile</string>
     <string name="edit_profile_title">Edit Profile</string>
+
+    <!--  ************ Mentor Manger Profile ****************** -->
+    <string name="menu_chat">Chat</string>
+    <string name="about">About</string>
+    <string name="mentors">Mentors</string>
+    <string name="tasks">Tasks</string>
+    <string name="reports">Reports</string>
+    <string name="certificates">Certificates</string>
+    <string name="image_certificate_content_description">Mentor Manager Certificate</string>
 
 </resources>
