@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -23,7 +24,8 @@
         app:cardCornerRadius="@dimen/cardCornerRadius"
         app:cardElevation="0dp"
         app:strokeColor="@color/mms_pry_10"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        tools:ignore="SmallSp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,7 +42,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/text_tag"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/text_mentor_name"
+                app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/CircleImage" />
 
             <TextView
@@ -48,16 +50,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/mukta_semibold"
                 android:lines="1"
                 android:text="Peculiar C. Umeh"
                 android:textColor="@color/mms_black_2"
                 android:textSize="@dimen/font_medium"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/image_mentor"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/image_mentor" />
 
             <TextView
                 android:id="@+id/text_role"
@@ -79,9 +80,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/spacing_default"
+                android:contentDescription="@string/add_icon"
                 android:src="@drawable/add_circle_plus_1"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/text_role" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_tag"
@@ -95,8 +98,9 @@
                 android:text="PROGRAM ASST."
                 android:textColor="@color/mms_pry_2"
                 android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_mentor"
                 app:layout_constraintEnd_toStartOf="@+id/image_add_mentor"
-                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
                 app:layout_constraintTop_toBottomOf="@+id/text_role" />
 
@@ -113,6 +117,7 @@
                 android:text="PROGRAM ASST."
                 android:textColor="@color/mms_pry_2"
                 android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_tag"
                 app:layout_constraintEnd_toStartOf="@+id/image_add_mentor"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toEndOf="@+id/text_tag"
