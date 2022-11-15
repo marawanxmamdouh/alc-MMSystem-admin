@@ -13,4 +13,8 @@ class EditAdminProfileViewModel : ViewModel() {
         _onClickSaveEvent.postValue(true)
     }
 
+    fun onSelectFormGallery(){
+
+    }
+
 }

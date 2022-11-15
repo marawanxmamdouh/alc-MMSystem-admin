@@ -49,6 +49,13 @@
     <string name="task_assigned">Assigned</string>
     <string name="task_completed">Completed</string>
     <string name="all_programs">All Programs</string>
-    
+
+    <!-- *************** Certificate ************    -->
+    <string name="download_certificate">Download as</string>
+    <string name="button_download">Download</string>
+    <array name="download_ways">
+        <item>PDF</item>
+        <item>PNG</item>
+    </array>
 
 </resources>

@@ -6,6 +6,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentMentorManagerBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
@@ -31,8 +32,8 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
         setTitle(true, "Peculiah C. Umeh")
         setHasOptionsMenu(true)
         setAdapter()
+        onEvents()
     }
-
 
     private fun setAdapter() {
         viewModel.checkChip.observe(viewLifecycleOwner) {
@@ -40,17 +41,17 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
                 if (it == R.id.chip_certificates) {
                     //******** For Test Only ***********\\
                     val list = listOf(
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
-                        Certificate("", ""),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+                        Certificate("", "GADS CLOUD 2022 CERTIFICATE")
                     )
                     /////////////////////////////////////
                     binding.recyclerMentor.adapter = CertificateAdapter(list, viewModel)
@@ -108,11 +109,24 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
                         Program("", "", ProgramProgress.DOUBLE_CHECK),
                         Program("", "", ProgramProgress.CHECK),
                         Program("", "", ProgramProgress.CHECK),
-                        Program("", "", ProgramProgress.DOUBLE_CHECK))
+                        Program("", "", ProgramProgress.DOUBLE_CHECK)
+                    )
                     /////////////////////////////////////
                     binding.recyclerMentor.adapter = ProgramAdapter(list, viewModel)
                 }
 
+            }
+        }
+    }
+
+    private fun onEvents() {
+        viewModel.selectCertificateEvent.observe(viewLifecycleOwner) { certificate ->
+            certificate?.let {
+                // need to add certificate id
+                findNavController().navigate(
+                    MentorManagerFragmentDirections
+                        .actionMentorManagerFragmentToCertificateFragment(certificate.title)
+                )
             }
         }
     }

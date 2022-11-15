@@ -41,6 +41,19 @@
     <fragment
         android:id="@+id/mentorManagerFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.MentorManagerFragment"
-        tools:layout="@layout/fragment_mentor_manager" />
+        tools:layout="@layout/fragment_mentor_manager">
+        <action
+            android:id="@+id/action_mentorManagerFragment_to_certificateFragment"
+            app:destination="@id/certificateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/certificateFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.certificate.CertificateFragment"
+        tools:layout="@layout/fragment_certificate">
+        <argument
+            android:name="certificateTitle"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

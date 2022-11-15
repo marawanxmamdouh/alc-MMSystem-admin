@@ -1,70 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<group>
+    <group>
 
-    <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_home"
-        android:title="Home" />
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home_title" />
 
-    <item
-        android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        <item
+            android:id="@+id/adminProfileFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profile_title" />
 
-    <item
-        android:id="@+id/programsFragment"
-        android:icon="@drawable/ic_programs"
-        android:title="Programs" />
+        <item
+            android:id="@+id/programsFragment"
+            android:icon="@drawable/ic_programs"
+            android:title="@string/programs_title" />
 
-    <item
-        android:id="@+id/tasksFragment"
-        android:icon="@drawable/ic_tasks"
-        android:title="Tasks" />
+        <item
+            android:id="@+id/tasksFragment"
+            android:icon="@drawable/ic_tasks"
+            android:title="Tasks" />
 
-    <item
-        android:id="@+id/reportsFragment"
-        android:icon="@drawable/ic_reports"
-        android:title="Reports" />
+        <item
+            android:id="@+id/reportsFragment"
+            android:icon="@drawable/ic_reports"
+            android:title="Reports" />
 
-    <item
-        android:id="@+id/mentorsFragment"
-        android:icon="@drawable/ic_mentors"
-        android:title="Mentors" />
+        <item
+            android:id="@+id/mentorsFragment"
+            android:icon="@drawable/ic_mentors"
+            android:title="Mentors" />
 
-    <item
-        android:id="@+id/mentorManagerFragment"
-        android:icon="@drawable/ic_mentor_managers"
-        android:title="Mentor Managers" />
+        <item
+            android:id="@+id/mentorManagerFragment"
+            android:icon="@drawable/ic_mentor_managers"
+            android:title="Mentor Managers" />
 
-    <item
-        android:id="@+id/approvalRequestsFragment"
-        android:icon="@drawable/ic_approval_requests"
-        android:title="Approval Requests" />
+        <item
+            android:id="@+id/approvalRequestsFragment"
+            android:icon="@drawable/ic_approval_requests"
+            android:title="Approval Requests" />
 
-    <item
-        android:id="@+id/certificatesFragment"
-        android:icon="@drawable/ic_certificates"
-        android:title="Certificates" />
+        <item
+            android:id="@+id/certificatesFragment"
+            android:icon="@drawable/ic_certificates"
+            android:title="Certificates" />
 
-    <item
-        android:id="@+id/messagesFragment"
-        android:icon="@drawable/ic_messages"
-        android:title="Messages" />
+        <item
+            android:id="@+id/messagesFragment"
+            android:icon="@drawable/ic_messages"
+            android:title="Messages" />
 
-    <item
-        android:id="@+id/discussionForumFragment"
-        android:icon="@drawable/ic_discussion_forum"
-        android:title="Discussion Forum" />
+        <item
+            android:id="@+id/discussionForumFragment"
+            android:icon="@drawable/ic_discussion_forum"
+            android:title="Discussion Forum" />
 
-</group>
+    </group>
 
 
     <item
         android:id="@+id/logoutFragment"
         android:icon="@drawable/ic_logout"
         android:title="Logout" />
-
 
 
 </menu>

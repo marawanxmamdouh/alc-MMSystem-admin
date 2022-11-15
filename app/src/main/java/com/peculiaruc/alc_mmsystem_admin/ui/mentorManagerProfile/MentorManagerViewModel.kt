@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
@@ -14,10 +15,13 @@ import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskIn
 class MentorManagerViewModel : ViewModel(), CertificateInteractionListener,
     TaskInteractionListener, MentorInteractionListener, ProgramInteractionListener {
 
+    private val _selectCertificateEvent = MutableLiveData<Certificate>()
+    val selectCertificateEvent: LiveData<Certificate> = _selectCertificateEvent
+
     val checkChip = MutableLiveData<Int>()
 
     override fun onItemCertificateSelected(item: Certificate) {
-
+        _selectCertificateEvent.postValue(item)
     }
 
     override fun onItemTaskSelected(item: Task) {
