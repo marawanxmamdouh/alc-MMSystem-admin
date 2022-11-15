@@ -91,7 +91,7 @@
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_program"
                     style="@style/chip"
-                    android:layout_width="@dimen/chip_mentor_profile_width"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/programs_title" />
 

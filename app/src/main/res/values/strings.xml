@@ -48,6 +48,7 @@
     <string name="task_assign">Assign Task</string>
     <string name="task_assigned">Assigned</string>
     <string name="task_completed">Completed</string>
+    <string name="all_programs">All Programs</string>
     
 
 </resources>

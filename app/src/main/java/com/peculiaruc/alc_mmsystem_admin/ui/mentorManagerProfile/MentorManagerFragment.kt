@@ -10,12 +10,15 @@ import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentMentorManagerBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Mentor
+import com.peculiaruc.alc_mmsystem_admin.domain.models.Program
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Task
+import com.peculiaruc.alc_mmsystem_admin.type.ProgramProgress
+import com.peculiaruc.alc_mmsystem_admin.type.TaskStatus
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.CertificateAdapter
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.MentorAdapter
+import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.ProgramAdapter
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskAdapter
-import com.peculiaruc.alc_mmsystem_admin.utilities.TaskStatus
 
 
 class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
@@ -68,23 +71,48 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
                     )
                     /////////////////////////////////////
                     binding.recyclerMentor.adapter = TaskAdapter(list, viewModel)
-                } else if (it == R.id.chip_mentors){
+                } else if (it == R.id.chip_mentors) {
                     //******** For Test Only ***********\\
                     val list = listOf(
-                        Mentor("Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-                        listOf("PROGRAM ASST.","MENTOR-GAD")),
-                        Mentor("Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-                            listOf("PROGRAM ASST.","MENTOR-GAD")),
-                        Mentor("Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-                            listOf("PROGRAM ASST.")),
-                        Mentor("Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-                            listOf("PROGRAM ASST.","MENTOR-GAD")),
-                        Mentor("Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-                            listOf("PROGRAM ASST.")),
+                        Mentor(
+                            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
+                            listOf("PROGRAM ASST.", "MENTOR-GAD")
+                        ),
+                        Mentor(
+                            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
+                            listOf("PROGRAM ASST.", "MENTOR-GAD")
+                        ),
+                        Mentor(
+                            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
+                            listOf("PROGRAM ASST.")
+                        ),
+                        Mentor(
+                            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
+                            listOf("PROGRAM ASST.", "MENTOR-GAD")
+                        ),
+                        Mentor(
+                            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
+                            listOf("PROGRAM ASST.")
+                        ),
                     )
                     /////////////////////////////////////
                     binding.recyclerMentor.adapter = MentorAdapter(list, viewModel)
+                } else if (it == R.id.chip_program) {
+                    //******** For Test Only ***********\\
+                    val list = listOf(
+                        Program("", "", ProgramProgress.DOUBLE_CHECK),
+                        Program("", "", ProgramProgress.ADD),
+                        Program("", "", ProgramProgress.DOUBLE_CHECK),
+                        Program("", "", ProgramProgress.CHECK),
+                        Program("", "", ProgramProgress.ADD),
+                        Program("", "", ProgramProgress.DOUBLE_CHECK),
+                        Program("", "", ProgramProgress.CHECK),
+                        Program("", "", ProgramProgress.CHECK),
+                        Program("", "", ProgramProgress.DOUBLE_CHECK))
+                    /////////////////////////////////////
+                    binding.recyclerMentor.adapter = ProgramAdapter(list, viewModel)
                 }
+
             }
         }
     }
