@@ -43,6 +43,13 @@
     <string name="reports">Reports</string>
     <string name="certificates">Certificates</string>
     <string name="image_certificate_content_description">Mentor Manager Certificate</string>
+    <string name="image_task_content_description">Task Icon</string>
+    <string name="all_tasks">All Tasks</string>
+    <string name="task_assign">Assign Task</string>
+    <string name="task_assigned">Assigned</string>
+    <string name="task_completed">Completed</string>
+    <string name="all_programs">All Programs</string>
+    
 
     <!--    String resource for Notifications Spinner      -->
     <string-array name="filter_notifications">
