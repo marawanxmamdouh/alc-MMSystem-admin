@@ -35,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_default"
+                android:contentDescription="@string/program_image"
                 android:src="@drawable/google_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +46,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/mukta_semibold"
                 android:lines="1"
                 android:text="GADS Program 2022"
@@ -54,7 +54,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toEndOf="@+id/image_program"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/image_program" />
 
             <TextView
                 android:id="@+id/text_date"
@@ -68,6 +68,7 @@
                 android:textColor="@color/mms_black_5"
                 android:textSize="12sp"
                 app:drawableStartCompat="@drawable/calender_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/image_program"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@+id/text_title"
@@ -79,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/add_circle_plus_1"
+                android:contentDescription="@string/add_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/image_program"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/image_program"

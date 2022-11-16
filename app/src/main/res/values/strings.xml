@@ -57,5 +57,14 @@
         <item>PDF</item>
         <item>PNG</item>
     </array>
+    <string name="add_icon">Add Icon</string>
+    <string name="program_image">Program image</string>
 
+
+    <!--    String resource for Notifications Spinner      -->
+    <string-array name="filter_notifications">
+        <item>All</item>
+        <item>Mentor</item>
+        <item>Admin</item>
+    </string-array>
 </resources>

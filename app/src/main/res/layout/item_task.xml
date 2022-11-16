@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="5dp"
+        android:minHeight="80dp"
         android:onClick="@{() -> listener.onItemTaskSelected(item)}"
         app:cardCornerRadius="@dimen/cardCornerRadius"
         app:cardElevation="0dp"
@@ -28,18 +29,23 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:minHeight="64dp">
 
             <ImageView
                 android:id="@+id/image_certificate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/spacing_default"
-                android:layout_marginStart="47dp"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_small"
                 android:contentDescription="@string/image_task_content_description"
+                android:scaleType="centerCrop"
                 android:src="@drawable/task"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="32:26"
+                app:layout_constraintDimensionRatio="24:26"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,16 +53,17 @@
                 android:id="@+id/text_task_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
+                android:layout_marginStart="@dimen/spacing_extra_large"
+                android:layout_marginTop="@dimen/spacing_small"
                 android:fontFamily="@font/mukta_semibold"
-                android:paddingTop="18dp"
                 android:text="Debugging in VSCode"
                 android:textColor="@color/mms_black_2"
                 android:textSize="@dimen/font_regular"
                 app:layout_constraintBottom_toTopOf="@+id/centerItemGuide"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toEndOf="@+id/image_certificate" />
+                app:layout_constraintStart_toEndOf="@+id/image_certificate"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintVertical_chainStyle="packed" />
 
             <TextView
                 android:id="@+id/text_time_task"
@@ -64,13 +71,14 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="4dp"
                 android:fontFamily="@font/mukta_regular"
-                android:paddingBottom="18dp"
                 android:text="3 days from now"
                 android:textColor="@color/mms_black_5"
                 android:textSize="@dimen/font_small"
                 app:drawableStartCompat="@drawable/calender_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/text_task_title"
-                app:layout_constraintTop_toBottomOf="@+id/centerItemGuide" />
+                app:layout_constraintTop_toTopOf="@+id/centerItemGuide"
+                app:layout_constraintVertical_bias="0.0" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/centerItemGuide"
@@ -83,7 +91,7 @@
                 android:id="@+id/text_status_task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="@dimen/spacing_extra_large"
                 android:fontFamily="@font/mukta_regular"
                 android:text="Assign Task"
                 android:textColor="@color/mms_pry_4"
