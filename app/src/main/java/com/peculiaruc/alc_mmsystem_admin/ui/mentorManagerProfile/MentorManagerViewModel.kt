@@ -11,17 +11,18 @@ import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.Certif
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.MentorInteractionListener
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.ProgramInteractionListener
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskInteractionListener
+import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
 class MentorManagerViewModel : ViewModel(), CertificateInteractionListener,
     TaskInteractionListener, MentorInteractionListener, ProgramInteractionListener {
 
-    private val _selectCertificateEvent = MutableLiveData<Certificate>()
-    val selectCertificateEvent: LiveData<Certificate> = _selectCertificateEvent
+    private val _selectCertificateEvent = MutableLiveData<Event<Certificate>>()
+    val selectCertificateEvent: LiveData<Event<Certificate>> = _selectCertificateEvent
 
     val checkChip = MutableLiveData<Int>()
 
     override fun onItemCertificateSelected(item: Certificate) {
-        _selectCertificateEvent.postValue(item)
+        _selectCertificateEvent.postValue(Event(item))
     }
 
     override fun onItemTaskSelected(item: Task) {

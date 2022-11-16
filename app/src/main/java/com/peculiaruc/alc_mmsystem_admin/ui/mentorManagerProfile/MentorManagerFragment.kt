@@ -20,6 +20,7 @@ import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.Certif
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.MentorAdapter
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.ProgramAdapter
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskAdapter
+import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
 class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
@@ -120,15 +121,16 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
     }
 
     private fun onEvents() {
-        viewModel.selectCertificateEvent.observe(viewLifecycleOwner) { certificate ->
-            certificate?.let {
+        viewModel.selectCertificateEvent.observe(
+            viewLifecycleOwner,
+            EventObserve { certificate ->
                 // need to add certificate id
                 findNavController().navigate(
                     MentorManagerFragmentDirections
                         .actionMentorManagerFragmentToCertificateFragment(certificate.title)
                 )
-            }
-        }
+            })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
