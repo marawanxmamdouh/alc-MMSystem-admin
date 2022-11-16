@@ -31,6 +31,7 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTitle(true, "Peculiah C. Umeh")
+        setBottomNavigationVisibility(false)
         setHasOptionsMenu(true)
         setAdapter()
         onEvents()
