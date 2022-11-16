@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="18dp"
                 android:fontFamily="@font/mukta_semibold"
-                android:gravity="center"
+                android:gravity="center|top"
                 android:lines="3"
                 android:text="@{item.description}"
                 android:textColor="@color/mms_black_5"
