@@ -122,15 +122,20 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
     }
 
     private fun onEvents() {
-        viewModel.selectCertificateEvent.observe(
-            viewLifecycleOwner,
-            EventObserve { certificate ->
-                // need to add certificate id
-                findNavController().navigate(
-                    MentorManagerFragmentDirections
-                        .actionMentorManagerFragmentToCertificateFragment(certificate.title)
-                )
-            })
+        viewModel.selectCertificateEvent.observe(viewLifecycleOwner, EventObserve { certificate ->
+            // need to add certificate id
+            findNavController().navigate(
+                MentorManagerFragmentDirections
+                    .actionMentorManagerFragmentToCertificateFragment(certificate.title)
+            )
+        })
+
+        viewModel.selectTaskEvent.observe(viewLifecycleOwner, EventObserve { task ->
+            findNavController().navigate(
+                MentorManagerFragmentDirections
+                    .actionMentorManagerFragmentToTaskDetailsFragment()
+            )
+        })
 
     }
 

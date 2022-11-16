@@ -67,4 +67,9 @@
         <item>Mentor</item>
         <item>Admin</item>
     </string-array>
+
+    <!-- *************** Task ************    -->
+    <string name="task_title">Task</string>
+    <string name="assign_task_button">Assign to task</string>
+    <string name="view_button">View</string>
 </resources>

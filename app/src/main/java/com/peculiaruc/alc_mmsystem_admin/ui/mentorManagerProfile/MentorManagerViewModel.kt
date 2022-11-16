@@ -19,6 +19,9 @@ class MentorManagerViewModel : ViewModel(), CertificateInteractionListener,
     private val _selectCertificateEvent = MutableLiveData<Event<Certificate>>()
     val selectCertificateEvent: LiveData<Event<Certificate>> = _selectCertificateEvent
 
+    private val _selectTaskEvent = MutableLiveData<Event<Task>>()
+    val selectTaskEvent: LiveData<Event<Task>> = _selectTaskEvent
+
     val checkChip = MutableLiveData<Int>()
 
     override fun onItemCertificateSelected(item: Certificate) {
@@ -26,7 +29,7 @@ class MentorManagerViewModel : ViewModel(), CertificateInteractionListener,
     }
 
     override fun onItemTaskSelected(item: Task) {
-
+        _selectTaskEvent.postValue(Event(item))
     }
 
     override fun onItemMentorSelected(item: Mentor) {

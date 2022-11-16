@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_mentorManagerFragment_to_certificateFragment"
             app:destination="@id/certificateFragment" />
+        <action
+            android:id="@+id/action_mentorManagerFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
     </fragment>
 
     <fragment
@@ -55,5 +58,10 @@
             android:name="certificateTitle"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.task.TaskDetailsFragment"
+        tools:layout="@layout/fragment_task_details" />
 
 </navigation>
