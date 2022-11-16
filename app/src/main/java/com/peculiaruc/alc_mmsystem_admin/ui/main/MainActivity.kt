@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             menuItem.isChecked = true
 
             // this condition for test only until other fragment be complete.
-            if (R.id.mentorManagerFragment == menuItem.itemId)
+            if (menuItem.itemId == R.id.mentorManagerFragment || menuItem.itemId == R.id.adminProfileFragment || menuItem.itemId == R.id.homeFragment)
                 binding.navHostFragment.findNavController().navigate(menuItem.itemId)
             true
         }
@@ -47,12 +47,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.homeFragment,
-//                R.id.exploringFragment,
-//                R.id.myListFragment,
-//                R.id.profileFragment,
-            )
+            setOf(R.id.homeFragment)
         )
         val navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavigation.setupWithNavController(navController)
