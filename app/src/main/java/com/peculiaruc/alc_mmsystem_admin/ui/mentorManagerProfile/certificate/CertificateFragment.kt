@@ -19,13 +19,14 @@ class CertificateFragment : BaseFragment<FragmentCertificateBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTitle(true, args.certificateTitle)
+        setBottomNavigationVisibility(false)
         onEvents()
     }
 
-    private fun onEvents(){
-        viewModel.downloadEvent.observe(viewLifecycleOwner){ downloadType ->
+    private fun onEvents() {
+        viewModel.downloadEvent.observe(viewLifecycleOwner) { downloadType ->
             downloadType?.let {
-                Toast.makeText(requireContext(),"Should display dialog",Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "Should display dialog", Toast.LENGTH_LONG).show()
             }
         }
     }

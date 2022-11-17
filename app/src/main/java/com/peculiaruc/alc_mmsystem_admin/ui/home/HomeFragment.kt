@@ -17,6 +17,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTitle(false)
+        setBottomNavigationVisibility(true)
         binding.buttonTest.setOnClickListener {
             (requireActivity() as MainActivity).openDrawer()
         }

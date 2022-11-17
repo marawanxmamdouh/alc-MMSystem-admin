@@ -10,6 +10,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.BR
+import com.peculiaruc.alc_mmsystem_admin.ui.main.MainActivity
 
 abstract class BaseFragment<VDB : ViewDataBinding> : Fragment() {
     abstract val layoutIdFragment: Int
@@ -43,4 +44,8 @@ abstract class BaseFragment<VDB : ViewDataBinding> : Fragment() {
         }
     }
 
+    protected fun setBottomNavigationVisibility(isVisible: Boolean) {
+        if (requireActivity() is MainActivity)
+            (requireActivity() as MainActivity).setBottomNavigationVisibility(isVisible)
+    }
 }

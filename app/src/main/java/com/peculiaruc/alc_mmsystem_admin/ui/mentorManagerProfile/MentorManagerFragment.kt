@@ -31,6 +31,7 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTitle(true, "Peculiah C. Umeh")
+        setBottomNavigationVisibility(false)
         setHasOptionsMenu(true)
         setAdapter()
         onEvents()
@@ -121,15 +122,20 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
     }
 
     private fun onEvents() {
-        viewModel.selectCertificateEvent.observe(
-            viewLifecycleOwner,
-            EventObserve { certificate ->
-                // need to add certificate id
-                findNavController().navigate(
-                    MentorManagerFragmentDirections
-                        .actionMentorManagerFragmentToCertificateFragment(certificate.title)
-                )
-            })
+        viewModel.selectCertificateEvent.observe(viewLifecycleOwner, EventObserve { certificate ->
+            // need to add certificate id
+            findNavController().navigate(
+                MentorManagerFragmentDirections
+                    .actionMentorManagerFragmentToCertificateFragment(certificate.title)
+            )
+        })
+
+        viewModel.selectTaskEvent.observe(viewLifecycleOwner, EventObserve { task ->
+            findNavController().navigate(
+                MentorManagerFragmentDirections
+                    .actionMentorManagerFragmentToTaskDetailsFragment()
+            )
+        })
 
     }
 
