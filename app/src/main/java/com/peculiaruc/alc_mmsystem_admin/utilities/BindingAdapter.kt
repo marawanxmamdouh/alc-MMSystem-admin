@@ -39,7 +39,8 @@ fun showIfID(view: View, id: Int?) {
             R.id.chip_certificates,
             R.id.chip_tasks,
             R.id.chip_mentors,
-            R.id.chip_program -> {
+            R.id.chip_program,
+            R.id.chip_reports -> {
                 true
             }
             else -> {
@@ -74,7 +75,8 @@ fun showSearchIcon(view: View, id: Int?) {
         when (it) {
             R.id.chip_tasks,
             R.id.chip_mentors,
-            R.id.chip_program -> {
+            R.id.chip_program,
+            R.id.chip_reports -> {
                 true
             }
             else -> {

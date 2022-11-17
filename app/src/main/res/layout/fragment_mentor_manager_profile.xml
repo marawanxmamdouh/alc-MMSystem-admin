@@ -157,6 +157,8 @@
             app:showSearchIcon="@{viewModel.checkChip}"
             app:tint="@color/mms_black_5" />
 
+        <!-- ***************Reports*********************  -->
+
         <!-- ************************************  -->
 
         <androidx.recyclerview.widget.RecyclerView
