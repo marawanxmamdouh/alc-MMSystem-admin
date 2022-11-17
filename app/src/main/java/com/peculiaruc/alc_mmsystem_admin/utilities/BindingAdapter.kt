@@ -62,6 +62,10 @@ fun showTaskBar(view: TextView, id: Int?) {
                 view.text = view.context.getString(R.string.all_programs)
                 true
             }
+            R.id.chip_reports -> {
+                view.text = view.context.getString(R.string.all_reports)
+                true
+            }
             else -> {
                 false
             }
