@@ -62,13 +62,17 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/mukta_semibold"
+            android:inputType="textCapSentences"
             android:onClick="@{() -> viewModel.onClickAssignToTask()}"
             android:paddingVertical="@dimen/spacing_small"
             android:text="@string/assign_task_button"
             android:textColor="@color/white"
             android:textSize="@dimen/font_large"
             app:cornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_recycler"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
