@@ -8,7 +8,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
-import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentMentorManagerBinding
+import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentMentorManagerProfileBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Mentor
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Program
@@ -23,10 +23,10 @@ import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskAd
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
-class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
+class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBinding>() {
 
-    override val layoutIdFragment: Int = R.layout.fragment_mentor_manager
-    override val viewModel: MentorManagerViewModel by viewModels()
+    override val layoutIdFragment: Int = R.layout.fragment_mentor_manager_profile
+    override val viewModel: MentorManagerProfileViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -125,15 +125,15 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
         viewModel.selectCertificateEvent.observe(viewLifecycleOwner, EventObserve { certificate ->
             // need to add certificate id
             findNavController().navigate(
-                MentorManagerFragmentDirections
-                    .actionMentorManagerFragmentToCertificateFragment(certificate.title)
+                MentorManagerProfileFragmentDirections
+                    .actionMentorManagerProfileFragmentToCertificateFragment(certificate.title)
             )
         })
 
         viewModel.selectTaskEvent.observe(viewLifecycleOwner, EventObserve { task ->
             findNavController().navigate(
-                MentorManagerFragmentDirections
-                    .actionMentorManagerFragmentToTaskDetailsFragment()
+                MentorManagerProfileFragmentDirections
+                    .actionMentorManagerProfileFragmentToTaskDetailsFragment()
             )
         })
 
