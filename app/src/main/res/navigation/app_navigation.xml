@@ -8,7 +8,11 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.home.HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_reportDetailsFragment"
+            app:destination="@id/reportDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/searchFragment"
@@ -67,10 +71,15 @@
     <fragment
         android:id="@+id/mentorMangerFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManger.MentorMangerFragment"
-        tools:layout="@layout/fragment_mentor_manger" >
+        tools:layout="@layout/fragment_mentor_manger">
         <action
             android:id="@+id/action_mentorMangerFragment_to_mentorManagerProfileFragment"
             app:destination="@id/mentorManagerProfileFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/reportDetailsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.report.ReportDetailsFragment"
+        tools:layout="@layout/fragment_report_details" />
 
 </navigation>
