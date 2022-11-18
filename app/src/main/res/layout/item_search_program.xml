@@ -42,7 +42,7 @@
                 android:id="@+id/text_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginStart="@dimen/spacing_medium"
                 android:layout_marginEnd="@dimen/search_item_left_margin"
                 android:fontFamily="@font/mukta_bold"
                 android:lineHeight="@dimen/line_height_regular"
