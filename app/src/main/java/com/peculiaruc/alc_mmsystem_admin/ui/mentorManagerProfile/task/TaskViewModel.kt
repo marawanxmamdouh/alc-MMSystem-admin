@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.domain.models.TaskDetails
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
+/**
+ * task view model class to handle the logic for the task details fragment
+ */
 class TaskViewModel : ViewModel(), TaskDetailInteractionListener {
 
     private val _assignToTaskEvent = MutableLiveData<Event<Boolean>>()
@@ -18,6 +21,9 @@ class TaskViewModel : ViewModel(), TaskDetailInteractionListener {
         _viewTaskEvent.postValue(Event(item))
     }
 
+    /**
+     * done when the assign to task button is clicked
+     */
     fun onClickAssignToTask() {
         _assignToTaskEvent.postValue(Event(true))
     }
