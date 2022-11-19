@@ -30,13 +30,5 @@
             android:text="Go to Mentor Manger for test only"
             app:layout_constraintTop_toBottomOf="@+id/text_home" />
 
-        <Button
-            android:id="@+id/button_report_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Test Report details"
-            app:layout_constraintTop_toBottomOf="@+id/button_test" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
