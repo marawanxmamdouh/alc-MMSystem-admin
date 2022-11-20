@@ -52,7 +52,7 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
             "Monday at 11:52 PM",
             "Baba C. Mammah",
             "created",
-            "All Mentor Managers Task Report"
+            "All Mentor Managers Task Report Report"
         ),
         Notification(
             "",
@@ -73,7 +73,7 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
             "Monday at 11:52 PM",
             "Baba C. Mammah",
             "created",
-            "All Mentor Managers Task Report"
+            "All Mentor Managers Task Report Report"
         ),
         Notification(
             "",

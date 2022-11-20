@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="android.text.Html" />
+
         <variable
             name="item"
             type="com.peculiaruc.alc_mmsystem_admin.domain.models.Notification" />
@@ -18,13 +20,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{()-> listener.onNotificationClick(item)}"
-        android:layout_marginTop="14dp">
+        android:layout_marginTop="14dp"
+        android:minHeight="80dp"
+        android:onClick="@{()-> listener.onNotificationClick(item)}">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:background="@drawable/image"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +43,7 @@
             android:fontFamily="@font/mukta_regular"
             android:gravity="start"
             android:lines="2"
-            android:text="@{item.from}"
+            android:text="@{Html.fromHtml(@string/notification_details(item.from,item.action,item.actionOn))}"
             android:textColor="@color/mms_black_1"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
