@@ -22,7 +22,7 @@
         android:layout_marginVertical="5dp"
         android:clickable="false"
         android:minHeight="80dp"
-        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardCornerRadius="@dimen/radius_default"
         app:cardElevation="0dp"
         app:strokeColor="@color/mms_pry_10"
         app:strokeWidth="1dp">
@@ -84,7 +84,8 @@
                 android:onClick="@{() -> listener.onItemReportDownload(item)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/image_share"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/download_report" />
 
 
             <ImageView
@@ -95,7 +96,8 @@
                 android:onClick="@{() -> listener.onItemReportShare(item)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/share_report" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

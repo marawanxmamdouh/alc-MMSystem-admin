@@ -78,4 +78,6 @@
     <string name="assign_task_button">Assign to task</string>
     <string name="view_button">View</string>
     <string name="massage_mentor">Massage Mentor</string>
+    <string name="download_report">Download report</string>
+    <string name="share_report">Share report</string>
 </resources>
