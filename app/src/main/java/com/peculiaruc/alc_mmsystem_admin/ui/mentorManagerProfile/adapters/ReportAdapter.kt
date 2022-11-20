@@ -15,4 +15,5 @@ class ReportAdapter(
 interface ReportInteractionListener : BaseInteractionListener {
     fun onItemReportShare(item: Report)
     fun onItemReportDownload(item: Report)
+    fun onItemClick(item:Report)
 }

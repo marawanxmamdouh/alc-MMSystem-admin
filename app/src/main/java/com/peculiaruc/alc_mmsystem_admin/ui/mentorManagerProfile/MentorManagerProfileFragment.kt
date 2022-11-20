@@ -83,6 +83,13 @@ class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBi
             Toast.makeText(requireContext(), "Share", Toast.LENGTH_LONG).show()
         })
 
+        viewModel.openReportDetailsEvent.observe(viewLifecycleOwner, EventObserve {
+            findNavController().navigate(
+                MentorManagerProfileFragmentDirections
+                    .actionMentorManagerProfileFragmentToReportDetailsFragment()
+            )
+        })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
