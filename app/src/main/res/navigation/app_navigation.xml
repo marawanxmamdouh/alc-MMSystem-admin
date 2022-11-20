@@ -8,7 +8,11 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.home.HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/searchFragment"
@@ -80,5 +84,10 @@
         android:id="@+id/reportDetailsFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.report.ReportDetailsFragment"
         tools:layout="@layout/fragment_report_details" />
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.notification.NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
 
 </navigation>

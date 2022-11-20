@@ -3,6 +3,7 @@ package com.peculiaruc.alc_mmsystem_admin.ui.home
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentHomeBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
@@ -20,6 +21,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         setBottomNavigationVisibility(true)
         binding.buttonTest.setOnClickListener {
             (requireActivity() as MainActivity).openDrawer()
+        }
+
+        binding.buttonNotification.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNotificationFragment())
         }
     }
 
