@@ -135,7 +135,7 @@
             android:layout_marginStart="@dimen/spacing_large"
             android:layout_marginEnd="@dimen/spacing_medium"
             android:drawablePadding="4dp"
-            android:fontFamily="@font/mukta_medium"
+            android:fontFamily="@font/mukta_semibold"
             android:paddingBottom="10dp"
             android:text="@string/all_tasks"
             android:textColor="@color/mms_black_2"
@@ -157,7 +157,6 @@
             app:showSearchIcon="@{viewModel.checkChip}"
             app:tint="@color/mms_black_5" />
 
-        <!-- ************************************  -->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_mentor"

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.peculiaruc.alc_mmsystem_admin.domain.models.Report" />
+
+        <variable
+            name="listener"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.ReportInteractionListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:clickable="false"
+        android:minHeight="80dp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/mms_pry_10"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="start"
+                android:text="@{item.title}"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/image_download"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Google Africa Scholarship Report" />
+
+            <TextView
+                android:id="@+id/text_author"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:gravity="start"
+                android:text="@{item.author}"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/text_date"
+                app:layout_constraintStart_toStartOf="@+id/text_title"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                tools:text="By Ibrahim Kabir" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="start"
+                android:lines="1"
+                android:text="@{item.date}"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/image_download"
+                app:layout_constraintStart_toEndOf="@+id/text_author"
+                app:layout_constraintTop_toTopOf="@id/text_author"
+                tools:text="-  19th - 25th Oct 22" />
+
+            <ImageView
+                android:id="@+id/image_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/download_icon"
+                android:onClick="@{() -> listener.onItemReportDownload(item)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/image_share"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/image_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/share_icon"
+                android:onClick="@{() -> listener.onItemReportShare(item)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -39,7 +39,8 @@ fun showIfID(view: View, id: Int?) {
             R.id.chip_certificates,
             R.id.chip_tasks,
             R.id.chip_mentors,
-            R.id.chip_program -> {
+            R.id.chip_program,
+            R.id.chip_reports -> {
                 true
             }
             else -> {
@@ -61,6 +62,10 @@ fun showTaskBar(view: TextView, id: Int?) {
                 view.text = view.context.getString(R.string.all_programs)
                 true
             }
+            R.id.chip_reports -> {
+                view.text = view.context.getString(R.string.all_reports)
+                true
+            }
             else -> {
                 false
             }
@@ -74,7 +79,8 @@ fun showSearchIcon(view: View, id: Int?) {
         when (it) {
             R.id.chip_tasks,
             R.id.chip_mentors,
-            R.id.chip_program -> {
+            R.id.chip_program,
+            R.id.chip_reports -> {
                 true
             }
             else -> {

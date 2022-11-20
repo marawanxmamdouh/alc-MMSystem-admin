@@ -3,24 +3,25 @@ package com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
-import com.peculiaruc.alc_mmsystem_admin.domain.models.Mentor
-import com.peculiaruc.alc_mmsystem_admin.domain.models.Program
-import com.peculiaruc.alc_mmsystem_admin.domain.models.Task
-import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.CertificateInteractionListener
-import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.MentorInteractionListener
-import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.ProgramInteractionListener
-import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskInteractionListener
+import com.peculiaruc.alc_mmsystem_admin.domain.models.*
+import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.*
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
 class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListener,
-    TaskInteractionListener, MentorInteractionListener, ProgramInteractionListener {
+    TaskInteractionListener, MentorInteractionListener, ProgramInteractionListener,
+    ReportInteractionListener {
 
     private val _selectCertificateEvent = MutableLiveData<Event<Certificate>>()
     val selectCertificateEvent: LiveData<Event<Certificate>> = _selectCertificateEvent
 
     private val _selectTaskEvent = MutableLiveData<Event<Task>>()
     val selectTaskEvent: LiveData<Event<Task>> = _selectTaskEvent
+
+    private val _downloadReportEvent = MutableLiveData<Event<Report>>()
+    val downloadReportEvent: LiveData<Event<Report>> = _downloadReportEvent
+
+    private val _shareReportEvent = MutableLiveData<Event<Report>>()
+    val shareReportEvent: LiveData<Event<Report>> = _shareReportEvent
 
     val checkChip = MutableLiveData<Int>()
 
@@ -38,6 +39,15 @@ class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListene
 
     override fun onProgramSelected(item: Program) {
 
+    }
+
+
+    override fun onItemReportShare(item: Report) {
+        _shareReportEvent.postValue(Event(item))
+    }
+
+    override fun onItemReportDownload(item: Report) {
+        _downloadReportEvent.postValue(Event(item))
     }
 
 
