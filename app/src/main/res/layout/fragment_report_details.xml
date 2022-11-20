@@ -10,185 +10,197 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="20dp">
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/text_report_title"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="97dp"
-            android:fontFamily="@font/mukta_bold"
-            android:lines="2"
-            android:text="Google Africa Scholarship Program Report"
-            android:textColor="@color/mms_black_2"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/image_close_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginHorizontal="20dp">
 
-        <ImageView
-            android:id="@+id/image_close_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="7dp"
-            android:background="@drawable/close_icon"
-            android:onClick="@{() -> viewModel.onClickClose()}"
-            app:layout_constraintBottom_toBottomOf="@+id/text_report_title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_report_title" />
+            <TextView
+                android:id="@+id/text_report_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="97dp"
+                android:fontFamily="@font/mukta_bold"
+                android:lineHeight="20sp"
+                android:text="Google Africa Scholarship Program Report"
+                android:textColor="@color/mms_black_2"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/image_close_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/text_author"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mukta_semibold"
-            android:gravity="start"
-            android:text="By Ibrahim Kabir"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_report_title" />
+            <ImageView
+                android:id="@+id/image_close_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/close_icon"
+                android:contentDescription="@string/close_button"
+                android:onClick="@{() -> viewModel.onClickClose()}"
+                app:layout_constraintBottom_toBottomOf="@+id/text_report_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_report_title" />
 
-
-        <TextView
-            android:id="@+id/text_date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mukta_regular"
-            android:gravity="start"
-            android:text=" -  19th - 25th Oct 22"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/text_author"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/text_author" />
-
-        <TextView
-            android:id="@+id/text_achievements"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/mukta_bold"
-            android:gravity="start"
-            android:text="Major Achievements"
-            android:textColor="@color/mms_black_2"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_author" />
-
-        <TextView
-            android:id="@+id/text_achievements_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/mukta_regular"
-            android:gravity="start"
-            android:text="@string/report_achievements_description"
-            android:textColor="@color/mms_black_4"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_achievements" />
+            <TextView
+                android:id="@+id/text_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:gravity="start"
+                android:text="By Ibrahim Kabir"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_report_title" />
 
 
-        <TextView
-            android:id="@+id/text_major_blocker"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/mukta_bold"
-            android:gravity="start"
-            android:text="Major Blocker"
-            android:textColor="@color/mms_black_2"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_achievements_details" />
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="start"
+                android:text="-  19th - 25th Oct 22"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_author"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_author" />
 
-        <TextView
-            android:id="@+id/text_major_blocker_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/mukta_regular"
-            android:gravity="start"
-            android:text="@string/report_major_blocker_description"
-            android:textColor="@color/mms_black_4"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_major_blocker" />
+            <TextView
+                android:id="@+id/text_achievements"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mukta_bold"
+                android:gravity="start"
+                android:text="Major Achievements"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_author" />
 
-        <TextView
-            android:id="@+id/text_major_recommendations"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/mukta_bold"
-            android:gravity="start"
-            android:text="Major Recommendations"
-            android:textColor="@color/mms_black_2"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_major_blocker_details" />
-
-        <TextView
-            android:id="@+id/text_major_recommendations_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/mukta_regular"
-            android:gravity="start"
-            android:text="@string/major_recommendation"
-            android:textColor="@color/mms_black_4"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_major_recommendations" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_share"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/mukta_semibold"
-            android:onClick="@{() -> viewModel.onClickShare()}"
-            android:paddingVertical="8dp"
-            android:text="@string/button_share"
-            android:textColor="@color/mms_pry_2"
-            android:textSize="16sp"
-            app:cornerRadius="7dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_download"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_major_recommendations_description"
-            app:strokeColor="@color/mms_pry_2" />
+            <TextView
+                android:id="@+id/text_achievements_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="start"
+                android:text="@string/report_achievements_description"
+                android:textColor="@color/mms_black_4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_achievements" />
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_download"
-            style="?attr/materialIconButtonFilledStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mukta_semibold"
-            android:onClick="@{() -> viewModel.onClickDownload()}"
-            android:paddingVertical="8dp"
-            android:text="@string/button_download"
-            android:textColor="@color/mms_black_10"
-            android:textSize="16sp"
-            app:cornerRadius="7dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_share"
-            app:layout_constraintTop_toBottomOf="@+id/text_major_recommendations_description" />
+            <TextView
+                android:id="@+id/text_major_blocker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mukta_bold"
+                android:gravity="start"
+                android:text="Major Blocker"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_achievements_details" />
+
+            <TextView
+                android:id="@+id/text_major_blocker_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="start"
+                android:text="@string/report_major_blocker_description"
+                android:textColor="@color/mms_black_4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_major_blocker" />
+
+            <TextView
+                android:id="@+id/text_major_recommendations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mukta_bold"
+                android:gravity="start"
+                android:text="Major Recommendations"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_major_blocker_details" />
+
+            <TextView
+                android:id="@+id/text_major_recommendations_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="start"
+                android:text="@string/major_recommendation"
+                android:textColor="@color/mms_black_4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_major_recommendations" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_share"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:onClick="@{() -> viewModel.onClickShare()}"
+                android:paddingVertical="8dp"
+                android:text="@string/button_share"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="16sp"
+                app:cornerRadius="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/button_download"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_major_recommendations_description"
+                app:strokeColor="@color/mms_pry_2" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_download"
+                style="?attr/materialIconButtonFilledStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_semibold"
+                android:onClick="@{() -> viewModel.onClickDownload()}"
+                android:paddingVertical="8dp"
+                android:text="@string/button_download"
+                android:textColor="@color/mms_black_10"
+                android:textSize="16sp"
+                app:cornerRadius="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_share"
+                app:layout_constraintTop_toBottomOf="@+id/text_major_recommendations_description" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

@@ -87,5 +87,6 @@
     <string name="massage_mentor">Massage Mentor</string>
     <string name="download_report">Download report</string>
     <string name="share_report">Share report</string>
-    
+    <string name="close_button">Close button</string>
+
 </resources>
