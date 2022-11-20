@@ -35,6 +35,10 @@
     <string name="profile_title">Profile</string>
     <string name="edit_profile_title">Edit Profile</string>
 
+    <!--  ************ Mentor Manger  ****************** -->
+    <string name="mentor_manger_title">Mentor Managers</string>
+    <string name="messages">Messages</string>
+    <string name="all_mentor_manger">All mentor managers</string>
     <!--  ************ Mentor Manger Profile ****************** -->
     <string name="menu_chat">Chat</string>
     <string name="about">About</string>

@@ -13,7 +13,7 @@ import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.Progra
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.TaskInteractionListener
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
-class MentorManagerViewModel : ViewModel(), CertificateInteractionListener,
+class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListener,
     TaskInteractionListener, MentorInteractionListener, ProgramInteractionListener {
 
     private val _selectCertificateEvent = MutableLiveData<Event<Certificate>>()

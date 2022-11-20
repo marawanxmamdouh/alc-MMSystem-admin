@@ -18,7 +18,7 @@
 
     </style>
 
-    <style name="AppActionBar" parent="@style/ThemeOverlay.MaterialComponents.ActionBar">
+    <style name="AppActionBar" parent="@style/Theme.MaterialComponents.DayNight">
         <item name="android:background">@color/white</item>
         <item name="android:textColorPrimary">@color/mms_black_2</item>
         <item name="contentInsetStartWithNavigation">0dp</item>
@@ -27,10 +27,14 @@
         <item name="windowActionBarOverlay">@null</item>
         <item name="android:actionButtonStyle">@style/menuIconStyle</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:paddingStart">0dip</item>
+        <item name="android:paddingEnd">0dip</item>
     </style>
 
     <style name="menuIconStyle" parent="@android:style/Widget.ActionButton">
-        <item name="android:drawablePadding">@dimen/spacing_large</item>
+        <item name="contentInsetLeft">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="titleMarginStart">0dp</item>
     </style>
 
     <style name="regularB">

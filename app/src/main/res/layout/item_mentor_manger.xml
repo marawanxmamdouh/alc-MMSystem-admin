@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.peculiaruc.alc_mmsystem_admin.domain.models.Mentor" />
+
+        <variable
+            name="listener"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManger.MentorMangerInteractionListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:minHeight="82dp"
+        android:onClick="@{() -> listener.onItemMentorMangerSelected(item)}"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/mms_pry_10"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_profile"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="11dp"
+                android:layout_marginStart="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
+
+            <TextView
+                android:id="@+id/text_mentor_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:gravity="start"
+                android:paddingBottom="8dp"
+                android:text="Daniela Josh"
+                android:textColor="@color/mms_black_2"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_profile"
+                app:layout_constraintTop_toBottomOf="@+id/text_role"
+                app:layout_constraintTop_toTopOf="@+id/image_profile"
+                tools:text="Daniela Josh" />
+
+            <TextView
+                android:id="@+id/text_role"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Program Assistant, Andela, She/her"
+                android:textColor="@color/mms_black_5"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@id/text_tag"
+                app:layout_constraintEnd_toStartOf="@+id/message"
+                app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_mentor_name"
+                tools:text="Program Assistant, Andela, She/her" />
+
+            <TextView
+                android:id="@+id/text_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/tag_bg"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="MENTOR-GAD"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+                app:layout_constraintEnd_toStartOf="@+id/message"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_role"
+                tools:text="MENTOR-GAD" />
+
+
+            <TextView
+                android:id="@+id/text_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/tag_bg"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="PROGRAM ASST."
+                android:textColor="@color/mms_pry_2"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_tag"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/text_tag"
+                app:layout_constraintTop_toTopOf="@+id/text_tag"
+                tools:text="PROGRAM ASST." />
+
+            <ImageView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/comment_circle_chat_message_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/mms_pry_2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

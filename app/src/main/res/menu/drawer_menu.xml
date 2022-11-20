@@ -33,7 +33,7 @@
             android:title="Mentors" />
 
         <item
-            android:id="@+id/mentorManagerFragment"
+            android:id="@+id/mentorMangerFragment"
             android:icon="@drawable/ic_mentor_managers"
             android:title="Mentor Managers" />
 
