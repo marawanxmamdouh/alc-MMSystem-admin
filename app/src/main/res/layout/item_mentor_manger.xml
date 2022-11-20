@@ -22,7 +22,7 @@
         android:layout_marginVertical="5dp"
         android:minHeight="82dp"
         android:onClick="@{() -> listener.onItemMentorMangerSelected(item)}"
-        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardCornerRadius="@dimen/radius_default"
         app:cardElevation="0dp"
         app:strokeColor="@color/mms_pry_10"
         app:strokeWidth="1dp">
@@ -75,6 +75,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/message"
                 app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
                 app:layout_constraintTop_toBottomOf="@+id/text_mentor_name"
+                tools:ignore="SmallSp"
                 tools:text="Program Assistant, Andela, She/her" />
 
             <TextView
@@ -96,6 +97,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/text_mentor_name"
                 app:layout_constraintTop_toBottomOf="@+id/text_role"
+                tools:ignore="SmallSp"
                 tools:text="MENTOR-GAD" />
 
 
@@ -116,6 +118,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/text_tag"
                 app:layout_constraintTop_toTopOf="@+id/text_tag"
+                tools:ignore="SmallSp"
                 tools:text="PROGRAM ASST." />
 
             <ImageView
@@ -124,11 +127,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/comment_circle_chat_message_1"
+                android:contentDescription="@string/massage_mentor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/mms_pry_2" />
-
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
