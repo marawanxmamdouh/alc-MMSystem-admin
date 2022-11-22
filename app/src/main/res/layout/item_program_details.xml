@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.peculiaruc.alc_mmsystem_admin.domain.models.MentorMangersProgram" />
+
+        <variable
+            name="listener"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.program.ProgramDetailInteractionListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewStyle"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginEnd="@dimen/spacing_large"
+        android:clickable="false"
+        app:cardBackgroundColor="@color/mms_black_10"
+        app:cardCornerRadius="@dimen/radius_large"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/mukta_bold"
+                android:text="@{Integer.toString(item.number)}"
+                android:textColor="@color/mms_black_2"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="-5dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:gravity="center|top"
+                android:lines="3"
+                android:text="@{item.title}"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_number"
+                app:lineHeight="14.5sp"
+                tools:text="Mentor Manager assigned to this Task" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:fontFamily="@font/mukta_semibold"
+                android:inputType="textCapSentences"
+                android:onClick="@{() -> listener.onProgramDetailsView(item)}"
+                android:text="@string/view_button"
+                android:textColor="@color/mms_black_10"
+                android:textSize="@dimen/font_small"
+                app:cornerRadius="@dimen/radius_default"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
