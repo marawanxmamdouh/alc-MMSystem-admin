@@ -468,6 +468,7 @@
                 app:layout_constraintTop_toBottomOf="@id/cards" />
 
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -504,16 +505,20 @@
                     app:chipMinTouchTargetSize="0dp"
                     app:chipStrokeColor="@color/mms_pry_8"
                     app:chipStrokeWidth="1dp" />
-
-        <Button
-            android:id="@+id/button_notification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notification"
-            app:layout_constraintTop_toBottomOf="@+id/button_test" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.chip.ChipGroup>
+
+            <Button
+                android:id="@+id/button_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="Notification"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chipGroup2" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
