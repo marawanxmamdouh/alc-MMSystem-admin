@@ -8,10 +8,12 @@ import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
 import androidx.databinding.InverseBindingAdapter
 import androidx.databinding.InverseBindingListener
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.chip.ChipGroup
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.type.ProgramProgress
 import com.peculiaruc.alc_mmsystem_admin.type.TaskStatus
+import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseAdapter
 
 @BindingAdapter(value = ["checkedChipButtonId"])
 fun setCheckedChipId(view: ChipGroup?, id: Int) {
@@ -146,4 +148,20 @@ fun setTaskStatus(view: TextView, status: TaskStatus?) {
         }
         view.text = taskStatus
     }
+}
+
+
+@BindingAdapter("app:showWhenEmptyList")
+fun <T> showWhenEmptyList(view: View, list: List<T>?) {
+    view.isVisible = list.isNullOrEmpty()
+}
+
+@BindingAdapter("app:showWhenListNotEmpty")
+fun <T> showWhenListNotEmpty(view: View, list: List<T>?) {
+    view.isVisible = !list.isNullOrEmpty()
+}
+
+@BindingAdapter(value = ["app:items"])
+fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
+    (view.adapter as BaseAdapter<T>?)?.setItems(items ?: emptyList())
 }

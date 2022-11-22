@@ -41,29 +41,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_01" />
 
-    <Spinner
-        android:id="@+id/spinner_notifications"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="21dp"
-        android:entries="@array/filter_notifications"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_all_read"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
-        android:drawablePadding="3dp"
-        android:fontFamily="@font/mukta_regular"
-        android:text="Mark all as read"
-        android:textColor="#CCCCCC"
-        android:textSize="12sp"
-        app:drawableEndCompat="@drawable/ic_check"
-        app:drawableTint="#CCCCCC"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_notifications"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinner_notifications" />
 </androidx.constraintlayout.widget.ConstraintLayout>

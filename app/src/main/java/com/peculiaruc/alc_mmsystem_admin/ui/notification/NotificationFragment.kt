@@ -21,74 +21,14 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
         setTitle(true, getString(R.string.notification_title))
         setBottomNavigationVisibility(true)
         onEvents()
-        binding.recyclerNotifications.adapter = NotificationAdapter(list, viewModel)
+        binding.recyclerNotifications.adapter = NotificationAdapter(emptyList(), viewModel)
     }
 
     private fun onEvents() {
         viewModel.selectNotificationEvent.observe(viewLifecycleOwner, EventObserve {
-            Toast.makeText(requireContext(), "open Notifcation", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "open Notification", Toast.LENGTH_LONG).show()
         })
     }
 
 
-    //For Test
-    val list = listOf(
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Lex Murphy",
-            " requested approval for Gads Certificate  by",
-            "Roseline Anapuna"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Peculiah C. Umeh",
-            "commented on",
-            "How to Archive a Program on MMS"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Baba C. Mammah",
-            "created",
-            "All Mentor Managers Task Report Report"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Lex Murphy",
-            " requested approval for Gads Certificate  by",
-            "Roseline Anapuna"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Peculiah C. Umeh",
-            "commented on",
-            "How to Archive a Program on MMS"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Baba C. Mammah",
-            "created",
-            "All Mentor Managers Task Report Report"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Lex Murphy",
-            " requested approval for Gads Certificate  by",
-            "Roseline Anapuna"
-        ),
-        Notification(
-            "",
-            "Monday at 11:52 PM",
-            "Peculiah C. Umeh",
-            "commented on",
-            "How to Archive a Program on MMS"
-        ),
-    )
-    ////////////
 }
