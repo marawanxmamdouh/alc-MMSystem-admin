@@ -18,9 +18,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setTitle(false)
         setBottomNavigationVisibility(true)
-        binding.buttonTest.setOnClickListener {
-            (requireActivity() as MainActivity).openDrawer()
-        }
+//        binding.buttonTest.setOnClickListener {
+//            (requireActivity() as MainActivity).openDrawer()
+//        }
     }
 
 }
