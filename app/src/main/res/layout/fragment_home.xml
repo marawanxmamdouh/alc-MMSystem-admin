@@ -505,6 +505,14 @@
                     app:chipStrokeColor="@color/mms_pry_8"
                     app:chipStrokeWidth="1dp" />
 
+        <Button
+            android:id="@+id/button_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            app:layout_constraintTop_toBottomOf="@+id/button_test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.chip.ChipGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
