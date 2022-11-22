@@ -22,8 +22,12 @@
     <string name="hint_twitter">Twitter</string>
     <string name="button_save">Save</string>
     <string name="button_done">Done</string>
+    <string name="button_undo">Undo</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_send">Send</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_open_email">Open Email App</string>
+
     <array name="countries">
         <item>Egypt</item>
         <item>Ethiopia</item>
@@ -86,7 +90,7 @@
     <string name="report_major_blocker_description">In iaculis arcu eros, eget tempus orci facilisis id.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. </string>
     <string name="major_recommendation">Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</string>
     <string name="button_share">Share</string>
-    
+
     <string name="massage_mentor">Massage Mentor</string>
     <string name="download_report">Download report</string>
     <string name="share_report">Share report</string>
@@ -110,5 +114,7 @@
     <string name="dialog_mentor_manger_title">Add Mentor Manager</string>
     <string name="dialog_hint_email">Email</string>
     <string name="dialog_invitation">An invitation has been sent to \n $s \nsuccessfully</string>
-
+    <string name="dialog_certificate_downloaded">Certificate Downloaded \n Successfully!</string>
+    <string name="dialog_delete">Mentor Manager Deleted \nsuccessfully</string>
+    <string name="dialog_share_report">Share report via email</string>
 </resources>

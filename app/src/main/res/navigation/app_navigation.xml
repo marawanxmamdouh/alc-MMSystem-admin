@@ -59,6 +59,12 @@
         <action
             android:id="@+id/action_mentorManagerProfileFragment_to_reportDetailsFragment"
             app:destination="@id/reportDetailsFragment" />
+        <action
+            android:id="@+id/action_mentorManagerProfileFragment_to_twoActionDialogFragment"
+            app:destination="@id/twoActionDialogFragment" />
+        <action
+            android:id="@+id/action_mentorManagerProfileFragment_to_basicDialog"
+            app:destination="@id/basicDialog" />
     </fragment>
 
     <fragment
@@ -68,6 +74,9 @@
         <argument
             android:name="certificateTitle"
             app:argType="string" />
+        <action
+            android:id="@+id/action_certificateFragment_to_basicDialog"
+            app:destination="@id/basicDialog" />
     </fragment>
 
     <fragment
@@ -114,10 +123,21 @@
             app:popUpTo="@id/adminProfileFragment"
             app:popUpToInclusive="true" />
     </dialog>
+
     <dialog
         android:id="@+id/mentorManagerDialog"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.dialogs.mentorManager.MentorManagerDialog"
         tools:layout="@layout/dialog_mentor_manager" />
+
+    <dialog
+        android:id="@+id/twoActionDialogFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.dialogs.twoActionDialog.TwoActionDialogFragment"
+        tools:layout="@layout/dialog_two_action">
+        <argument
+            android:name="dialogType"
+            app:argType="com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes" />
+
+    </dialog>
 
 
 </navigation>

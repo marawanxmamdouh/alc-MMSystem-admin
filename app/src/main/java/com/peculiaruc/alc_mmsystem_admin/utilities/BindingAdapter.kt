@@ -1,6 +1,7 @@
 package com.peculiaruc.alc_mmsystem_admin.utilities
 
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -179,6 +180,9 @@ fun setDialogTitle(textView: TextView, types: DialogTypes?) {
             DialogTypes.ASSIGNED_TASK -> R.string.dialog_assigned_task
             DialogTypes.UNASSIGNED_TASK -> R.string.dialog_unassigned_task
             DialogTypes.REPORT_DOWNLOAD -> R.string.dialog_download
+            DialogTypes.CERTIFICATE_DOWNLOAD -> R.string.dialog_certificate_downloaded
+            DialogTypes.DELETE_MENTOR_MANGER -> R.string.dialog_delete
+            DialogTypes.SHARE_REPORT -> R.string.dialog_share_report
         }
         textView.text = textView.context.getString(title)
     }
@@ -193,18 +197,56 @@ fun setDialogTitle(imageView: ImageView, types: DialogTypes?) {
             DialogTypes.UNASSIGNED_TO_PROGRAM,
             DialogTypes.UNASSIGNED_TO_MENTOR,
             DialogTypes.UNASSIGNED_TASK -> R.drawable.unassign_program_icon
-
             DialogTypes.ASSIGNED_TO_PROGRAM -> R.drawable.assigned_program
             DialogTypes.ASSIGNED_TO_MENTOR,
             DialogTypes.ASSIGNED_TASK -> R.drawable.assigned_task_icon
+            DialogTypes.CERTIFICATE_DOWNLOAD -> R.drawable.download_dialog_icon
+            DialogTypes.DELETE_MENTOR_MANGER -> R.drawable.delete_icon
+            DialogTypes.SHARE_REPORT -> R.drawable.share_report_icon
         }
         imageView.setImageResource(image)
     }
 
 }
 
-
 @BindingAdapter("app:isVisible")
 fun setVisibility(view: View, isVisible: Boolean) {
     view.isVisible = isVisible
+}
+
+@BindingAdapter("app:mentorMangerButton")
+fun setMentorMangerButtonText(view: Button, doneSend: Boolean?) {
+    doneSend?.let {
+        val title = if (doneSend) {
+            R.string.button_done
+        } else {
+            R.string.button_send
+        }
+        view.text = view.context.getText(title)
+    }
+}
+
+
+@BindingAdapter("app:textFirstActionButton")
+fun setTextFirstActionButton(view: Button, type: DialogTypes?) {
+    type?.let {
+        val title = if (type == DialogTypes.SHARE_REPORT) {
+            R.string.button_open_email
+        } else {
+            R.string.button_done
+        }
+        view.text = view.context.getText(title)
+    }
+}
+
+@BindingAdapter("app:textSecondActionButton")
+fun setTextSecondActionButton(view: Button, type: DialogTypes?) {
+    type?.let {
+        val title = if (type == DialogTypes.SHARE_REPORT) {
+            R.string.button_cancel
+        } else {
+            R.string.button_undo
+        }
+        view.text = view.context.getText(title)
+    }
 }

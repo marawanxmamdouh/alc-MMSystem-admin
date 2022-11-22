@@ -39,13 +39,15 @@ class BasicDialog : BaseDialog<DialogBasicBinding>() {
     private fun getAction(type: DialogTypes): NavDirections? {
         return when (type) {
             DialogTypes.SAVED_PROFILE -> BasicDialogDirections.actionBasicDialogToAdminProfileFragment()
-            DialogTypes.ASSIGNED_TO_PROGRAM -> null
             DialogTypes.UNASSIGNED_TO_PROGRAM -> TODO()
             DialogTypes.ASSIGNED_TO_MENTOR -> TODO()
             DialogTypes.UNASSIGNED_TO_MENTOR -> TODO()
+            DialogTypes.REPORT_DOWNLOAD,
             DialogTypes.ASSIGNED_TASK,
-            DialogTypes.UNASSIGNED_TASK -> null
-            DialogTypes.REPORT_DOWNLOAD -> TODO()
+            DialogTypes.ASSIGNED_TO_PROGRAM,
+            DialogTypes.UNASSIGNED_TASK,
+            DialogTypes.CERTIFICATE_DOWNLOAD -> null
+            else -> null
         }
     }
 }

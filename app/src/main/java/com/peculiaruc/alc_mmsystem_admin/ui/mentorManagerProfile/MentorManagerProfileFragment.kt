@@ -14,6 +14,7 @@ import com.peculiaruc.alc_mmsystem_admin.domain.models.*
 import com.peculiaruc.alc_mmsystem_admin.type.ProgramProgress
 import com.peculiaruc.alc_mmsystem_admin.type.TaskStatus
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
+import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.*
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
@@ -76,11 +77,20 @@ class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBi
         })
 
         viewModel.downloadReportEvent.observe(viewLifecycleOwner, EventObserve {
-            Toast.makeText(requireContext(), "Download", Toast.LENGTH_LONG).show()
+            findNavController().navigate(
+                MentorManagerProfileFragmentDirections.actionMentorManagerProfileFragmentToBasicDialog(
+                    DialogTypes.REPORT_DOWNLOAD
+                )
+            )
         })
 
         viewModel.shareReportEvent.observe(viewLifecycleOwner, EventObserve {
-            Toast.makeText(requireContext(), "Share", Toast.LENGTH_LONG).show()
+            findNavController().navigate(
+                MentorManagerProfileFragmentDirections
+                    .actionMentorManagerProfileFragmentToTwoActionDialogFragment(
+                        DialogTypes.SHARE_REPORT
+                    )
+            )
         })
 
         viewModel.openReportDetailsEvent.observe(viewLifecycleOwner, EventObserve {
