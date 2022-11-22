@@ -19,13 +19,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setTitle(false)
         setBottomNavigationVisibility(true)
-        binding.buttonTest.setOnClickListener {
-            (requireActivity() as MainActivity).openDrawer()
-        }
 
         binding.buttonNotification.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNotificationFragment())
         }
+
+//        binding.buttonTest.setOnClickListener {
+//            (requireActivity() as MainActivity).openDrawer()
+//        }
     }
 
 }

@@ -23,5 +23,6 @@
     <dimen name="chip_mentor_profile_height">32dp</dimen>
 
     <!-- ************** radius *********** -->
-    <dimen name="cardCornerRadius">5dp</dimen>
+    <dimen name="radius_default">5dp</dimen>
+    <dimen name="radius_large">10dp</dimen>
 </resources>

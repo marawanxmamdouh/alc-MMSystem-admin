@@ -68,6 +68,9 @@ class MainActivity : AppCompatActivity() {
         return findNavController(R.id.nav_host_fragment).navigateUp() || super.onSupportNavigateUp()
     }
 
+    /**
+     *  this method is for the bottom navigation bar
+     */
     fun setBottomNavigationVisibility(isVisible:Boolean){
         binding.bottomNavigation.isVisible = isVisible
     }

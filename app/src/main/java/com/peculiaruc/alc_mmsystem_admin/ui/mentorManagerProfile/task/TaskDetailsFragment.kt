@@ -12,6 +12,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
+/**
+ * task details fragment to display the task details
+ */
 class TaskDetailsFragment : BaseFragment<FragmentTaskDetailsBinding>() {
     override val layoutIdFragment: Int = R.layout.fragment_task_details
     override val viewModel: TaskViewModel by viewModels()
