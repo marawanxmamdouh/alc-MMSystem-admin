@@ -18,7 +18,7 @@ class ProgramDetailsFragment : BaseFragment<FragmentProgramDetailsBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setTitle(true, getString(R.string.task_title))
+        setTitle(true, "Google Africa Scholarship Program")
         setBottomNavigationVisibility(false)
         binding.programRecycler.adapter = ProgramDetailsAdapter(emptyList(), viewModel)
         onEvents()
@@ -36,8 +36,8 @@ class ProgramDetailsFragment : BaseFragment<FragmentProgramDetailsBinding>() {
                 )
             }
             findNavController().navigate(action)
+            viewModel.setAssigned(!it)
         })
     }
-
 
 }

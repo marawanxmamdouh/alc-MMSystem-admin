@@ -32,10 +32,9 @@ class ProgramDetailsViewModel : ViewModel(), ProgramDetailInteractionListener {
 
     fun onAssignProgram() {
         _assignedEvent.postValue(Event(_isAssigned.value!!))
-        setAssigned(_isAssigned.value!!.not())
     }
 
-    private fun setAssigned(isAssigned: Boolean) {
+     fun setAssigned(isAssigned: Boolean) {
         _isAssigned.postValue(isAssigned)
     }
 
