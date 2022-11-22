@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentTaskDetailsBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.TaskDetails
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
+import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 class TaskDetailsFragment : BaseFragment<FragmentTaskDetailsBinding>() {
@@ -32,9 +34,14 @@ class TaskDetailsFragment : BaseFragment<FragmentTaskDetailsBinding>() {
 
     private fun onEvents() {
         viewModel.assignToTaskEvent.observe(viewLifecycleOwner, EventObserve {
-            if (it) {
-                Toast.makeText(requireContext(), "Will display Dialog", Toast.LENGTH_LONG).show()
+            val type = if (it) {
+                DialogTypes.ASSIGNED_TASK
+            } else {
+                DialogTypes.UNASSIGNED_TASK
             }
+            findNavController().navigate(
+                TaskDetailsFragmentDirections.actionTaskDetailsFragmentToBasicDialog(type)
+            )
         })
 
         viewModel.viewTaskEvent.observe(viewLifecycleOwner, EventObserve {

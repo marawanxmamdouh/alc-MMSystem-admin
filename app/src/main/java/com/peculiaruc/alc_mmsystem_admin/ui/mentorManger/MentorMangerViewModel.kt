@@ -11,7 +11,14 @@ class MentorMangerViewModel : ViewModel(), MentorMangerInteractionListener {
     private val _selectItemMange = MutableLiveData<Event<Mentor>>()
     val selectItemMange: LiveData<Event<Mentor>> = _selectItemMange
 
+    private val _addMentorEvent = MutableLiveData<Event<Boolean>>()
+    val addMentorEvent: LiveData<Event<Boolean>> = _addMentorEvent
+
     override fun onItemMentorMangerSelected(item: Mentor) {
         _selectItemMange.postValue(Event(item))
+    }
+
+    fun addMentorManger() {
+        _addMentorEvent.postValue(Event(true))
     }
 }

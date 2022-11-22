@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentEditAdminProfileBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
+import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 
 class EditAdminProfileFragment : BaseFragment<FragmentEditAdminProfileBinding>() {
     override val layoutIdFragment: Int = R.layout.fragment_edit_admin_profile
@@ -22,7 +23,11 @@ class EditAdminProfileFragment : BaseFragment<FragmentEditAdminProfileBinding>()
     private fun observeEvents() {
         viewModel.onClickSaveEvent.observe(viewLifecycleOwner) {
             if (it) {
-                findNavController().navigateUp()
+                findNavController()
+                    .navigate(
+                        EditAdminProfileFragmentDirections
+                            .actionEditAdminProfileFragmentToBasicDialog(DialogTypes.SAVED_PROFILE)
+                    )
             }
         }
     }

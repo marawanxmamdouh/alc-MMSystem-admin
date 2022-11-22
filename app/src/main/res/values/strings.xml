@@ -21,7 +21,9 @@
     <string name="hint_linkdein">LinkedIn</string>
     <string name="hint_twitter">Twitter</string>
     <string name="button_save">Save</string>
-
+    <string name="button_done">Done</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_send">Send</string>
     <array name="countries">
         <item>Egypt</item>
         <item>Ethiopia</item>
@@ -39,6 +41,7 @@
     <string name="mentor_manger_title">Mentor Managers</string>
     <string name="messages">Messages</string>
     <string name="all_mentor_manger">All mentor managers</string>
+    <string name="fab_add_mentor_manger">Add mentor manger</string>
     <!--  ************ Mentor Manger Profile ****************** -->
     <string name="menu_chat">Chat</string>
     <string name="about">About</string>
@@ -89,4 +92,18 @@
     <string name="all_notifications">All</string>
     <string name="read_notification">Mark all as read</string>
     <string name="notification_details">&lt;b> %1$s &lt;/b>  %2$s &lt;b> %3$s &lt;/b></string>
+
+    <!-- *************** Dialogs ************  -->
+    <string name="dialog_profile_title">Profile saved successfully</string>
+    <string name="dialog_assigned_program">Assigned to program!</string>
+    <string name="dialog_unassigned_program">Unassigned from program!</string>
+    <string name="dialog_assigned_mentor">Assigned to Mentor Manager!</string>
+    <string name="dialog_unassigned_mentor">Unassigned from Mentor Manager!</string>
+    <string name="dialog_assigned_task">Assigned to Task</string>
+    <string name="dialog_unassigned_task">Unassigned from Task</string>
+    <string name="dialog_download">Report Downloaded Successfully!</string>
+    <string name="dialog_mentor_manger_title">Add Mentor Manager</string>
+    <string name="dialog_hint_email">Email</string>
+    <string name="dialog_invitation">An invitation has been sent to \n $s \nsuccessfully</string>
+
 </resources>
