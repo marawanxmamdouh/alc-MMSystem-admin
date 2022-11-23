@@ -13,6 +13,7 @@ import com.peculiaruc.alc_mmsystem_admin.databinding.DialogBasicBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseDialog
 import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
+import com.peculiaruc.alc_mmsystem_admin.utilities.setWidthPercent
 
 class BasicDialog : BaseDialog<DialogBasicBinding>() {
     override val layoutIdFragment: Int = R.layout.dialog_basic
@@ -22,6 +23,7 @@ class BasicDialog : BaseDialog<DialogBasicBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        setWidthPercent(90)
         viewModel.setTitle(args.dialogType)
         dialog?.setCancelable(false)
         onEvents()

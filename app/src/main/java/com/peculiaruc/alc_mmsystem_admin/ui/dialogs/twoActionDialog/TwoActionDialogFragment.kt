@@ -10,6 +10,7 @@ import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.DialogTwoActionBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseDialog
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
+import com.peculiaruc.alc_mmsystem_admin.utilities.setWidthPercent
 
 class TwoActionDialogFragment : BaseDialog<DialogTwoActionBinding>() {
 
@@ -20,6 +21,7 @@ class TwoActionDialogFragment : BaseDialog<DialogTwoActionBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        setWidthPercent(90)
         viewModel.setType(args.dialogType)
         onEvents()
     }

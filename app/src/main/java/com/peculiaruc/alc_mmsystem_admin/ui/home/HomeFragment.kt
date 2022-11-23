@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentHomeBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
+import com.peculiaruc.alc_mmsystem_admin.ui.main.MainActivity
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
@@ -29,6 +30,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     .actionHomeFragmentToNotificationFragment()
             )
         })
+
+        viewModel.drawerEvent.observe(viewLifecycleOwner, EventObserve {
+            (requireActivity() as MainActivity).openDrawer()
+        })
     }
+
 
 }

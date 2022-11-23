@@ -9,6 +9,7 @@ import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.DialogMentorManagerBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseDialog
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
+import com.peculiaruc.alc_mmsystem_admin.utilities.setWidthPercent
 
 class MentorManagerDialog : BaseDialog<DialogMentorManagerBinding>() {
     override val layoutIdFragment: Int = R.layout.dialog_mentor_manager
@@ -17,6 +18,7 @@ class MentorManagerDialog : BaseDialog<DialogMentorManagerBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        setWidthPercent(90)
         dialog?.setCancelable(false)
         onEvents()
 
