@@ -26,6 +26,9 @@ class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListene
     private val _openReportDetailsEvent = MutableLiveData<Event<Report>>()
     val openReportDetailsEvent: LiveData<Event<Report>> = _openReportDetailsEvent
 
+    private val _selectProgramEvent = MutableLiveData<Event<Program>>()
+    val selectProgramEvent: LiveData<Event<Program>> = _selectProgramEvent
+
     val checkChip = MutableLiveData<Int>()
 
     override fun onItemCertificateSelected(item: Certificate) {
@@ -41,7 +44,7 @@ class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListene
     }
 
     override fun onProgramSelected(item: Program) {
-
+        _selectProgramEvent.postValue(Event(item))
     }
 
 

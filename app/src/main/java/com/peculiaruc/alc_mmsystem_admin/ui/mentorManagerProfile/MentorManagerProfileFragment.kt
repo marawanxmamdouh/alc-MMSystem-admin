@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
@@ -100,6 +99,12 @@ class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBi
             )
         })
 
+        viewModel.selectProgramEvent.observe(viewLifecycleOwner, EventObserve {
+            findNavController().navigate(
+                MentorManagerProfileFragmentDirections
+                    .actionMentorManagerProfileFragmentToProgramDetailsFragment()
+            )
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

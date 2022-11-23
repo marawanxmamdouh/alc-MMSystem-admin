@@ -23,6 +23,7 @@ class BasicDialog : BaseDialog<DialogBasicBinding>() {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         viewModel.setTitle(args.dialogType)
+        dialog?.setCancelable(false)
         onEvents()
     }
 
@@ -39,12 +40,12 @@ class BasicDialog : BaseDialog<DialogBasicBinding>() {
     private fun getAction(type: DialogTypes): NavDirections? {
         return when (type) {
             DialogTypes.SAVED_PROFILE -> BasicDialogDirections.actionBasicDialogToAdminProfileFragment()
-            DialogTypes.UNASSIGNED_TO_PROGRAM -> TODO()
             DialogTypes.ASSIGNED_TO_MENTOR -> TODO()
             DialogTypes.UNASSIGNED_TO_MENTOR -> TODO()
+            DialogTypes.UNASSIGNED_TO_PROGRAM,
+            DialogTypes.ASSIGNED_TO_PROGRAM,
             DialogTypes.REPORT_DOWNLOAD,
             DialogTypes.ASSIGNED_TASK,
-            DialogTypes.ASSIGNED_TO_PROGRAM,
             DialogTypes.UNASSIGNED_TASK,
             DialogTypes.CERTIFICATE_DOWNLOAD -> null
             else -> null

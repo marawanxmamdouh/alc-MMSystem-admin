@@ -65,6 +65,9 @@
         <action
             android:id="@+id/action_mentorManagerProfileFragment_to_basicDialog"
             app:destination="@id/basicDialog" />
+        <action
+            android:id="@+id/action_mentorManagerProfileFragment_to_programDetailsFragment"
+            app:destination="@id/programDetailsFragment" />
     </fragment>
 
     <fragment
@@ -138,6 +141,15 @@
             app:argType="com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes" />
 
     </dialog>
+
+    <fragment
+        android:id="@+id/programDetailsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.program.ProgramDetailsFragment"
+        tools:layout="@layout/fragment_program_details" >
+        <action
+            android:id="@+id/action_programDetailsFragment_to_basicDialog"
+            app:destination="@id/basicDialog" />
+    </fragment>
 
 
 </navigation>

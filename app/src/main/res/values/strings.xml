@@ -96,6 +96,10 @@
     <string name="share_report">Share report</string>
     <string name="close_button">Close button</string>
 
+    <!-- *************** Program ************    -->
+    <string name="button_assign_program">Assign to Program</string>
+    <string name="button_unAssign_program">Unassigned from program</string>
+
     <!-- *************** Notification ************    -->
     <string name="notification_title">Notifications</string>
     <string name="all_notifications">All</string>
@@ -117,4 +121,5 @@
     <string name="dialog_certificate_downloaded">Certificate Downloaded \n Successfully!</string>
     <string name="dialog_delete">Mentor Manager Deleted \nsuccessfully</string>
     <string name="dialog_share_report">Share report via email</string>
+
 </resources>
