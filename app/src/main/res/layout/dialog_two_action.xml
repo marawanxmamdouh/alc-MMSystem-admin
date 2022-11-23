@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.dialogs.twoActionDialog.TwoActionDialogViewModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:gravity="center"
+                android:textColor="@color/mms_black_2"
+                android:textSize="18sp"
+                app:dialogTitle="@{viewModel.dialogType}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Assigned to Task" />
+
+            <ImageView
+                android:id="@+id/dialog_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:dialogIcon="@{viewModel.dialogType}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:src="@drawable/unassign_program_icon" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_first"
+                style="?attr/materialIconButtonFilledStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:minWidth="318dp"
+                android:minHeight="50dp"
+                android:onClick="@{() -> viewModel.onClickDone()}"
+                android:paddingVertical="10dp"
+                android:textColor="@color/mms_black_10"
+                android:textSize="@dimen/font_large"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dialog_icon"
+                app:textFirstActionButton="@{viewModel.dialogType}" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_second"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:minWidth="318dp"
+                android:minHeight="50dp"
+                android:onClick="@{() -> viewModel.onClickCancel()}"
+                android:paddingVertical="10dp"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="@dimen/font_large"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_first"
+                app:strokeColor="@color/mms_pry_2"
+                app:textSecondActionButton="@{viewModel.dialogType}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

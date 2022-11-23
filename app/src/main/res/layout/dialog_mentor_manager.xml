@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.dialogs.mentorManager.MentorMangerDialogViewModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:gravity="center"
+                android:text="@string/dialog_mentor_manger_title"
+                android:textColor="@color/mms_black_2"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/dialog_mentor_manger_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_email"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:hint="@string/dialog_hint_email"
+                app:isVisible="@{!viewModel.invitationSent}"
+                app:layout_constraintEnd_toEndOf="@+id/button_done"
+                app:layout_constraintStart_toStartOf="@+id/button_done"
+                app:layout_constraintTop_toBottomOf="@id/title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_invitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="center"
+                android:text="@{@string/dialog_invitation(viewModel.email)}"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:isVisible="@{viewModel.invitationSent}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_email" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_done"
+                style="?attr/materialIconButtonFilledStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:minWidth="318dp"
+                android:minHeight="50dp"
+                android:onClick="@{() -> viewModel.onClickSend()}"
+                android:paddingVertical="10dp"
+                android:textColor="@color/mms_black_10"
+                android:textSize="@dimen/font_large"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_invitation"
+                app:mentorMangerButton="@{viewModel.invitationSent}" />
+
+            <com.google.android.material.button.MaterialButton
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:minWidth="318dp"
+                android:minHeight="50dp"
+                android:onClick="@{() -> viewModel.onClickCancel()}"
+                android:paddingVertical="10dp"
+                android:text="@string/button_cancel"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="@dimen/font_large"
+                app:cornerRadius="10dp"
+                app:isVisible="@{!viewModel.invitationSent}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_done"
+                app:strokeColor="@color/mms_pry_2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

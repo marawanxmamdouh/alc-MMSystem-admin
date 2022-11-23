@@ -59,4 +59,7 @@ dependencies {
     // cardView
     implementation 'androidx.cardview:cardview:1.0.0'
 
+    //setting
+    implementation "androidx.preference:preference:1.2.0"
+
 }

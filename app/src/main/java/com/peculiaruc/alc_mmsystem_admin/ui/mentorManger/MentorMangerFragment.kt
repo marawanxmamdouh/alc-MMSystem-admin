@@ -46,6 +46,10 @@ class MentorMangerFragment : BaseFragment<FragmentMentorMangerBinding>() {
         viewModel.selectItemMange.observe(viewLifecycleOwner, EventObserve {
             findNavController().navigate(MentorMangerFragmentDirections.actionMentorMangerFragmentToMentorManagerProfileFragment())
         })
+
+        viewModel.addMentorEvent.observe(viewLifecycleOwner, EventObserve {
+            findNavController().navigate(MentorMangerFragmentDirections.actionMentorMangerFragmentToMentorManagerDialog())
+        })
     }
 
 

@@ -7,7 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentHomeBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
-import com.peculiaruc.alc_mmsystem_admin.ui.main.MainActivity
+import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -19,14 +19,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setTitle(false)
         setBottomNavigationVisibility(true)
+        onEvents()
+    }
 
-        binding.buttonNotification.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNotificationFragment())
-        }
-
-//        binding.buttonTest.setOnClickListener {
-//            (requireActivity() as MainActivity).openDrawer()
-//        }
+    private fun onEvents() {
+        viewModel.notificationEvent.observe(viewLifecycleOwner, EventObserve {
+            findNavController().navigate(
+                HomeFragmentDirections
+                    .actionHomeFragmentToNotificationFragment()
+            )
+        })
     }
 
 }

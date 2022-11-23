@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentEditAdminProfileBinding
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
+import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 class EditAdminProfileFragment : BaseFragment<FragmentEditAdminProfileBinding>() {
@@ -26,7 +27,11 @@ class EditAdminProfileFragment : BaseFragment<FragmentEditAdminProfileBinding>()
     private fun observeEvents() {
         viewModel.onClickSaveEvent.observe(viewLifecycleOwner, EventObserve {
             if (it) {
-                findNavController().navigateUp()
+                findNavController()
+                    .navigate(
+                        EditAdminProfileFragmentDirections
+                            .actionEditAdminProfileFragmentToBasicDialog(DialogTypes.SAVED_PROFILE)
+                    )
             }
         })
 
