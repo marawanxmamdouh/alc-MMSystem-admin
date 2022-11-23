@@ -15,6 +15,21 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
         <item name="actionBarTheme">@style/AppActionBar</item>
+        <item name="materialSwitchStyle">@style/settingSwitch</item>
+
+    </style>
+
+    <style name="settingSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+        <item name="android:thumb">@color/black</item>
+        <item name="thumbColor">@color/black</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorPrimary">@color/mms_pry_2</item>
+        <item name="colorOutline">@color/mms_black_7</item>
+        <item name="colorSurfaceVariant">@color/mms_black_10</item>
+        <item name="thumbColor">@color/black</item>
 
     </style>
 

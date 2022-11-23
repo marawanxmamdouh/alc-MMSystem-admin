@@ -48,7 +48,7 @@
             android:title="Certificates" />
 
         <item
-            android:id="@+id/messagesFragment"
+            android:id="@+id/settingsFragment"
             android:icon="@drawable/ic_messages"
             android:title="Messages" />
 

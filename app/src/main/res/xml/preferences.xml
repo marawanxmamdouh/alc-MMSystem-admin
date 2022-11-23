@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="@string/profile_settings"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/edit_profile"
+            android:title="@string/edit_profile"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="@string/change_password"
+            android:title="@string/change_password"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreference
+            android:key="@string/setting_notifications"
+            android:title="@string/setting_notifications"
+            android:widgetLayout="@layout/switch_preference"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreference
+            android:key="@string/settings_show_contact"
+            android:title="@string/settings_show_contact"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/settings_preferences">
+
+        <ListPreference
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false"
+            app:title="@string/settings_archive" />
+
+        <Preference
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false"
+
+            app:title="@string/settings_clear" />
+        <Preference
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false"
+            app:title="@string/setting_about" />
+
+        <Preference
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="false"
+            app:title="@string/settings_faq" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:key="settings_exit"
+        app:title="@string/settings_exit" />
+</PreferenceScreen>
