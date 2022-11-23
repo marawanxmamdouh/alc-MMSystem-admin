@@ -2,70 +2,100 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
-        android:title="@string/profile_settings"
-        app:iconSpaceReserved="false">
+        android:layout="@layout/item_profile_settings"
+        app:iconSpaceReserved="false"
+        app:key="profileSettings">
 
         <Preference
             android:key="@string/edit_profile"
             android:title="@string/edit_profile"
-            app:allowDividerBelow="true"
             app:iconSpaceReserved="false" />
+
+        <Preference android:layout="@layout/item_divider_settings" />
 
         <Preference
             android:key="@string/change_password"
             android:title="@string/change_password"
-            app:allowDividerAbove="true"
-            app:allowDividerBelow="true"
             app:iconSpaceReserved="false" />
+
+        <Preference android:layout="@layout/item_divider_settings" />
 
         <SwitchPreference
             android:key="@string/setting_notifications"
             android:title="@string/setting_notifications"
             android:widgetLayout="@layout/switch_preference"
-            app:allowDividerAbove="true"
-            app:allowDividerBelow="true"
             app:iconSpaceReserved="false" />
+
+        <Preference android:layout="@layout/item_divider_settings" />
 
         <SwitchPreference
             android:key="@string/settings_show_contact"
             android:title="@string/settings_show_contact"
-            app:allowDividerAbove="true"
-            app:allowDividerBelow="true"
+            android:widgetLayout="@layout/switch_preference"
             app:iconSpaceReserved="false" />
+
+        <Preference android:layout="@layout/item_divider_settings" />
 
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:layout="@layout/item_preferences_settings"
+        app:allowDividerAbove="false"
         app:iconSpaceReserved="false"
-        app:title="@string/settings_preferences">
+        app:key="settingsPreferences">
 
         <ListPreference
-            app:allowDividerBelow="true"
+            android:entries="@array/countries"
+            android:entryValues="@array/countries"
+            android:widgetLayout="@layout/item_image_settings"
             app:iconSpaceReserved="false"
+            app:key="archive"
             app:title="@string/settings_archive" />
 
-        <Preference
-            app:allowDividerAbove="true"
-            app:allowDividerBelow="true"
-            app:iconSpaceReserved="false"
+        <Preference android:layout="@layout/item_divider_settings" />
 
-            app:title="@string/settings_clear" />
         <Preference
-            app:allowDividerAbove="true"
-            app:allowDividerBelow="true"
+            android:layout="@layout/item_clear_settings"
+            app:iconSpaceReserved="false"
+            app:key="clear" />
+
+        <Preference android:layout="@layout/item_divider_settings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:allowDividerAbove="false">
+
+        <Preference
+            android:widgetLayout="@layout/item_image_settings"
             app:iconSpaceReserved="false"
             app:title="@string/setting_about" />
 
+        <Preference android:layout="@layout/item_divider_settings" />
+
         <Preference
-            app:allowDividerAbove="true"
-            app:allowDividerBelow="true"
+            android:widgetLayout="@layout/item_image_settings"
+            app:iconSpaceReserved="false"
+            app:title="@string/settings_support" />
+
+        <Preference android:layout="@layout/item_divider_settings" />
+
+
+        <Preference
+            android:widgetLayout="@layout/item_image_settings"
             app:iconSpaceReserved="false"
             app:title="@string/settings_faq" />
 
+        <Preference android:layout="@layout/item_divider_settings" />
+
+        <Preference
+            android:layout="@layout/item_exit_settings"
+            app:iconSpaceReserved="false"
+            app:key="settings_exit" />
+
+        <Preference
+            android:layout="@layout/item_version_settings"
+            app:iconSpaceReserved="false"
+            app:key="Version" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        app:iconSpaceReserved="false"
-        app:key="settings_exit"
-        app:title="@string/settings_exit" />
 </PreferenceScreen>

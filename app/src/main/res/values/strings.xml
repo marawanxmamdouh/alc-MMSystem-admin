@@ -136,6 +136,6 @@
     <string name="setting_about">About App</string>
     <string name="settings_support">Support</string>
     <string name="settings_faq">FAQ</string>
-    <string name="settings_exit">Exit</string>
+    <string name="settings_exit">Logout</string>
 
 </resources>
