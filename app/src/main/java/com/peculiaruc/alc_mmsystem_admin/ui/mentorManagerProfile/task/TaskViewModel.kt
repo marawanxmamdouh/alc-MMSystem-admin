@@ -11,6 +11,9 @@ import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
  */
 class TaskViewModel : ViewModel(), TaskDetailInteractionListener {
 
+    private val _isAssigned = MutableLiveData(false)
+    val isAssigned: LiveData<Boolean> = _isAssigned
+
     private val _assignToTaskEvent = MutableLiveData<Event<Boolean>>()
     val assignToTaskEvent: LiveData<Event<Boolean>> = _assignToTaskEvent
 
@@ -25,6 +28,10 @@ class TaskViewModel : ViewModel(), TaskDetailInteractionListener {
      * done when the assign to task button is clicked
      */
     fun onClickAssignToTask() {
-        _assignToTaskEvent.postValue(Event(true))
+        _assignToTaskEvent.postValue(Event(_isAssigned.value!!))
+    }
+
+    fun setAssigned(isAssigned: Boolean) {
+        _isAssigned.postValue(isAssigned)
     }
 }
