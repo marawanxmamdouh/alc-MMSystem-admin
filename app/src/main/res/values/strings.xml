@@ -60,7 +60,6 @@
     <string name="task_assigned">Assigned</string>
     <string name="task_completed">Completed</string>
     <string name="all_programs">All Programs</string>
-    <string name="all_reports">All Reports</string>
 
     <!-- *************** Certificate ************    -->
     <string name="download_certificate">Download as</string>
@@ -121,5 +120,5 @@
     <string name="dialog_certificate_downloaded">Certificate Downloaded \n Successfully!</string>
     <string name="dialog_delete">Mentor Manager Deleted \nsuccessfully</string>
     <string name="dialog_share_report">Share report via email</string>
-
+    <string name="filter">Filter</string>
 </resources>

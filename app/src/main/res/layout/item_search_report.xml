@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:layout_marginVertical="@dimen/search_item_default_vertical_margin"
+        app:cardCornerRadius="@dimen/radius_default"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/mms_pry_10"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/list_item_height">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginEnd="@dimen/search_item_left_margin"
+                android:fontFamily="@font/mukta_bold"
+                android:lineHeight="@dimen/line_height_regular"
+                android:text="Google Africa Scholarship Program"
+                android:textColor="@color/mms_black_2"
+                android:textSize="@dimen/font_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_semibold"
+                android:lines="1"
+                android:text="By Ibrahim Kabir -"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/mukta_regular"
+                android:lines="1"
+                android:text="19th - 25th Oct 22"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_owner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/text_owner"
+                app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/search_item_spacing_small"
+                android:layout_marginBottom="@dimen/search_item_spacing_extra_small"
+                android:fontFamily="@font/mukta_regular"
+                android:lines="1"
+                android:text="in Reports"
+                android:textColor="@color/mms_pry_3"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
