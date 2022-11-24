@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="391dp"
+    tools:context=".Add_Mentor_Manager_Invitation_Dialog">
+
+    <TextView
+        android:id="@+id/addMentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="133dp"
+        android:fontFamily="@font/mukta_medium"
+        android:text="@string/add_mentor"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="600"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="600" />
+
+    <TextView
+        android:id="@+id/invitation_textView"
+        android:layout_width="204dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="78dp"
+        android:fontFamily="@font/mukta_regular"
+        android:text="@string/an_invitation_has_been_sent_to_samkebede_gmail_com_successfully"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Done_button"
+        android:layout_width="318dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="71dp"
+        android:backgroundTint="#035D63"
+        android:fontFamily="@font/mukta_medium"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

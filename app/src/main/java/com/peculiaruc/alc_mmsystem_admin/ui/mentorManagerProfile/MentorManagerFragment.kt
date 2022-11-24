@@ -102,15 +102,15 @@ class MentorManagerFragment : BaseFragment<FragmentMentorManagerBinding>() {
                 } else if (it == R.id.chip_program) {
                     //******** For Test Only ***********\\
                     val list = listOf(
-                        Program("", "", ProgramProgress.DOUBLE_CHECK),
-                        Program("", "", ProgramProgress.ADD),
-                        Program("", "", ProgramProgress.DOUBLE_CHECK),
-                        Program("", "", ProgramProgress.CHECK),
-                        Program("", "", ProgramProgress.ADD),
-                        Program("", "", ProgramProgress.DOUBLE_CHECK),
-                        Program("", "", ProgramProgress.CHECK),
-                        Program("", "", ProgramProgress.CHECK),
-                        Program("", "", ProgramProgress.DOUBLE_CHECK)
+                        Program("", "", ProgramProgress.DOUBLE_CHECK,0,0,""),
+                        Program("", "", ProgramProgress.ADD,0,0,""),
+                        Program("", "", ProgramProgress.DOUBLE_CHECK,0,0,""),
+                        Program("", "", ProgramProgress.CHECK,0,0,""),
+                        Program("", "", ProgramProgress.ADD,0,0,""),
+                        Program("", "", ProgramProgress.DOUBLE_CHECK,0,0,""),
+                        Program("", "", ProgramProgress.CHECK,0,0,""),
+                        Program("", "", ProgramProgress.CHECK,0,0,""),
+                        Program("", "", ProgramProgress.DOUBLE_CHECK,0,0,"")
                     )
                     /////////////////////////////////////
                     binding.recyclerMentor.adapter = ProgramAdapter(list, viewModel)

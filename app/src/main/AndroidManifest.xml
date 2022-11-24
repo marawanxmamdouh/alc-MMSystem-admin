@@ -15,6 +15,23 @@
         android:theme="@style/Theme.AlcMMSystemadmin"
         android:windowSoftInputMode="adjustNothing"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ui.mentorApplicationRequest.Chat"
+            android:exported="false"
+            android:label="@string/title_activity_chat"/>
+        <activity
+            android:name=".MentorAppRequests"
+            android:exported="false" />
+        <activity android:name=".MentorManagerAppRequests" />
+        <activity android:name=".ui.mentorApplicationRequest.Approval_Requests" />
+        <activity android:name=".ProgramRequests" />
+        <activity android:name=".Add_Mentor_Application_Dialog" />
+        <activity android:name=".Add_Mentor_Manager_Application_Dialog" />
+        <activity android:name=".Add_Mentor_Invitation_Dialog" />
+        <activity android:name=".Add_Mentor_Manager_Invitation_Dialog" />
+        <activity android:name=".Delete_Mentor_Dialog" />
+        <activity android:name=".Delete_Mentor_Manager_Dialog" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true">

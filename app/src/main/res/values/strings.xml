@@ -67,4 +67,21 @@
         <item>Mentor</item>
         <item>Admin</item>
     </string-array>
+    <!--    String resource for add mentor manager dialog     -->
+    <string name="send">Send</string>
+    <string name="done">Done</string>
+    <string name="email">Email</string>
+    <string name="samkebede_gmail_com">Samkebede@gmail.com</string>
+    <string name="add_mentor_manager">Add Mentor Manager</string>
+    <string name="an_invitation_has_been_sent_to_samkebede_gmail_com_successfully">An invitation has been sent to samkebede@gmail.com successfully</string>
+    <string name="approval_requests">Approval Requests</string>
+    <string name="mentor_manager_requests">Mentor Manager Requests</string>
+    <string name="_287">287</string>
+    <string name="view">View</string>
+    <string name="applicant_requests">Applicant Requests</string>
+    <string name="franka_kebe">Franka Kebe</string>
+    <string name="add_mentor">Add Mentor</string>
+    <string name="program_requests">Program Requests</string>
+    <string name="bio">Bio</string>
+    <string name="title_activity_chat">Chat</string>
 </resources>

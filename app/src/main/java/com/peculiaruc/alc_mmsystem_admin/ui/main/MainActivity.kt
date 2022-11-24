@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.Window
@@ -13,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.ActivityMainBinding
+import com.peculiaruc.alc_mmsystem_admin.ui.mentorApplicationRequest.Approval_Requests
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +39,13 @@ class MainActivity : AppCompatActivity() {
             if (menuItem.itemId == R.id.mentorManagerFragment || menuItem.itemId == R.id.adminProfileFragment || menuItem.itemId == R.id.homeFragment)
                 binding.navHostFragment.findNavController().navigate(menuItem.itemId)
             true
+
+            if (menuItem.itemId == R.id.approvalRequestsFragment) {
+                val intent = Intent(this, Approval_Requests::class.java)
+                startActivity(intent)
+            }
+            true
+
         }
     }
 

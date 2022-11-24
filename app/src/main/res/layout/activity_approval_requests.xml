@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="800dp"
+    android:layout_gravity="top"
+    tools:context=".ui.mentorApplicationRequest.Approval_Requests">
+
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:layout_width="18dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="319dp"
+        android:layout_marginBottom="719dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_left_arrow" />
+
+    <TextView
+        android:id="@+id/approvalRequests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="711dp"
+        android:fontFamily="@font/mukta_semibold"
+        android:gravity="top"
+        android:text="@string/approval_requests"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineHeight="29.92px" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame529"
+        android:layout_width="320dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="581dp"
+        android:background="#F2F2F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mentorManagerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="55dp"
+            android:fontFamily="@font/mukta_medium"
+            android:text="@string/mentor_manager_requests"
+            android:textAlignment="textStart"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/mukta_extrabold"
+            android:text="@string/_287"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:lineHeight="39.89dp" />
+
+        <Button
+            android:id="@+id/view1Button"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="248dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="@string/view"
+            android:textAllCaps="false"
+            android:textColor="#F2F2F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="94dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="18dp"
+            app:circularflow_defaultRadius="10dp"
+            app:circularflow_radiusInDP="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mentorManagerTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/frame_532" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame532"
+        android:layout_width="320dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="456dp"
+        android:background="#F2F2F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mentorRequestsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="55dp"
+            android:fontFamily="@font/mukta_medium"
+            android:text="Mentor Requests"
+            android:textAlignment="textStart"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/mukta_extrabold"
+            android:text="160"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:lineHeight="39.89dp" />
+
+        <Button
+            android:id="@+id/view2Button"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="248dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="@string/view"
+            android:textAllCaps="false"
+            android:textColor="#F2F2F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="94dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="18dp"
+            app:circularflow_defaultRadius="10dp"
+            app:circularflow_radiusInDP="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/frame_532_outer" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/frame_532_inner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame533"
+        android:layout_width="320dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="359dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="331dp"
+        android:background="#F2F2F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/programRequestsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="55dp"
+            android:fontFamily="@font/mukta_medium"
+            android:text="Program Requests"
+            android:textAlignment="textStart"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number3TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/mukta_extrabold"
+            android:text="160"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:lineHeight="39.89dp" />
+
+        <Button
+            android:id="@+id/view3Button"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="248dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="@string/view"
+            android:textAllCaps="false"
+            android:textColor="#F2F2F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="94dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="18dp"
+            app:circularflow_defaultRadius="10dp"
+            app:circularflow_radiusInDP="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/programRequestsTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/frame_532_outer" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/frame_533_inner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
