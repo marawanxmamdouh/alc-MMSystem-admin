@@ -121,5 +121,14 @@
     <string name="dialog_certificate_downloaded">Certificate Downloaded \n Successfully!</string>
     <string name="dialog_delete">Mentor Manager Deleted \nsuccessfully</string>
     <string name="dialog_share_report">Share report via email</string>
+    <string name="bio">Bio</string>
+    <string name="technical_proficiency">Technical Proficiency</string>
+    <string name="previous_roles_held">Previous Roles Held:</string>
+    <string name="previous_programs">Previous Programs</string>
+    <string name="program_of_interest">Program of interest:</string>
+    <string name="been_a_mentor_before">Been a Mentor Before?</string>
+    <string name="years_of_technical_experience">Years of Technical Experience:</string>
+    <string name="documents">Documents</string>
+    <string name="delete_mentor_manager">Delete Mentor Manager</string>
 
 </resources>
