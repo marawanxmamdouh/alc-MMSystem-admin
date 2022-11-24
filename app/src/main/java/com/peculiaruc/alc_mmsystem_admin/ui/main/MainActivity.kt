@@ -2,6 +2,7 @@ package com.peculiaruc.alc_mmsystem_admin.ui.main
 
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -35,7 +36,10 @@ class MainActivity : AppCompatActivity() {
             menuItem.isChecked = true
 
             // this condition for test only until other fragment be complete.
-            if (menuItem.itemId == R.id.mentorMangerFragment || menuItem.itemId == R.id.adminProfileFragment || menuItem.itemId == R.id.homeFragment)
+            if (menuItem.itemId == R.id.mentorMangerFragment
+                || menuItem.itemId == R.id.adminProfileFragment
+                || menuItem.itemId == R.id.homeFragment
+            )
                 binding.navHostFragment.findNavController().navigate(menuItem.itemId)
             true
         }
@@ -43,6 +47,11 @@ class MainActivity : AppCompatActivity() {
 
     fun openDrawer() {
         binding.drawerLayout.openDrawer(Gravity.LEFT)
+    }
+
+    fun onClickSetting(view: View) {
+        binding.drawerLayout.closeDrawers()
+        binding.navHostFragment.findNavController().navigate(R.id.settingsFragment)
     }
 
     override fun onResume() {
@@ -71,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     /**
      *  this method is for the bottom navigation bar
      */
-    fun setBottomNavigationVisibility(isVisible:Boolean){
+    fun setBottomNavigationVisibility(isVisible: Boolean) {
         binding.bottomNavigation.isVisible = isVisible
     }
 }

@@ -152,11 +152,16 @@
     <fragment
         android:id="@+id/programDetailsFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.program.ProgramDetailsFragment"
-        tools:layout="@layout/fragment_program_details" >
+        tools:layout="@layout/fragment_program_details">
         <action
             android:id="@+id/action_programDetailsFragment_to_basicDialog"
             app:destination="@id/basicDialog" />
     </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.settings.SettingsFragment"
+        android:label="Settings" />
 
 
 </navigation>
