@@ -267,3 +267,19 @@ fun setButtonAssignProgram(button: Button, isAssigned: Boolean?) {
         }
     }
 }
+
+@BindingAdapter("app:buttonAssignTask")
+fun setButtonTaskProgram(button: Button, isAssigned: Boolean?) {
+    isAssigned?.let {
+        val context = button.context
+        if (isAssigned) {
+            button.setTextColor(context.resources.getColor(R.color.mms_pry_2))
+            button.setBackgroundColor(context.resources.getColor(R.color.white))
+            button.text = context.getText(R.string.unassigned_task_button)
+        } else {
+            button.setTextColor(context.resources.getColor(R.color.mms_black_10))
+            button.setBackgroundColor(context.resources.getColor(R.color.mms_pry_2))
+            button.text = context.getText(R.string.assign_task_button)
+        }
+    }
+}

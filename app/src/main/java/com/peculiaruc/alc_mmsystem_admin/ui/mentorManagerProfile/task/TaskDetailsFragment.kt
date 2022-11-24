@@ -38,13 +38,14 @@ class TaskDetailsFragment : BaseFragment<FragmentTaskDetailsBinding>() {
     private fun onEvents() {
         viewModel.assignToTaskEvent.observe(viewLifecycleOwner, EventObserve {
             val type = if (it) {
-                DialogTypes.ASSIGNED_TASK
-            } else {
                 DialogTypes.UNASSIGNED_TASK
+            } else {
+                DialogTypes.ASSIGNED_TASK
             }
             findNavController().navigate(
                 TaskDetailsFragmentDirections.actionTaskDetailsFragmentToBasicDialog(type)
             )
+            viewModel.setAssigned(!it)
         })
 
         viewModel.viewTaskEvent.observe(viewLifecycleOwner, EventObserve {
