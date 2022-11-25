@@ -16,6 +16,12 @@ class HomeViewModel : ViewModel() {
     private val _viewMMEvent = MutableLiveData<Event<Boolean>>()
     val viewMMEvent: LiveData<Event<Boolean>> = _viewMMEvent
 
+    private val _viewMentorsEvent = MutableLiveData<Event<Boolean>>()
+    val viewMentorsEvent: LiveData<Event<Boolean>> = _viewMentorsEvent
+
+    private val _viewProgramsEvent = MutableLiveData<Event<Boolean>>()
+    val viewProgramsEvent: LiveData<Event<Boolean>> = _viewProgramsEvent
+
     fun onNotificationClick() {
         _notificationEvent.postValue(Event(true))
     }
@@ -26,5 +32,13 @@ class HomeViewModel : ViewModel() {
 
     fun onViewMMClick() {
         _viewMMEvent.postValue(Event(true))
+    }
+
+    fun onViewMentorsClick() {
+        _viewMentorsEvent.postValue(Event(true))
+    }
+
+    fun onViewProgramsClick() {
+        _viewProgramsEvent.postValue(Event(true))
     }
 }

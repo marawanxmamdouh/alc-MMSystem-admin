@@ -41,5 +41,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     .actionHomeFragmentToMentorMangerFragment()
             )
         })
+
+        viewModel.viewMentorsEvent.observe(viewLifecycleOwner, EventObserve {
+            // TODO: Navigate to Mentors Fragment
+//            findNavController().navigate(
+//                HomeFragmentDirections
+//                    .actionHomeFragmentToMentorsFragment()
+//            )
+        })
+
+        viewModel.viewProgramsEvent.observe(viewLifecycleOwner, EventObserve {
+            // TODO: Navigate to Programs Fragment
+//            findNavController().navigate(
+//                HomeFragmentDirections
+//                    .actionHomeFragmentToProgramsFragment()
+//            )
+        })
     }
 }
