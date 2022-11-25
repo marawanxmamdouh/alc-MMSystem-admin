@@ -15,6 +15,12 @@
     <dimen name="font_medium">16sp</dimen>
     <dimen name="font_large">18sp</dimen>
 
+    <!--  ************* line height ************ -->
+    <dimen name="line_height_small">16sp</dimen>
+    <dimen name="line_height_regular">18sp</dimen>
+    <dimen name="line_height_medium">20sp</dimen>
+    <dimen name="line_height_large">22sp</dimen>
+
     <!-- ************** dimension *********** -->
     <dimen name="profile_width">112dp</dimen>
     <dimen name="mentor_item_width">60dp</dimen>
@@ -25,4 +31,13 @@
     <!-- ************** radius *********** -->
     <dimen name="radius_default">5dp</dimen>
     <dimen name="radius_large">10dp</dimen>
+
+    <!-- ************** search list item *********** -->
+    <dimen name="list_item_height">80dp</dimen>
+    <dimen name="search_item_left_margin">32dp</dimen>
+    <dimen name="search_item_default_vertical_margin">5dp</dimen>
+
+    <dimen name="search_item_spacing_extra_small">4dp</dimen>
+    <dimen name="search_item_spacing_small">10dp</dimen>
+
 </resources>

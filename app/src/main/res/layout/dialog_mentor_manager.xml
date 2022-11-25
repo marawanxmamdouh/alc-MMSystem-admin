@@ -75,12 +75,11 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_done"
                 style="?attr/materialIconButtonFilledStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="21dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/mukta_semibold"
-                android:minWidth="318dp"
                 android:minHeight="50dp"
                 android:onClick="@{() -> viewModel.onClickSend()}"
                 android:paddingVertical="10dp"
@@ -94,12 +93,11 @@
 
             <com.google.android.material.button.MaterialButton
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="21dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/mukta_semibold"
-                android:minWidth="318dp"
                 android:minHeight="50dp"
                 android:onClick="@{() -> viewModel.onClickCancel()}"
                 android:paddingVertical="10dp"
