@@ -54,6 +54,13 @@ fun showIfID(view: View, id: Int?) {
     } ?: false
 }
 
+@BindingAdapter("app:showAbout")
+fun showIfAbout(view: View, id: Int?) {
+    view.isVisible = id?.let {
+        it == R.id.chip_about
+    } ?: false
+}
+
 @BindingAdapter("app:showTaskBar")
 fun showTaskBar(view: TextView, id: Int?) {
     view.isVisible = id?.let {

@@ -10,393 +10,401 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="@dimen/spacing_large">
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
-        <TextView
-            android:id="@+id/text_website"
-            style="@style/mediumMukta"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="www.andela.com"
-            android:textColor="@color/mms_pry_2"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_website"
-            app:layout_constraintStart_toEndOf="@+id/image_website"
-            app:layout_constraintTop_toTopOf="@+id/image_website" />
-
-        <TextView
-            android:id="@+id/text_document_3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/mukta_regular"
-            android:text="Java Lead.doc"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_document_1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/image_document_3"
-            app:layout_constraintTop_toTopOf="@+id/image_document_1"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/image_document_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/text_document_1"
-            app:layout_constraintEnd_toStartOf="@+id/text_document_3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/text_document_2"
-            app:layout_constraintTop_toTopOf="@+id/text_document_1"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/paper_file_text_2" />
-
-        <TextView
-            android:id="@+id/text_document_2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:fontFamily="@font/mukta_regular"
-            android:text="Birth Cert.doc"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_document_1"
-            app:layout_constraintEnd_toStartOf="@+id/image_document_3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/image_document_2"
-            app:layout_constraintTop_toTopOf="@+id/image_document_1"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/image_document_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/text_document_1"
-            app:layout_constraintEnd_toStartOf="@+id/text_document_2"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/text_document_1"
-            app:layout_constraintTop_toTopOf="@+id/text_document_1"
-            app:srcCompat="@drawable/paper_file_text_2" />
-
-        <TextView
-            android:id="@+id/text_mentor_before_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:fontFamily="@font/mukta_regular"
-            android:text="Yes"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/text_mentor_before"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/text_mentor_before" />
-
-        <TextView
-            android:id="@+id/text_technical_experience"
-            style="@style/mediumMukta"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/years_of_technical_experience"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_mentor_before" />
-
-        <TextView
-            android:id="@+id/text_mentor_before"
-            style="@style/mediumMukta"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/been_a_mentor_before"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_program_interest" />
-
-        <TextView
-            android:id="@+id/text_technical_experience_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:fontFamily="@font/mukta_regular"
-            android:text="3 years"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/text_technical_experience"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/text_technical_experience" />
-
-        <TextView
-            android:id="@+id/text_document_1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:fontFamily="@font/mukta_regular"
-            android:text="My resume.doc"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_document_1"
-            app:layout_constraintEnd_toStartOf="@+id/image_document_2"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/image_document_1"
-            app:layout_constraintTop_toTopOf="@+id/image_document_1" />
-
-        <TextView
-            android:id="@+id/text_program_interest_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:fontFamily="@font/mukta_regular"
-            android:text="Google Africa Scholarship Program"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/text_program_interest"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/text_program_interest" />
-
-        <TextView
-            android:id="@+id/text_previous_roles"
-            style="@style/mediumMukta"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/previous_roles_held"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_previous_programs_details" />
+            android:layout_marginHorizontal="@dimen/spacing_large">
 
-        <TextView
-            android:id="@+id/text_documents"
-            style="@style/mediumMukta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/documents"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_technical_experience" />
+            <TextView
+                android:id="@+id/text_website"
+                style="@style/mediumMukta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="www.andela.com"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_website"
+                app:layout_constraintStart_toEndOf="@+id/image_website"
+                app:layout_constraintTop_toTopOf="@+id/image_website" />
 
-        <TextView
-            android:id="@+id/text_program_interest"
-            style="@style/mediumMukta"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/program_of_interest"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_previous_roles_details" />
+            <TextView
+                android:id="@+id/text_document_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Java Lead.doc"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_document_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image_document_3"
+                app:layout_constraintTop_toTopOf="@+id/image_document_1"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/text_previous_roles_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mukta_regular"
-            android:text="Learner, Mentor, Program Assistant,  Program Assistant Lead"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_previous_roles" />
+            <ImageView
+                android:id="@+id/image_document_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/text_document_1"
+                app:layout_constraintEnd_toStartOf="@+id/text_document_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_document_2"
+                app:layout_constraintTop_toTopOf="@+id/text_document_1"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/paper_file_text_2" />
 
-        <TextView
-            android:id="@+id/text_previous_programs_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mukta_regular"
-            android:text="GADS 2022, Google I/O Extended 2021"
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_previous_programs" />
+            <TextView
+                android:id="@+id/text_document_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Birth Cert.doc"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_document_1"
+                app:layout_constraintEnd_toStartOf="@+id/image_document_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image_document_2"
+                app:layout_constraintTop_toTopOf="@+id/image_document_1"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/text_previous_programs"
-            style="@style/mediumMukta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/previous_programs"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_technical_proficiency_details" />
+            <ImageView
+                android:id="@+id/image_document_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/text_document_1"
+                app:layout_constraintEnd_toStartOf="@+id/text_document_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_document_1"
+                app:layout_constraintTop_toTopOf="@+id/text_document_1"
+                app:srcCompat="@drawable/paper_file_text_2" />
 
-        <TextView
-            android:id="@+id/text_description2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_extra_small"
-            android:fontFamily="@font/mukta_regular"
-            android:text="@string/text_description"
-            android:textColor="@color/mms_black_5"
-            android:textSize="@dimen/font_small"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_bio" />
+            <TextView
+                android:id="@+id/text_mentor_before_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Yes"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_mentor_before"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/text_mentor_before" />
 
-        <TextView
-            android:id="@+id/text_bio"
-            style="@style/mediumMukta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="@string/bio"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/text_technical_experience"
+                style="@style/mediumMukta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/years_of_technical_experience"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_mentor_before" />
 
-        <TextView
-            android:id="@+id/text_technical_proficiency"
-            style="@style/mediumMukta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/technical_proficiency"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_bio_details" />
+            <TextView
+                android:id="@+id/text_mentor_before"
+                style="@style/mediumMukta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/been_a_mentor_before"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_program_interest" />
 
-        <TextView
-            android:id="@+id/text_bio_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_extra_small"
-            android:fontFamily="@font/mukta_regular"
-            android:text="@string/text_description"
-            android:textColor="@color/mms_black_5"
-            android:textSize="@dimen/font_small"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_bio" />
+            <TextView
+                android:id="@+id/text_technical_experience_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="3 years"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_technical_experience"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/text_technical_experience" />
+
+            <TextView
+                android:id="@+id/text_document_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="My resume.doc"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_document_1"
+                app:layout_constraintEnd_toStartOf="@+id/image_document_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image_document_1"
+                app:layout_constraintTop_toTopOf="@+id/image_document_1" />
+
+            <TextView
+                android:id="@+id/text_program_interest_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Google Africa Scholarship Program"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_program_interest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/text_program_interest" />
+
+            <TextView
+                android:id="@+id/text_previous_roles"
+                style="@style/mediumMukta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/previous_roles_held"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_previous_programs_details" />
+
+            <TextView
+                android:id="@+id/text_documents"
+                style="@style/mediumMukta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/documents"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_technical_experience" />
+
+            <TextView
+                android:id="@+id/text_program_interest"
+                style="@style/mediumMukta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/program_of_interest"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_previous_roles_details" />
+
+            <TextView
+                android:id="@+id/text_previous_roles_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Learner, Mentor, Program Assistant,  Program Assistant Lead"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_previous_roles" />
+
+            <TextView
+                android:id="@+id/text_previous_programs_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:text="GADS 2022, Google I/O Extended 2021"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_previous_programs" />
+
+            <TextView
+                android:id="@+id/text_previous_programs"
+                style="@style/mediumMukta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/previous_programs"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_technical_proficiency_details" />
+
+            <TextView
+                android:id="@+id/text_description2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:fontFamily="@font/mukta_regular"
+                android:text="@string/text_description"
+                android:textColor="@color/mms_black_5"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bio" />
+
+            <TextView
+                android:id="@+id/text_bio"
+                style="@style/mediumMukta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/bio"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_technical_proficiency"
+                style="@style/mediumMukta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/technical_proficiency"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bio_details" />
+
+            <TextView
+                android:id="@+id/text_bio_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:fontFamily="@font/mukta_regular"
+                android:text="@string/text_description"
+                android:textColor="@color/mms_black_5"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bio" />
 
 
-        <TextView
-            android:id="@+id/text_technical_proficiency_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mukta_regular"
-            android:text="Java Script, Django, Mysql, Android "
-            android:textColor="@color/mms_black_5"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_technical_proficiency" />
+            <TextView
+                android:id="@+id/text_technical_proficiency_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Java Script, Django, Mysql, Android "
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_technical_proficiency" />
 
-        <ImageView
-            android:id="@+id/image_document_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="2dp"
-            app:layout_constraintEnd_toStartOf="@+id/text_document_1"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_documents"
-            app:srcCompat="@drawable/paper_file_text_2" />
+            <ImageView
+                android:id="@+id/image_document_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/text_document_1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_documents"
+                app:srcCompat="@drawable/paper_file_text_2" />
 
-        <ImageView
-            android:id="@+id/image_website"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_document_1"
-            app:srcCompat="@drawable/globe_world_earth_" />
+            <ImageView
+                android:id="@+id/image_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_document_1"
+                app:srcCompat="@drawable/globe_world_earth_" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_github"
-            style="@style/ChipProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="@dimen/spacing_large"
-            android:onClick="@{()->viewModel.onClickGithub()}"
-            android:text="\@peculiar.umeh"
-            app:chipIcon="@drawable/github_icon"
-            app:layout_constraintEnd_toStartOf="@+id/chip_instagram"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_website" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_github"
+                style="@style/ChipProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:onClick="@{()->viewModel.onClickGithub()}"
+                android:text="\@peculiar.umeh"
+                app:chipIcon="@drawable/github_icon"
+                app:layout_constraintEnd_toStartOf="@+id/chip_instagram"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_website" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_instagram"
-            style="@style/ChipProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="@{()->viewModel.onClickInstagram()}"
-            android:text="\@peculiar.umeh"
-            app:chipIcon="@drawable/instagram_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/chip_github"
-            app:layout_constraintTop_toTopOf="@+id/chip_github" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_instagram"
+                style="@style/ChipProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.onClickInstagram()}"
+                android:text="\@peculiar.umeh"
+                app:chipIcon="@drawable/instagram_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chip_github"
+                app:layout_constraintTop_toTopOf="@+id/chip_github" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_linkedIn"
-            style="@style/ChipProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_large"
-            android:onClick="@{()->viewModel.onClickLinkedIn()}"
-            android:text="\@peculiar.umeh"
-            app:chipIcon="@drawable/linkedin_icon"
-            app:layout_constraintEnd_toStartOf="@+id/chip_twitter"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chip_github" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_linkedIn"
+                style="@style/ChipProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:onClick="@{()->viewModel.onClickLinkedIn()}"
+                android:text="\@peculiar.umeh"
+                app:chipIcon="@drawable/linkedin_icon"
+                app:layout_constraintEnd_toStartOf="@+id/chip_twitter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip_github" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_twitter"
-            style="@style/ChipProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="@{()->viewModel.onClickTwitter()}"
-            android:text="\@peculiar.umeh"
-            app:chipIcon="@drawable/twitter_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/chip_linkedIn"
-            app:layout_constraintTop_toTopOf="@+id/chip_linkedIn" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_twitter"
+                style="@style/ChipProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.onClickTwitter()}"
+                android:text="\@peculiar.umeh"
+                app:chipIcon="@drawable/twitter_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chip_linkedIn"
+                app:layout_constraintTop_toTopOf="@+id/chip_linkedIn" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_delete_mentor_manager"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/mukta_semibold"
-            android:paddingVertical="10dp"
-            android:text="@string/delete_mentor_manager"
-            android:textAllCaps="false"
-            android:textColor="@color/mms_pry_2"
-            android:textSize="@dimen/font_large"
-            app:cornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chip_linkedIn"
-            app:strokeColor="@color/mms_pry_2"
-            app:strokeWidth="1dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete_mentor_manager"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/mukta_semibold"
+                android:paddingVertical="10dp"
+                android:text="@string/delete_mentor_manager"
+                android:textAllCaps="false"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="@dimen/font_large"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip_linkedIn"
+                app:strokeColor="@color/mms_pry_2"
+                app:strokeWidth="1dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
