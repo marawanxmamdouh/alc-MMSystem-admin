@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.mentorApplicationRequest
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,6 +43,8 @@ class UserAdapter(private val userList: ArrayList<User>): RecyclerView.Adapter<U
     override fun getItemCount(): Int {
         return userList.size
     }
+
+
 
 
 }
