@@ -34,7 +34,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         viewModel.drawerEvent.observe(viewLifecycleOwner, EventObserve {
             (requireActivity() as MainActivity).openDrawer()
         })
+
+        viewModel.viewMMEvent.observe(viewLifecycleOwner, EventObserve {
+            findNavController().navigate(
+                HomeFragmentDirections
+                    .actionHomeFragmentToMentorMangerFragment()
+            )
+        })
     }
-
-
 }

@@ -129,6 +129,7 @@
                         </LinearLayout>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_view_mm"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="50dp"
                             android:layout_height="32dp"
@@ -137,6 +138,7 @@
                             android:layout_marginBottom="11dp"
                             android:backgroundTint="@color/mms_pry_10"
                             android:fontFamily="@font/mukta_regular"
+                            android:onClick="@{()-> viewModel.onViewMMClick()}"
                             android:padding="0dp"
                             android:text="View"
                             android:textAllCaps="false"
@@ -186,6 +188,7 @@
                         </LinearLayout>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_view_mentors"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="50dp"
                             android:layout_height="32dp"
@@ -242,6 +245,7 @@
                         </LinearLayout>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_view_programs"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="50dp"
                             android:layout_height="32dp"

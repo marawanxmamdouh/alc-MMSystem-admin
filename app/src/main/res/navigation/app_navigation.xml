@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_homeFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mentorMangerFragment"
+            app:destination="@id/mentorMangerFragment" />
     </fragment>
 
     <fragment
@@ -106,7 +109,7 @@
     <fragment
         android:id="@+id/reportDetailsFragment"
         android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.report.ReportDetailsFragment"
-        tools:layout="@layout/fragment_report_details" >
+        tools:layout="@layout/fragment_report_details">
         <action
             android:id="@+id/action_reportDetailsFragment_to_basicDialog"
             app:destination="@id/basicDialog" />

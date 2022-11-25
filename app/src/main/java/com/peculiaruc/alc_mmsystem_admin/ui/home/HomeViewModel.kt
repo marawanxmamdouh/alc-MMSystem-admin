@@ -13,11 +13,18 @@ class HomeViewModel : ViewModel() {
     private val _drawerEvent = MutableLiveData<Event<Boolean>>()
     val drawerEvent: LiveData<Event<Boolean>> = _drawerEvent
 
+    private val _viewMMEvent = MutableLiveData<Event<Boolean>>()
+    val viewMMEvent: LiveData<Event<Boolean>> = _viewMMEvent
+
     fun onNotificationClick() {
         _notificationEvent.postValue(Event(true))
     }
 
     fun openDrawer() {
         _drawerEvent.postValue(Event(true))
+    }
+
+    fun onViewMMClick() {
+        _viewMMEvent.postValue(Event(true))
     }
 }
