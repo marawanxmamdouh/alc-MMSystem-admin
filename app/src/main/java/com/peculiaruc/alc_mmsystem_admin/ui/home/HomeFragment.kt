@@ -57,5 +57,37 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 //                    .actionHomeFragmentToProgramsFragment()
 //            )
         })
+
+        viewModel.createTaskEvent.observe(viewLifecycleOwner, EventObserve {
+            // TODO: Navigate to Create Task Fragment
+//            findNavController().navigate(
+//                HomeFragmentDirections
+//                    .actionHomeFragmentToCreateTaskFragment()
+//            )
+        })
+
+        viewModel.sentBroadcastEvent.observe(viewLifecycleOwner, EventObserve {
+            // TODO: Navigate to Sent Broadcast Fragment
+//            findNavController().navigate(
+//                HomeFragmentDirections
+//                    .actionHomeFragmentToBroadcastFragment()
+//            )
+        })
+
+        viewModel.addMentorManagerEvent.observe(viewLifecycleOwner, EventObserve {
+            // TODO: Navigate to Add Mentor Manager Fragment
+//            findNavController().navigate(
+//                HomeFragmentDirections
+//                    .actionHomeFragmentToAddMentorManagerFragment()
+//            )
+        })
+
+        viewModel.addMentorEvent.observe(viewLifecycleOwner, EventObserve {
+            // TODO: Navigate to Add Mentor Fragment
+//            findNavController().navigate(
+//                HomeFragmentDirections
+//                    .actionHomeFragmentToAddMentorFragment()
+//            )
+        })
     }
 }

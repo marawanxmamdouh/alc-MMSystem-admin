@@ -22,6 +22,18 @@ class HomeViewModel : ViewModel() {
     private val _viewProgramsEvent = MutableLiveData<Event<Boolean>>()
     val viewProgramsEvent: LiveData<Event<Boolean>> = _viewProgramsEvent
 
+    private val _createTaskEvent = MutableLiveData<Event<Boolean>>()
+    val createTaskEvent: LiveData<Event<Boolean>> = _createTaskEvent
+
+    private val _sentBroadcastEvent = MutableLiveData<Event<Boolean>>()
+    val sentBroadcastEvent: LiveData<Event<Boolean>> = _sentBroadcastEvent
+
+    private val _addMentorManagerEvent = MutableLiveData<Event<Boolean>>()
+    val addMentorManagerEvent: LiveData<Event<Boolean>> = _addMentorManagerEvent
+
+    private val _addMentorEvent = MutableLiveData<Event<Boolean>>()
+    val addMentorEvent: LiveData<Event<Boolean>> = _addMentorEvent
+
     fun onNotificationClick() {
         _notificationEvent.postValue(Event(true))
     }
@@ -40,5 +52,21 @@ class HomeViewModel : ViewModel() {
 
     fun onViewProgramsClick() {
         _viewProgramsEvent.postValue(Event(true))
+    }
+
+    fun onCreateTaskClick() {
+        _createTaskEvent.postValue(Event(true))
+    }
+
+    fun onSentBroadcastClick() {
+        _sentBroadcastEvent.postValue(Event(true))
+    }
+
+    fun onAddMentorManagerClick() {
+        _addMentorManagerEvent.postValue(Event(true))
+    }
+
+    fun onAddMentorClick() {
+        _addMentorEvent.postValue(Event(true))
     }
 }
