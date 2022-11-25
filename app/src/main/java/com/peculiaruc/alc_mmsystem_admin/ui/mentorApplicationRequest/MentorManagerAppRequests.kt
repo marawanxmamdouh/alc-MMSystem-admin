@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -76,6 +77,11 @@ class MentorManagerAppRequests : AppCompatActivity() {
         backBtn.setOnClickListener {
             this.finish()
         }
+//        val view = LayoutInflater.from(recyclerView.context).inflate(R.layout.item_user, recyclerView, false)
+//        view.setOnClickListener {
+//            val intent = Intent(recyclerView.context, MentorManagerProfileRequest::class.java)
+//            recyclerView.context.startActivity(intent)
+//        }
 
 
 

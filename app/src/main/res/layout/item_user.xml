@@ -34,7 +34,8 @@
             android:id="@+id/user_constrain"
             android:layout_width="320dp"
             android:layout_height="82dp"
-            android:clickable="true">
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
                 android:id="@+id/imageView13"
