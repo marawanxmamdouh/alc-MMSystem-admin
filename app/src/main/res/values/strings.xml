@@ -139,4 +139,17 @@
     <string name="settings_exit">Logout</string>
 
     <string name="filter">Filter</string>
+    <string name="admin">Admin</string>
+    <string name="notifications_button">Notifications Button</string>
+    <string name="mentor_managers">Mentor\nManagers</string>
+    <string name="view">View</string>
+    <string name="programs">Programs</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="create_task">Create\nTask</string>
+    <string name="send_broadcast_message">Send Broadcast\nMessage</string>
+    <string name="add_new_mentor_manager">Add New Mentor\nManager</string>
+    <string name="add_new_mentor">Add New\nMentor</string>
+    <string name="requests">Requests</string>
+    <string name="mentor_application">Mentor Application</string>
+    <string name="mentor_manager_application">Mentor Manager Application</string>
 </resources>
