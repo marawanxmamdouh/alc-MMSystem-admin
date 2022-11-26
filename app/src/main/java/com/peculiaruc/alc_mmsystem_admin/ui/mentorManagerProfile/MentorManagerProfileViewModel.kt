@@ -3,6 +3,7 @@ package com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.domain.models.*
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.*
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
@@ -29,7 +30,7 @@ class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListene
     private val _selectProgramEvent = MutableLiveData<Event<Program>>()
     val selectProgramEvent: LiveData<Event<Program>> = _selectProgramEvent
 
-    val checkChip = MutableLiveData<Int>()
+    val checkChip = MutableLiveData(R.id.chip_about)
 
     override fun onItemCertificateSelected(item: Certificate) {
         _selectCertificateEvent.postValue(Event(item))
