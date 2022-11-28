@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentSearchBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Certificate
@@ -20,6 +21,10 @@ import com.peculiaruc.alc_mmsystem_admin.type.TaskStatus
  */
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
+
+    private val navController by lazy {
+        NavHostFragment.findNavController(this)
+    }
 
     private val list = listOf(
         Task("Room library article write", "3 days from now", TaskStatus.ASSIGN),
@@ -65,5 +70,14 @@ class SearchFragment : Fragment() {
         binding.recyclerViewSearch.adapter = SearchAdapter(list)
         binding.appBarLayout.elevation = 0f
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // handle back button
+        binding.topAppBar.setNavigationOnClickListener {
+            navController.navigateUp()
+        }
     }
 }
