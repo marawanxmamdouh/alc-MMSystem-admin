@@ -175,6 +175,9 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     (view.adapter as BaseAdapter<T>?)?.setItems(items ?: emptyList())
 }
 
+/**
+ * help to set text title in Dialog screen
+ */
 @BindingAdapter("app:dialogTitle")
 fun setDialogTitle(textView: TextView, types: DialogTypes?) {
     types?.let {
@@ -195,6 +198,10 @@ fun setDialogTitle(textView: TextView, types: DialogTypes?) {
     }
 }
 
+
+/**
+ * help to set text Image in Dialog screen
+ */
 @BindingAdapter("app:dialogIcon")
 fun setDialogTitle(imageView: ImageView, types: DialogTypes?) {
     types?.let {
@@ -216,11 +223,17 @@ fun setDialogTitle(imageView: ImageView, types: DialogTypes?) {
 
 }
 
+/**
+ * help to set visibility for the view
+ */
 @BindingAdapter("app:isVisible")
 fun setVisibility(view: View, isVisible: Boolean) {
     view.isVisible = isVisible
 }
 
+/**
+ * help to set text on button in Mentor Manger Dialog screen
+ */
 @BindingAdapter("app:mentorMangerButton")
 fun setMentorMangerButtonText(view: Button, doneSend: Boolean?) {
     doneSend?.let {
@@ -233,7 +246,9 @@ fun setMentorMangerButtonText(view: Button, doneSend: Boolean?) {
     }
 }
 
-
+/**
+ * help to set text on first button in Dialog screen
+ */
 @BindingAdapter("app:textFirstActionButton")
 fun setTextFirstActionButton(view: Button, type: DialogTypes?) {
     type?.let {
@@ -246,6 +261,9 @@ fun setTextFirstActionButton(view: Button, type: DialogTypes?) {
     }
 }
 
+/**
+ * help to set text on second button in Dialog screen
+ */
 @BindingAdapter("app:textSecondActionButton")
 fun setTextSecondActionButton(view: Button, type: DialogTypes?) {
     type?.let {
@@ -259,6 +277,9 @@ fun setTextSecondActionButton(view: Button, type: DialogTypes?) {
 }
 
 
+/**
+ * help to set text on button in ProgramDetails screen
+ */
 @BindingAdapter("app:buttonAssignProgram")
 fun setButtonAssignProgram(button: Button, isAssigned: Boolean?) {
     isAssigned?.let {
@@ -275,6 +296,9 @@ fun setButtonAssignProgram(button: Button, isAssigned: Boolean?) {
     }
 }
 
+/**
+ * help to set text on button in taskDetails screen
+ */
 @BindingAdapter("app:buttonAssignTask")
 fun setButtonTaskProgram(button: Button, isAssigned: Boolean?) {
     isAssigned?.let {

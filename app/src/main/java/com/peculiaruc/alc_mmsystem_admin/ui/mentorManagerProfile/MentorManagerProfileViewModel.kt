@@ -8,6 +8,9 @@ import com.peculiaruc.alc_mmsystem_admin.domain.models.*
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.*
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
+/**
+ * this is the viewModel for MentorManagerProfileFragment.
+ */
 class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListener,
     TaskInteractionListener, MentorInteractionListener, ProgramInteractionListener,
     ReportInteractionListener {
@@ -30,6 +33,9 @@ class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListene
     private val _selectProgramEvent = MutableLiveData<Event<Program>>()
     val selectProgramEvent: LiveData<Event<Program>> = _selectProgramEvent
 
+    private val _selectMentorEvent = MutableLiveData<Event<Mentor>>()
+    val selectMentorEvent: LiveData<Event<Mentor>> = _selectMentorEvent
+
     val checkChip = MutableLiveData(R.id.chip_about)
 
     override fun onItemCertificateSelected(item: Certificate) {
@@ -40,8 +46,11 @@ class MentorManagerProfileViewModel : ViewModel(), CertificateInteractionListene
         _selectTaskEvent.postValue(Event(item))
     }
 
+    /**
+     * set event to open selected mentor manger.
+     * */
     override fun onItemMentorSelected(item: Mentor) {
-
+        _selectMentorEvent.postValue(Event(item))
     }
 
     override fun onProgramSelected(item: Program) {

@@ -34,38 +34,65 @@ class HomeViewModel : ViewModel() {
     private val _addMentorEvent = MutableLiveData<Event<Boolean>>()
     val addMentorEvent: LiveData<Event<Boolean>> = _addMentorEvent
 
+    /**
+     * set event when user click on notification
+     * */
     fun onNotificationClick() {
         _notificationEvent.postValue(Event(true))
     }
 
+    /**
+     * set event to open start drawer.
+     * */
     fun openDrawer() {
         _drawerEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Mentor Manger.
+     * */
     fun onViewMMClick() {
         _viewMMEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Mentor.
+     * */
     fun onViewMentorsClick() {
         _viewMentorsEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Program.
+     * */
     fun onViewProgramsClick() {
         _viewProgramsEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Task.
+     * */
     fun onCreateTaskClick() {
         _createTaskEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Broadcast.
+     * */
     fun onSentBroadcastClick() {
         _sentBroadcastEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Add to new add mentor mange .
+     * */
     fun onAddMentorManagerClick() {
         _addMentorManagerEvent.postValue(Event(true))
     }
 
+    /**
+     * set event when user click on Add to add Mentor.
+     * */
     fun onAddMentorClick() {
         _addMentorEvent.postValue(Event(true))
     }

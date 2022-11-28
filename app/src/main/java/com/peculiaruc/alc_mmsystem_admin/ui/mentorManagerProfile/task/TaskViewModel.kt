@@ -31,6 +31,9 @@ class TaskViewModel : ViewModel(), TaskDetailInteractionListener {
         _assignToTaskEvent.postValue(Event(_isAssigned.value!!))
     }
 
+    /**
+     * set the new value of assign.
+     */
     fun setAssigned(isAssigned: Boolean) {
         _isAssigned.postValue(isAssigned)
     }

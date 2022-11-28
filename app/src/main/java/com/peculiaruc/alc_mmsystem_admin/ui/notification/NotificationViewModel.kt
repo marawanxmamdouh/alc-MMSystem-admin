@@ -6,6 +6,10 @@ import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Notification
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
+
+/**
+ * this is the viewModel for Notification.
+ */
 class NotificationViewModel : ViewModel(), NotificationInteractionListener {
 
     private val _selectNotificationEvent = MutableLiveData<Event<Boolean>>()
@@ -24,11 +28,12 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
     }
 
 
+    //done when clicked on button mark as read.
     fun onClickMarkAllAsRead() {
         _notifications.postValue(emptyList())
     }
 
-
+    //function for test only .
     private fun testNotification(): List<Notification> {
         return listOf(
             Notification(
@@ -37,56 +42,7 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
                 "Lex Murphy",
                 " requested approval for Gads Certificate  by",
                 "Roseline Anapuna"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Peculiah C. Umeh",
-                "commented on",
-                "How to Archive a Program on MMS"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Baba C. Mammah",
-                "created",
-                "All Mentor Managers Task Report Report"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Lex Murphy",
-                " requested approval for Gads Certificate  by",
-                "Roseline Anapuna"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Peculiah C. Umeh",
-                "commented on",
-                "How to Archive a Program on MMS"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Baba C. Mammah",
-                "created",
-                "All Mentor Managers Task Report Report"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Lex Murphy",
-                " requested approval for Gads Certificate  by",
-                "Roseline Anapuna"
-            ),
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Peculiah C. Umeh",
-                "commented on",
-                "How to Archive a Program on MMS"
-            ),
+            )
         )
     }
 }

@@ -12,6 +12,10 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseDialog
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 import com.peculiaruc.alc_mmsystem_admin.utilities.setWidthPercent
 
+
+/**
+ * this represent any dialog that contain two action button.
+ * */
 class TwoActionDialogFragment : BaseDialog<DialogTwoActionBinding>() {
 
     override val layoutIdFragment: Int = R.layout.dialog_two_action

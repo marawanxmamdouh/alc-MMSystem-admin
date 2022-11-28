@@ -11,7 +11,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
-
+/**
+ * represent Certificate screen.
+ * */
 class CertificateFragment : BaseFragment<FragmentCertificateBinding>() {
 
     override val layoutIdFragment: Int = R.layout.fragment_certificate

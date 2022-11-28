@@ -11,6 +11,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
+/**
+ * this represent Notification screen..
+ */
 class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
 
     override val layoutIdFragment: Int = R.layout.fragment_notification

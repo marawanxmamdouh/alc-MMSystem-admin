@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import com.peculiaruc.alc_mmsystem_admin.R
 
+/**
+ * this represent Setting screen..
+ */
 class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {

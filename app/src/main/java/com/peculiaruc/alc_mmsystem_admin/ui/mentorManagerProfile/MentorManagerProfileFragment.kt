@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_admin.R
@@ -17,7 +18,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.adapters.*
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
-
+/**
+ * represent the Mentor Manager Profile screen.
+ * */
 class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBinding>() {
 
     override val layoutIdFragment: Int = R.layout.fragment_mentor_manager_profile
@@ -114,74 +117,29 @@ class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBi
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.chat) {
-
+            Toast.makeText(requireContext(),"Chat icon",Toast.LENGTH_LONG).show()
         }
         return super.onOptionsItemSelected(item)
     }
 
-
     //******** For Test Only ***********\\
     val listCertificate = listOf(
         Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE")
     )
 
     val listTask = listOf(
         Task("", "", TaskStatus.ASSIGN),
-        Task("", "", TaskStatus.COMPLETED),
-        Task("", "", TaskStatus.COMPLETED),
-        Task("", "", TaskStatus.ASSIGNED),
-        Task("", "", TaskStatus.ASSIGN),
-        Task("", "", TaskStatus.ASSIGNED),
-        Task("", "", TaskStatus.ASSIGN),
-        Task("", "", TaskStatus.ASSIGN),
-        Task("", "", TaskStatus.COMPLETED),
-        Task("", "", TaskStatus.ASSIGNED),
-        Task("", "", TaskStatus.ASSIGNED),
     )
 
     val listMentor = listOf(
         Mentor(
             "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
             listOf("PROGRAM ASST.", "MENTOR-GAD")
-        ),
-        Mentor(
-            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-            listOf("PROGRAM ASST.", "MENTOR-GAD")
-        ),
-        Mentor(
-            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-            listOf("PROGRAM ASST.")
-        ),
-        Mentor(
-            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-            listOf("PROGRAM ASST.", "MENTOR-GAD")
-        ),
-        Mentor(
-            "Peculiar C. Umeh", "", "Program Assistant, Andela, She/her",
-            listOf("PROGRAM ASST.")
-        ),
+        )
     )
 
     val listProgram = listOf(
         Program("", "", ProgramProgress.DOUBLE_CHECK),
-        Program("", "", ProgramProgress.ADD),
-        Program("", "", ProgramProgress.DOUBLE_CHECK),
-        Program("", "", ProgramProgress.CHECK),
-        Program("", "", ProgramProgress.ADD),
-        Program("", "", ProgramProgress.DOUBLE_CHECK),
-        Program("", "", ProgramProgress.CHECK),
-        Program("", "", ProgramProgress.CHECK),
-        Program("", "", ProgramProgress.DOUBLE_CHECK)
     )
 
 
@@ -189,43 +147,6 @@ class MentorManagerProfileFragment : BaseFragment<FragmentMentorManagerProfileBi
         Report(
             "Google Africa Scholarship Report", "By Ibrahim Kabir ",
             "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
-        Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
-        ),
+        )
     )
-    /////////////////////////////////////
 }

@@ -15,6 +15,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 import com.peculiaruc.alc_mmsystem_admin.utilities.setWidthPercent
 
+/**
+ * this represent any dialog with only one action button.
+ * */
 class BasicDialog : BaseDialog<DialogBasicBinding>() {
     override val layoutIdFragment: Int = R.layout.dialog_basic
     override val viewModel: BasicDialogViewModel by viewModels()
