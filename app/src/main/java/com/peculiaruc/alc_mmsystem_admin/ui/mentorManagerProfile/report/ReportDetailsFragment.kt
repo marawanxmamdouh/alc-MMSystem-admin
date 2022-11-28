@@ -10,7 +10,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
-
+/**
+ * represent Report Details screen.
+ * */
 class ReportDetailsFragment : BaseFragment<FragmentTaskDetailsBinding>() {
 
     override val layoutIdFragment: Int = R.layout.fragment_report_details

@@ -1,5 +1,8 @@
 package com.peculiaruc.alc_mmsystem_admin.domain.models
 
+/**
+ *  represent the ProgramDetails object that will come from api .
+ */
 data class ProgramDetails(
     val programName: String,
     val programImage: String,
@@ -8,4 +11,3 @@ data class ProgramDetails(
     val mentorMangersList: List<MentorMangersProgram>
 )
 
-data class MentorMangersProgram(val number: Int, val title: String)

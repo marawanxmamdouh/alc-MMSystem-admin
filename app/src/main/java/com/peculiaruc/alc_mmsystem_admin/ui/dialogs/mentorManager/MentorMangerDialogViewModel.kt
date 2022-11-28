@@ -5,6 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
+/**
+ * this is the viewModel for MentorMangerDialog.
+ * */
 class MentorMangerDialogViewModel : ViewModel() {
 
     private val _invitationSent = MutableLiveData(false)
@@ -16,7 +19,9 @@ class MentorMangerDialogViewModel : ViewModel() {
     private val _dialogEvents = MutableLiveData<Event<Boolean>>()
     val dialogEvents: LiveData<Event<Boolean>> = _dialogEvents
 
-
+    /**
+     * set send event that come from dialog screen.
+     * */
     fun onClickSend() {
         if (_invitationSent.value == false) {
             _dialogEvents.postValue(Event(true))
@@ -26,6 +31,9 @@ class MentorMangerDialogViewModel : ViewModel() {
         }
     }
 
+    /**
+     * set cancel event that come from dialog screen.
+     * */
     fun onClickCancel() {
         _dialogEvents.postValue(Event(false))
     }

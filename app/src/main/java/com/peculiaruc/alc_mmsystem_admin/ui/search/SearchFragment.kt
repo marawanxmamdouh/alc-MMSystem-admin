@@ -15,7 +15,9 @@ import com.peculiaruc.alc_mmsystem_admin.domain.models.Task
 import com.peculiaruc.alc_mmsystem_admin.type.ProgramProgress
 import com.peculiaruc.alc_mmsystem_admin.type.TaskStatus
 
-
+/**
+ * this represent Search screen..
+ */
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
 

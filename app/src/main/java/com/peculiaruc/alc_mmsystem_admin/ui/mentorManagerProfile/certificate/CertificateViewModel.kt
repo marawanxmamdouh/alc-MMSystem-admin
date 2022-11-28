@@ -5,6 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
+/**
+ * Certificate viewModel for Program Details screen.
+ * */
 class CertificateViewModel : ViewModel() {
 
     // 0 represent type of download .

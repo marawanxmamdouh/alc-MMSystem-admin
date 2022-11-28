@@ -14,6 +14,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
+/**
+ * this represent MentorManger screen..
+ */
 class MentorMangerFragment : BaseFragment<FragmentMentorMangerBinding>() {
 
     override val layoutIdFragment: Int = R.layout.fragment_mentor_manger
@@ -21,14 +24,6 @@ class MentorMangerFragment : BaseFragment<FragmentMentorMangerBinding>() {
 
     //*******For Text*******
     val list = listOf(
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
-        Mentor("", "", "", listOf()),
         Mentor("", "", "", listOf()),
     )
     //////////////////

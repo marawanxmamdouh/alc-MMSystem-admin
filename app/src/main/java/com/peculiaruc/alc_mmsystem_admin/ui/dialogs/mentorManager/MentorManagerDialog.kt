@@ -11,6 +11,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseDialog
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 import com.peculiaruc.alc_mmsystem_admin.utilities.setWidthPercent
 
+/**
+ *  this is dialog that appear will add or remove mentor manger.
+ * */
 class MentorManagerDialog : BaseDialog<DialogMentorManagerBinding>() {
     override val layoutIdFragment: Int = R.layout.dialog_mentor_manager
     override val viewModel: MentorMangerDialogViewModel by viewModels()
@@ -27,7 +30,8 @@ class MentorManagerDialog : BaseDialog<DialogMentorManagerBinding>() {
     private fun onEvents() {
         viewModel.dialogEvents.observe(viewLifecycleOwner, EventObserve {
             if (it) {
-
+                // should change to the action we want
+                dialog?.dismiss()
             } else {
                 dialog?.dismiss()
             }

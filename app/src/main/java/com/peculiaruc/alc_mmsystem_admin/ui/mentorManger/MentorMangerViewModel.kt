@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Mentor
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
 
+/**
+ * this is the viewModel for MentorMangerFragment.
+ */
 class MentorMangerViewModel : ViewModel(), MentorMangerInteractionListener {
 
     private val _selectItemMange = MutableLiveData<Event<Mentor>>()

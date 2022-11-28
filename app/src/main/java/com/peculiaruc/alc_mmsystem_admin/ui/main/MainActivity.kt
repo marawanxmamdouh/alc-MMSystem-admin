@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         binding.drawerLayout.openDrawer(Gravity.LEFT)
     }
 
+    /**
+     * set event when user click on setting icon in drawer.
+     * */
     fun onClickSetting(view: View) {
         binding.drawerLayout.closeDrawers()
         binding.navHostFragment.findNavController().navigate(R.id.settingsFragment)

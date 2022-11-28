@@ -11,6 +11,9 @@ import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
 
+/**
+ * represent Program Details screen.
+ * */
 class ProgramDetailsFragment : BaseFragment<FragmentProgramDetailsBinding>() {
     override val layoutIdFragment: Int = R.layout.fragment_program_details
     override val viewModel: ProgramDetailsViewModel by viewModels()
