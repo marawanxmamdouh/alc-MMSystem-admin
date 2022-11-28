@@ -19,19 +19,24 @@ class ReportDetailsViewModel : ViewModel() {
     private val _shareReportEvent = MutableLiveData<Event<Boolean>>()
     val shareReportEvent: LiveData<Event<Boolean>> = _shareReportEvent
 
-    // done when click on close icon.
+    /**
+     * done when click on close icon.
+     */
     fun onClickClose() {
         _closeReportEvent.postValue(Event(true))
     }
 
-    // done when click on download button
+    /**
+     * done when click on download icon.
+     */
     fun onClickDownload() {
         _downloadReportEvent.postValue(Event(true))
     }
 
-    // done when click on share button
+    /**
+     * done when click on share icon.
+     */
     fun onClickShare() {
         _shareReportEvent.postValue(Event(true))
     }
-
 }

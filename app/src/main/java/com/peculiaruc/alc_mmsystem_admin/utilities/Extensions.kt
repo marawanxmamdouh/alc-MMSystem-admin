@@ -5,6 +5,9 @@ import android.graphics.Rect
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 
+/**
+ * extension function to set the dialog width
+ */
 fun DialogFragment.setWidthPercent(percentage: Int) {
     val percent = percentage.toFloat() / 100
     val dm = Resources.getSystem().displayMetrics

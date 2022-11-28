@@ -17,6 +17,9 @@ import com.peculiaruc.alc_mmsystem_admin.type.TaskStatus
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseAdapter
 import com.peculiaruc.alc_mmsystem_admin.ui.dialogs.DialogTypes
 
+/**
+ * Binding adapter to check specific chip
+ */
 @BindingAdapter(value = ["checkedChipButtonId"])
 fun setCheckedChipId(view: ChipGroup?, id: Int) {
     if (id != view?.checkedChipId) {
@@ -24,11 +27,17 @@ fun setCheckedChipId(view: ChipGroup?, id: Int) {
     }
 }
 
+/**
+ * Binding adapter to get the checked chip id
+ */
 @InverseBindingAdapter(attribute = "checkedChipButtonId", event = "checkedChipButtonId")
 fun getChipId(view: ChipGroup?): Int? {
     return view?.checkedChipId
 }
 
+/**
+ * Binding adapter to set the chip id
+ */
 @BindingAdapter("checkedChipButtonId")
 fun setChipsListener(view: ChipGroup?, attChange: InverseBindingListener) {
     view?.setOnCheckedStateChangeListener { group, checkedId ->
@@ -36,6 +45,9 @@ fun setChipsListener(view: ChipGroup?, attChange: InverseBindingListener) {
     }
 }
 
+/**
+ * Binding adapter to show if the id is equal to the checked id
+ */
 @BindingAdapter("app:showIfID")
 fun showIfID(view: View, id: Int?) {
     view.isVisible = id?.let {
@@ -54,6 +66,9 @@ fun showIfID(view: View, id: Int?) {
     } ?: false
 }
 
+/**
+ * show the about content
+ */
 @BindingAdapter("app:showAbout")
 fun showIfAbout(view: View, id: Int?) {
     view.isVisible = id?.let {
@@ -61,6 +76,9 @@ fun showIfAbout(view: View, id: Int?) {
     } ?: false
 }
 
+/**
+ * show the task bar
+ */
 @BindingAdapter("app:showTaskBar")
 fun showTaskBar(view: TextView, id: Int?) {
     view.isVisible = id?.let {
@@ -84,6 +102,9 @@ fun showTaskBar(view: TextView, id: Int?) {
     } ?: false
 }
 
+/**
+ * show the search icon
+ */
 @BindingAdapter("app:showSearchIcon")
 fun showSearchIcon(view: View, id: Int?) {
     view.isVisible = id?.let {
@@ -101,7 +122,9 @@ fun showSearchIcon(view: View, id: Int?) {
     } ?: false
 }
 
-
+/**
+ * show the task search bar
+ */
 @BindingAdapter("app:showTaskSearchBar")
 fun showTaskSearchBar(view: View, id: Int?) {
     view.isVisible = id?.let {
@@ -109,6 +132,9 @@ fun showTaskSearchBar(view: View, id: Int?) {
     } ?: false
 }
 
+/**
+ * show the task status
+ */
 @BindingAdapter("app:showTaskStatus")
 fun showTaskStatus(view: View, status: TaskStatus?) {
     if (status != null && status != TaskStatus.ASSIGN) {
@@ -120,7 +146,9 @@ fun showTaskStatus(view: View, status: TaskStatus?) {
     }
 }
 
-
+/**
+ * show the program icon
+ */
 @BindingAdapter("app:programIcon")
 fun showProgramIcon(view: ImageView, progress: ProgramProgress?) {
     progress?.let {
@@ -138,6 +166,9 @@ fun showProgramIcon(view: ImageView, progress: ProgramProgress?) {
     }
 }
 
+/**
+ * show the task status
+ */
 @BindingAdapter("app:setTaskStatus")
 fun setTaskStatus(view: TextView, status: TaskStatus?) {
     status?.let {
@@ -159,17 +190,25 @@ fun setTaskStatus(view: TextView, status: TaskStatus?) {
     }
 }
 
-
+/**
+ * show this view if the list is empty
+ */
 @BindingAdapter("app:showWhenEmptyList")
 fun <T> showWhenEmptyList(view: View, list: List<T>?) {
     view.isVisible = list.isNullOrEmpty()
 }
 
+/**
+ * show this view if the list is not empty
+ */
 @BindingAdapter("app:showWhenListNotEmpty")
 fun <T> showWhenListNotEmpty(view: View, list: List<T>?) {
     view.isVisible = !list.isNullOrEmpty()
 }
 
+/**
+ * set the recycler view content
+ */
 @BindingAdapter(value = ["app:items"])
 fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     (view.adapter as BaseAdapter<T>?)?.setItems(items ?: emptyList())

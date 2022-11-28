@@ -27,8 +27,9 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
         _selectNotificationEvent.postValue(Event(true))
     }
 
-
-    //done when clicked on button mark as read.
+    /**
+     * done when clicked on button mark as read.
+     */
     fun onClickMarkAllAsRead() {
         _notifications.postValue(emptyList())
     }

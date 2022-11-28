@@ -10,10 +10,16 @@ import com.peculiaruc.alc_mmsystem_admin.databinding.ItemSearchReportBinding
 import com.peculiaruc.alc_mmsystem_admin.databinding.ItemSearchTaskBinding
 import com.peculiaruc.alc_mmsystem_admin.domain.models.*
 
+/**
+ * enum class for the items to be displayed in the search fragment
+ */
 enum class ViewType(val value: Int) {
     Task(1), Program(2), Certificate(3), Report(4)
 }
 
+/**
+ * recycler view adapter for the search fragment
+ */
 class SearchAdapter(
     private val itemsList: List<Item>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -86,14 +92,11 @@ class SearchAdapter(
             is Certificate -> ViewType.Certificate.value
             else -> ViewType.Report.value
         }
-        /*        when (position % 4) {
-                    0 -> return R.layout.item_search_task
-                    1 -> return R.layout.item_search_program
-                    2 -> return R.layout.item_search_report
-                    3 -> return R.layout.item_search_certificate
-                }*/
     }
 
+    /**
+     *  handles the changes in the recycler view
+     */
     companion object ItemDiffCallback : DiffUtil.ItemCallback<Item>() {
         override fun areItemsTheSame(oldItem: Item, newItem: Item): Boolean {
             return oldItem == newItem
@@ -105,8 +108,15 @@ class SearchAdapter(
         }
     }
 
+    /**
+     * View holder for the task item
+     */
     class TaskViewHolder(private val binding: ItemSearchTaskBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        /**
+         * binds the task item to the view holder
+         */
         fun bind(item: Item) {
             binding.apply {
                 textTitle.text = (item as Task).title
@@ -115,15 +125,29 @@ class SearchAdapter(
         }
     }
 
+    /**
+     * View holder for the program item
+     */
     class ProgramViewHolder(private val binding: ItemSearchProgramBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        /**
+         * binds the program item to the view holder
+         */
         fun bind(item: Item) {
             binding.textTitle.text = (item as Program).programTitle
         }
     }
 
+    /**
+     * View holder for the certificate item
+     */
     class ReportViewHolder(private val binding: ItemSearchReportBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        /**
+         * binds the report item to the view holder
+         */
         fun bind(item: Item) {
             binding.apply {
                 textTitle.text = (item as Report).title
@@ -133,8 +157,15 @@ class SearchAdapter(
         }
     }
 
+    /**
+     * View holder for the report item
+     */
     class CertificateViewHolder(private val binding: ItemSearchCertificateBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        /**
+         * binds the certificate item to the view holder
+         */
         fun bind(item: Item) {
             binding.apply {
                 textTitle.text = (item as Certificate).title

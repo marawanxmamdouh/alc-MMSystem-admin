@@ -21,6 +21,9 @@ class MentorMangerViewModel : ViewModel(), MentorMangerInteractionListener {
         _selectItemMange.postValue(Event(item))
     }
 
+    /**
+     * done when the add mentor button is clicked
+     */
     fun addMentorManger() {
         _addMentorEvent.postValue(Event(true))
     }

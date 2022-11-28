@@ -1,5 +1,8 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.dialogs
 
+/**
+ * enum class for all dialog types
+ */
 enum class DialogTypes {
     SAVED_PROFILE,
     ASSIGNED_TO_PROGRAM,

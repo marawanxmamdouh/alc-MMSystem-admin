@@ -27,37 +27,37 @@ class SearchFragment : Fragment() {
     }
 
     private val list = listOf(
-        Task("Room library article write", "3 days from now", TaskStatus.ASSIGN),
+        Task("Retrofit library article write", "3 days from now", TaskStatus.ASSIGN),
         Program("Google Africa Scholarship Program", "", ProgramProgress.ADD),
         Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
         Task("Room library article write", "3 days from now", TaskStatus.ASSIGN),
         Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
+            "Google Africa Scholarship Report", "By Marawan Kabir ",
             "19th - 25th Oct 22"
         ),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Task("Room library article write", "5 days from now", TaskStatus.COMPLETED),
-        Program("Google Africa Scholarship Program", "", ProgramProgress.CHECK),
-        Task("Room library article write", "4 days from now", TaskStatus.ASSIGN),
-        Program("Google Africa Scholarship Program", "", ProgramProgress.DOUBLE_CHECK),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+        Certificate("", "GADS ANDROID 2022 CERTIFICATE"),
+        Task("Dagger library article write", "5 days from now", TaskStatus.COMPLETED),
+        Program("Google America Scholarship Program", "", ProgramProgress.CHECK),
+        Task("hilt library article write", "4 days from now", TaskStatus.ASSIGN),
+        Program("Google Asia Scholarship Program", "", ProgramProgress.DOUBLE_CHECK),
+        Certificate("", "GADS Web 2022 CERTIFICATE"),
         Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
+            "Google Asia Scholarship Report", "By Ibrahim Kabir ",
+            "14th - 26th Oct 22"
         ),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
-        Task("Room library article write", "2 days from now", TaskStatus.ASSIGNED),
+        Certificate("", "GADS React 2022 CERTIFICATE"),
+        Certificate("", "GADS Angular 2022 CERTIFICATE"),
+        Task("Angular library article write", "2 days from now", TaskStatus.ASSIGNED),
         Report(
-            "Google Africa Scholarship Report", "By Muhammad Kabir ",
+            "Google America Scholarship Report", "By Muhammad Kabir ",
             "19th - 25th Oct 22"
         ),
-        Program("Google Africa Scholarship Program", "", ProgramProgress.CHECK),
+        Program("Google Scholarship Program", "", ProgramProgress.CHECK),
         Report(
-            "Google Africa Scholarship Report", "By Ibrahim Kabir ",
-            "19th - 25th Oct 22"
+            "Google Scholarship Report", "By Nada Kabir ",
+            "11th - 15th Oct 22"
         ),
-        Certificate("", "GADS CLOUD 2022 CERTIFICATE"),
+        Certificate("", "GADS TF 2022 CERTIFICATE"),
     )
 
     override fun onCreateView(

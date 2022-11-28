@@ -32,12 +32,16 @@ class ProgramDetailsViewModel : ViewModel(), ProgramDetailInteractionListener {
         )
     }
 
-    // change last event when button assign is clicked
+    /**
+     * change last event when button assign is clicked
+     */
     fun onAssignProgram() {
         _assignedEvent.postValue(Event(_isAssigned.value!!))
     }
 
-    // set event when button assign is clicked
+    /**
+     * set event when button assign is clicked
+     */
     fun setAssigned(isAssigned: Boolean) {
         _isAssigned.postValue(isAssigned)
     }

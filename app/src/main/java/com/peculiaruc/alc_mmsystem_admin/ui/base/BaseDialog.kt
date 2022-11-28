@@ -10,6 +10,9 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModel
 import com.peculiaruc.alc_mmsystem_admin.BR
 
+/**
+ * abstract class for all dialogs
+ */
 abstract class BaseDialog<VDB : ViewDataBinding> : DialogFragment(){
     abstract val layoutIdFragment: Int
     abstract val viewModel: ViewModel
