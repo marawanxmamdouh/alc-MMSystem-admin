@@ -35,21 +35,24 @@
             android:drawableEnd="@drawable/flag_nigeria"
             android:drawablePadding="@dimen/spacing_small"
             android:text="Peculiah C. Umeh"
-            app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@+id/image_profile"
-            app:layout_constraintTop_toTopOf="@+id/image_profile" />
+            app:layout_constraintTop_toTopOf="@+id/image_profile"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/text_role"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Admin"
+            app:layout_constraintBottom_toBottomOf="@+id/image_profile"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_name"
-            app:layout_constraintTop_toBottomOf="@+id/text_name" />
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/text_title_about"
@@ -185,6 +188,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/chip_linkedIn"
             app:layout_constraintTop_toBottomOf="@+id/chip_github" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="56dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
