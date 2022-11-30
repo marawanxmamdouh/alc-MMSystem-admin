@@ -36,6 +36,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@color/mms_green_11"
+                app:labelVisibilityMode="labeled"
                 app:itemIconSize="20dp"
                 app:itemIconTint="@color/navigation_selector"
                 app:itemTextColor="@color/navigation_selector"
