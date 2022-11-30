@@ -3,6 +3,7 @@ package com.peculiaruc.alc_mmsystem_admin.ui.dialogs.mentorManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.peculiaruc.alc_mmsystem_admin.R
@@ -21,7 +22,8 @@ class MentorManagerDialog : BaseDialog<DialogMentorManagerBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        setWidthPercent(90)
+        setWidthPercent(100)
+        dialog?.window?.attributes?.gravity = Gravity.BOTTOM
         dialog?.setCancelable(false)
         onEvents()
 

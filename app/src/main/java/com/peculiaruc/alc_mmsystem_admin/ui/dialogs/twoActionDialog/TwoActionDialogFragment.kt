@@ -3,6 +3,7 @@ package com.peculiaruc.alc_mmsystem_admin.ui.dialogs.twoActionDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -25,7 +26,8 @@ class TwoActionDialogFragment : BaseDialog<DialogTwoActionBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        setWidthPercent(90)
+        setWidthPercent(100)
+        dialog?.window?.attributes?.gravity = Gravity.BOTTOM
         viewModel.setType(args.dialogType)
         onEvents()
     }

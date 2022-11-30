@@ -3,6 +3,7 @@ package com.peculiaruc.alc_mmsystem_admin.ui.dialogs.basicDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavDirections
@@ -26,7 +27,8 @@ class BasicDialog : BaseDialog<DialogBasicBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        setWidthPercent(90)
+        setWidthPercent(100)
+        dialog?.window?.attributes?.gravity = Gravity.BOTTOM
         viewModel.setTitle(args.dialogType)
         dialog?.setCancelable(false)
         onEvents()
