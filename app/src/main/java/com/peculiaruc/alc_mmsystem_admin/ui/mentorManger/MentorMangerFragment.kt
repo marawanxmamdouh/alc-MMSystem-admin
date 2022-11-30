@@ -24,7 +24,15 @@ class MentorMangerFragment : BaseFragment<FragmentMentorMangerBinding>() {
 
     //*******For Text*******
     val list = listOf(
-        Mentor("", "", "", listOf()),
+        Mentor("asd1", "", "", listOf()),
+        Mentor("asd2", "", "", listOf()),
+        Mentor("asd3", "", "", listOf()),
+        Mentor("asd4", "", "", listOf()),
+        Mentor("asd5", "", "", listOf()),
+        Mentor("asd6", "", "", listOf()),
+        Mentor("asd7", "", "", listOf()),
+        Mentor("asd8", "", "", listOf()),
+        Mentor("asd9", "", "", listOf()),
     )
     //////////////////
 
