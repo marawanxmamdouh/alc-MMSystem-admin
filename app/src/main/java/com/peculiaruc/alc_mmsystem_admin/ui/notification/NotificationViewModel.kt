@@ -12,6 +12,65 @@ import com.peculiaruc.alc_mmsystem_admin.utilities.event.Event
  */
 class NotificationViewModel : ViewModel(), NotificationInteractionListener {
 
+    private val list = listOf(
+        Notification(
+            "",
+            "Monday at 11:52 PM",
+            "Lex Murphy",
+            " requested approval for Gads Certificate  by",
+            "Roseline Anapuna"
+        ),
+        Notification(
+            "",
+            "Monday at 12:52 PM",
+            "Peculiah C. Umeh",
+            "commented on",
+            "How to create a new project"
+        ),
+        Notification(
+            "",
+            "Monday at 10:52 PM",
+            "Baba C. Mammah",
+            "created",
+            "All Mentor Managers Task Report Report"
+        ),
+        Notification(
+            "",
+            "Monday at 01:52 PM",
+            "Murphy",
+            " requested approval for GCCPs Certificate  by",
+            "sarah Anapuna"
+        ),
+        Notification(
+            "",
+            "Monday at 02:52 PM",
+            "C. Umeh",
+            "Delete a duplicate project",
+            "how to add a new mentor manager"
+        ),
+        Notification(
+            "",
+            "Monday at 06:52 PM",
+            "Mammah",
+            "created",
+            "All Mentor Managers Task Report Report"
+        ),
+        Notification(
+            "",
+            "Monday at 08:52 PM",
+            "Marawan Mamdouh",
+            " requested approval for Web Certificate  by",
+            "Manage Mentor Manager"
+        ),
+        Notification(
+            "",
+            "Monday at 07:52 PM",
+            "Nada",
+            "Copy a file",
+            "How to Archive a Program on MMS"
+        )
+    )
+
     private val _selectNotificationEvent = MutableLiveData<Event<Boolean>>()
     val selectNotificationEvent: LiveData<Event<Boolean>> = _selectNotificationEvent
 
@@ -36,63 +95,6 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
 
     //function for test only .
     private fun testNotification(): List<Notification> {
-        return listOf(
-            Notification(
-                "",
-                "Monday at 11:52 PM",
-                "Lex Murphy",
-                " requested approval for Gads Certificate  by",
-                "Roseline Anapuna"
-            ),
-            Notification(
-                "",
-                "Monday at 12:52 PM",
-                "Peculiah C. Umeh",
-                "commented on",
-                "How to create a new project"
-            ),
-            Notification(
-                "",
-                "Monday at 10:52 PM",
-                "Baba C. Mammah",
-                "created",
-                "All Mentor Managers Task Report Report"
-            ),
-            Notification(
-                "",
-                "Monday at 01:52 PM",
-                "Murphy",
-                " requested approval for Gads Certificate  by",
-                "sarah Anapuna"
-            ),
-            Notification(
-                "",
-                "Monday at 02:52 PM",
-                "C. Umeh",
-                "commented on",
-                "how to add a new mentor manager"
-            ),
-            Notification(
-                "",
-                "Monday at 06:52 PM",
-                "Mammah",
-                "created",
-                "All Mentor Managers Task Report Report"
-            ),
-            Notification(
-                "",
-                "Monday at 08:52 PM",
-                "Marawan Mamdouh",
-                " requested approval for Gads Certificate  by",
-                "Manage Mentor Manager"
-            ),
-            Notification(
-                "",
-                "Monday at 07:52 PM",
-                "Nada",
-                "commented on",
-                "How to Archive a Program on MMS"
-            )
-        )
+        return list
     }
 }
