@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.notification
 
+import android.view.View
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.domain.models.Notification
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseAdapter
@@ -20,5 +21,5 @@ interface NotificationInteractionListener : BaseInteractionListener {
     /**
      * done when the Notification item is Clicked
      */
-    fun onNotificationClick(item: Notification)
+    fun onNotificationClick(item: Notification, view: View)
 }

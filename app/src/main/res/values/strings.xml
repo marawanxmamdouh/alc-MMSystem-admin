@@ -161,4 +161,10 @@
     <string name="requests">Requests</string>
     <string name="mentor_application">Mentor Application</string>
     <string name="mentor_manager_application">Mentor Manager Application</string>
+
+    <array name="types">
+        <item>All</item>
+        <item>Read</item>
+        <item>Unread</item>
+    </array>
 </resources>

@@ -1,12 +1,12 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.notification
 
 import android.os.Bundle
+import android.view.MenuInflater
 import android.view.View
-import android.widget.Toast
+import android.widget.PopupMenu
 import androidx.fragment.app.viewModels
 import com.peculiaruc.alc_mmsystem_admin.R
 import com.peculiaruc.alc_mmsystem_admin.databinding.FragmentNotificationBinding
-import com.peculiaruc.alc_mmsystem_admin.domain.models.Notification
 import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseFragment
 import com.peculiaruc.alc_mmsystem_admin.utilities.event.EventObserve
 
@@ -29,7 +29,22 @@ class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
 
     private fun onEvents() {
         viewModel.selectNotificationEvent.observe(viewLifecycleOwner, EventObserve {
-            Toast.makeText(requireContext(), "open Notification", Toast.LENGTH_LONG).show()
+            val popup = PopupMenu(requireContext(), it.view)
+            val inflater: MenuInflater = popup.getMenuInflater()
+            inflater.inflate(R.menu.notification_menu, popup.getMenu())
+            popup.show()
+
+            popup.setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.delete -> {
+                        viewModel.deleteNotification(it.notification)
+                    }
+                    R.id.make_as_read -> {
+
+                    }
+                }
+                false
+            }
         })
     }
 
