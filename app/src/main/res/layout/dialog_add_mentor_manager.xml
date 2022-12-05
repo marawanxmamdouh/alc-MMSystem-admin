@@ -95,6 +95,7 @@
 
     <Button
         android:id="@+id/undo_button"
+        style="@style/buttonOutline"
         android:layout_width="318dp"
         android:layout_height="60dp"
         android:layout_marginStart="21dp"
