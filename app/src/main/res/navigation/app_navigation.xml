@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/programsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.programs.ProgramsFragment"
+        tools:layout="@layout/fragment_programs" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.messages.MessagesFragment"
+        tools:layout="@layout/fragment_messages" />
+
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.AdminProfileFragment"
+        tools:layout="@layout/fragment_admin_profile">
+        <action
+            android:id="@+id/action_adminProfileFragment_to_editAdminProfileFragment"
+            app:destination="@id/editAdminProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editAdminProfileFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.editAdminProfile.EditAdminProfileFragment"
+        tools:layout="@layout/fragment_edit_admin_profile" />
+
+    <fragment
+        android:id="@+id/mentorManagerFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.MentorManagerFragment"
+        tools:layout="@layout/fragment_mentor_manager">
+        <action
+            android:id="@+id/action_mentorManagerFragment_to_certificateFragment"
+            app:destination="@id/certificateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/certificateFragment"
+        android:name="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.certificate.CertificateFragment"
+        tools:layout="@layout/fragment_certificate">
+        <argument
+            android:name="certificateTitle"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

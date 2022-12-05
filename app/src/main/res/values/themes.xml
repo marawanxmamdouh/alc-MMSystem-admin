@@ -1,16 +1,92 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
     <style name="Theme.AlcMMSystemadmin" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/mms_pry_2</item>
+        <item name="colorPrimaryVariant">@color/mms_pry_1</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/mms_black_2</item>
+        <item name="colorSecondaryVariant">@color/mms_black_5</item>
+        <item name="colorOnSecondary">@color/mms_black_1</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
+        <item name="actionBarTheme">@style/AppActionBar</item>
+
     </style>
+
+    <style name="AppActionBar" parent="@style/ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorPrimary">@color/mms_black_2</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="windowActionBarOverlay">@null</item>
+        <item name="android:actionButtonStyle">@style/menuIconStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="menuIconStyle" parent="@android:style/Widget.ActionButton">
+        <item name="android:drawablePadding">@dimen/spacing_large</item>
+    </style>
+
+    <style name="regularB">
+        <item name="android:fontFamily">@font/mukta_regular</item>
+        <item name="android:textColor">@color/mms_black_2</item>
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="mediumMukta">
+        <item name="android:fontFamily">@font/mukta_bold</item>
+        <item name="android:textColor">@color/mms_black_2</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+
+    <style name="mediumRoboto">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/mms_black_2</item>
+        <item name="android:textSize">@dimen/font_regular</item>
+    </style>
+
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ChipProfile" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipStrokeColor">@color/mms_pry_10</item>
+        <item name="chipBackgroundColor">@color/mms_green_11</item>
+        <item name="chipCornerRadius">5dp</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/mms_pry_2</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="buttonOutline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">5dp</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="strokeColor">@color/mms_pry_2</item>
+        <item name="textOutlineColor">@color/mms_pry_2</item>
+        <item name="fontFamily">@font/mukta_regular</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_selector</item>
+        <item name="chipStrokeColor">@color/chip_stroke_selector</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipMinHeight">@dimen/chip_mentor_profile_height</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">@font/mukta_medium</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textColor">@color/chip_text_selector</item>
+        <item name="chipCornerRadius">5dp</item>
+    </style>
+
 </resources>

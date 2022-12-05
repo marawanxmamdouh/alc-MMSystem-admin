@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spacing_extra_large">24dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_default">16dp</dimen>
+    <dimen name="spacing_medium">12dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+
+    <dimen name="spacing_extra_small">3dp</dimen>
+
+    <!--  ************* fonts Size ************ -->
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_regular">14sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+
+    <!-- ************** dimension *********** -->
+    <dimen name="profile_width">112dp</dimen>
+    <dimen name="mentor_item_width">60dp</dimen>
+
+    <dimen name="chip_mentor_profile_width">90dp</dimen>
+    <dimen name="chip_mentor_profile_height">32dp</dimen>
+
+    <!-- ************** radius *********** -->
+    <dimen name="cardCornerRadius">5dp</dimen>
+</resources>

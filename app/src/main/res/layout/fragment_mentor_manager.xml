@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.mentorManagerProfile.MentorManagerViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_profile"
+            android:layout_width="@dimen/profile_width"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_medium"
+            android:text="Peculiah C. Umeh"
+            android:textColor="@color/mms_black_2"
+            android:textSize="@dimen/font_medium"
+            app:drawableEndCompat="@drawable/flag_nigeria"
+            app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/image_profile"
+            app:layout_constraintTop_toTopOf="@+id/image_profile" />
+
+        <TextView
+            android:id="@+id/text_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mukta_regular"
+            android:text="Mentor Manager"
+            android:textColor="@color/mms_black_5"
+            android:textSize="@dimen/font_small"
+            app:drawableEndCompat="@drawable/edit_write_alt_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/text_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+        <HorizontalScrollView
+            android:id="@+id/chips_Scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/spacing_medium"
+            android:paddingBottom="24dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@+id/image_profile"
+            app:layout_goneMarginTop="@dimen/spacing_large">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedChip="@+id/chip_about"
+                app:checkedChipButtonId="@={viewModel.checkChip}"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_about"
+                    style="@style/chip"
+                    android:layout_width="@dimen/chip_mentor_profile_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_program"
+                    style="@style/chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/programs_title" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_mentors"
+                    style="@style/chip"
+                    android:layout_width="@dimen/chip_mentor_profile_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mentors" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_tasks"
+                    style="@style/chip"
+                    android:layout_width="@dimen/chip_mentor_profile_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tasks" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_reports"
+                    style="@style/chip"
+                    android:layout_width="@dimen/chip_mentor_profile_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_certificates"
+                    style="@style/chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/certificates" />
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <!-- ********* task Search *************   -->
+
+        <TextView
+            android:id="@+id/text_all_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/mukta_medium"
+            android:paddingBottom="10dp"
+            android:text="@string/all_tasks"
+            android:textColor="@color/mms_black_2"
+            android:textSize="@dimen/font_medium"
+            app:drawableEndCompat="@drawable/down_arrow_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:showTaskBar="@{viewModel.checkChip}" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:paddingBottom="10dp"
+            android:src="@drawable/search_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chips_Scroll"
+            app:showSearchIcon="@{viewModel.checkChip}"
+            app:tint="@color/mms_black_5" />
+
+        <!-- ************************************  -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_mentor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_icon"
+            app:showIfID="@{viewModel.checkChip}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/OneDrive/Desktop/NineScreens/alc-MMSystem-admin/app/src/main/res/drawable/admin_certi.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Desktop/NineScreens/alc-MMSystem-admin/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Desktop/NineScreens/alc-MMSystem-admin/app/src/main/res/drawable/vector.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Desktop/NineScreens/alc-MMSystem-admin/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_approval_requests.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.21481481481481482" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/activity_mentor_app_requests.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/activity_mentor_manager_profile_request.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/activity_mentor_profile_request.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/activity_mm_app_requests.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/activity_program_requests.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/dialog_add_mentor.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/dialog_add_mentor_invitation.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/dialog_add_mentor_manager.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/dialog_add_mentor_manager_invitation.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_certificate.xml" value="0.2275449101796407" />
+        <entry key="app/src/main/res/layout/item_mentor.xml" value="0.21799621582031253" />
+        <entry key="app/src/main/res/layout/item_program_request.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/item_user.xml" value="0.23867753623188406" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.23867753623188406" />
+      </ProjectState>
+    </option>
   </component>
 </project>

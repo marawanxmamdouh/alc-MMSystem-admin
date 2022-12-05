@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="391dp"
+    android:background="#FFFFFF"
+    android:minWidth="360dp"
+    android:minHeight="391dp"
+    android:theme="@style/Theme.AlcMMSystemadmin"
+    app:flow_horizontalGap="10dp"
+    tools:context=".Add_Mentor_Manager_Application_Dialog">
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="254dp"
+        android:fontFamily="@font/mukta_light"
+        android:text="@string/email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/Frame133"
+        android:layout_width="318dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="201dp"
+        app:flow_horizontalGap="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/invitation_textView"
+            android:layout_width="163dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mukta_light"
+            android:text="@string/samkebede_gmail_com" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/deleteMentorManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="@font/mukta_medium"
+        android:text="@string/add_mentor"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Frame133"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="600"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="600" />
+
+    <!-- Frame 352 -->
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="318dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="231dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="#035D63"
+        android:fontFamily="@font/mukta_medium"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/undo_button"
+        android:layout_width="318dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="306dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/mukta_medium"
+        android:text="@android:string/cancel"
+        android:textAllCaps="false"
+        android:textColor="#035D63"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:theme="@style/Widget.Material3.TabLayout.Secondary"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

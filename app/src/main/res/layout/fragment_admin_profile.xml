@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.peculiaruc.alc_mmsystem_admin.ui.adminProfile.AdminProfileViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/spacing_large">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_profile"
+            android:layout_width="@dimen/profile_width"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        <TextView
+            android:id="@+id/text_name"
+            style="@style/mediumRoboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:drawableEnd="@drawable/flag_nigeria"
+            android:drawablePadding="@dimen/spacing_small"
+            android:text="Peculiah C. Umeh"
+            app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/image_profile"
+            app:layout_constraintTop_toTopOf="@+id/image_profile" />
+
+        <TextView
+            android:id="@+id/text_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/text_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+        <TextView
+            android:id="@+id/text_title_about"
+            style="@style/mediumMukta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/title_about"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_profile" />
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_extra_small"
+            android:fontFamily="@font/mukta_regular"
+            android:text="@string/text_description"
+            android:textColor="@color/mms_black_5"
+            android:textFontWeight="400"
+            android:textSize="@dimen/font_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_about" />
+
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_extra_large"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_regular"
+            android:gravity="center_vertical"
+            android:text="peculiah@andela.com"
+            android:textColor="@color/mms_black_5"
+            android:textSize="@dimen/font_small"
+            app:drawableStartCompat="@drawable/email_message_inbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_description" />
+
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_regular"
+            android:gravity="center_vertical"
+            android:text="Lagos, Nigeria"
+            android:textColor="@color/mms_black_5"
+            android:textSize="@dimen/font_small"
+            app:drawableStartCompat="@drawable/location_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_email" />
+
+        <TextView
+            android:id="@+id/text_membership_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/mukta_regular"
+            android:gravity="center_vertical"
+            android:text="Member since June 22, 2021"
+            android:textColor="@color/mms_black_5"
+            android:textSize="@dimen/font_small"
+            app:drawableStartCompat="@drawable/calender_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_location" />
+
+        <TextView
+            android:id="@+id/text_social"
+            style="@style/mediumMukta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_extra_large"
+            android:text="@string/title_social"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_membership_date" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_github"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:onClick="@{()->viewModel.onClickGithub()}"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/github_icon"
+            app:layout_constraintEnd_toStartOf="@+id/chip_instagram"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_social" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_instagram"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.onClickInstagram()}"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/instagram_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip_github"
+            app:layout_constraintTop_toBottomOf="@+id/text_social" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_linkedIn"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:onClick="@{()->viewModel.onClickLinkedIn()}"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/linkedin_icon"
+            app:layout_constraintEnd_toStartOf="@+id/chip_twitter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_github" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_twitter"
+            style="@style/ChipProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.onClickTwitter()}"
+            android:text="\@peculiar.umeh"
+            app:chipIcon="@drawable/twitter_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip_linkedIn"
+            app:layout_constraintTop_toBottomOf="@+id/chip_github" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

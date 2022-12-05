@@ -10,15 +10,48 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.AlcMMSystemadmin"
+        android:windowSoftInputMode="adjustNothing"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.mentorApplicationRequest.Chat"
+            android:exported="false"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity
+            android:name=".MentorAppRequests"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".ui.mentorApplicationRequest.MentorProfileRequest"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".ui.mentorApplicationRequest.MentorManagerProfileRequest"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".MentorManagerAppRequests"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".ui.mentorApplicationRequest.Approval_Requests"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+        <activity android:name=".ProgramRequests"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".Add_Mentor_Application_Dialog"
+            android:theme="@style/Theme.MaterialComponents.Dialog"/>
+        <activity android:name=".Add_Mentor_Manager_Application_Dialog"
+            android:theme="@style/Theme.MaterialComponents.Dialog"/>
+        <activity android:name=".Add_Mentor_Invitation_Dialog"
+            android:theme="@style/Theme.MaterialComponents.Light.Dialog"/>
+        <activity android:name=".Add_Mentor_Manager_Invitation_Dialog"
+            android:theme="@style/Theme.MaterialComponents.Light.Dialog"/>
+        <activity android:name=".Delete_Mentor_Dialog"
+            android:theme="@style/Theme.MaterialComponents.Dialog"/>
+        <activity android:name=".Delete_Mentor_Manager_Dialog"
+            android:theme="@style/Theme.MaterialComponents.Dialog"/>
+        <activity
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
