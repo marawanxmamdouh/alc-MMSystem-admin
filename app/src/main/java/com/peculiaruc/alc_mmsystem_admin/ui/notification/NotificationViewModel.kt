@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.notification
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -71,8 +72,8 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
         )
     )
 
-    private val _selectNotificationEvent = MutableLiveData<Event<Boolean>>()
-    val selectNotificationEvent: LiveData<Event<Boolean>> = _selectNotificationEvent
+    private val _selectNotificationEvent = MutableLiveData<Event<NotificationWithMenu>>()
+    val selectNotificationEvent: LiveData<Event<NotificationWithMenu>> = _selectNotificationEvent
 
     private val _notifications = MutableLiveData<List<Notification>>()
     val notifications: LiveData<List<Notification>> = _notifications
@@ -82,8 +83,8 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
         _notifications.postValue(testNotification())
     }
 
-    override fun onNotificationClick(item: Notification) {
-        _selectNotificationEvent.postValue(Event(true))
+    override fun onNotificationClick(item: Notification, view: View) {
+        _selectNotificationEvent.postValue(Event(NotificationWithMenu(view, item)))
     }
 
     /**
@@ -97,4 +98,13 @@ class NotificationViewModel : ViewModel(), NotificationInteractionListener {
     private fun testNotification(): List<Notification> {
         return list
     }
+
+    fun deleteNotification(item: Notification) {
+        val newList = _notifications.value!!.toMutableList()
+        newList.remove(item)
+        _notifications.postValue(newList)
+    }
+
 }
+
+data class NotificationWithMenu(val view: View, val notification: Notification)

@@ -17,14 +17,15 @@
         android:layout_marginHorizontal="20dp">
 
 
-        <TextView
+        <Spinner
             android:id="@+id/text_all_notification"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:drawablePadding="15dp"
             android:fontFamily="@font/mukta_medium"
             android:text="@string/all_notifications"
+            android:padding="0dp"
+            android:entries="@array/types"
             android:textColor="@color/mms_black_2"
             android:textSize="12sp"
             app:drawableEndCompat="@drawable/down_arrow_icon"
