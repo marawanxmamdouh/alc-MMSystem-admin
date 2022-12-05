@@ -84,4 +84,7 @@
     <string name="program_requests">Program Requests</string>
     <string name="bio">Bio</string>
     <string name="title_activity_chat">Chat</string>
+    <string name="hint">Type message...</string>
+    <string name="hint_typeMessage">Type message...</string>
+    <string name="type_message">Type message...</string>
 </resources>

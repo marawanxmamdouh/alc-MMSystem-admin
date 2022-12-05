@@ -5,9 +5,10 @@
     android:layout_width="360dp"
     android:layout_height="391dp"
     android:background="#FFFFFF"
-    app:flow_horizontalGap="10dp"
     android:minWidth="360dp"
     android:minHeight="391dp"
+    android:theme="@style/Theme.AlcMMSystemadmin"
+    app:flow_horizontalGap="10dp"
     tools:context=".Add_Mentor_Manager_Application_Dialog">
 
     <TextView

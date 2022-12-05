@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.peculiaruc.alc_mmsystem_admin.domain.models.User
+import com.peculiaruc.alc_mmsystem_admin.ui.mentorApplicationRequest.MentorProfileRequest
 import com.peculiaruc.alc_mmsystem_admin.ui.mentorApplicationRequest.UserAdapter
 
 //import fake.`package`.name.`for`.sync.R
@@ -72,9 +73,11 @@ class MentorAppRequests : AppCompatActivity() {
         userAdapter = UserAdapter(userList)
         recyclerView.adapter = userAdapter
 
+
+
         var btn = findViewById<FloatingActionButton>(R.id.fab_add_mentor)
         btn.setOnClickListener{
-            val intent = Intent(this, Add_Mentor_Application_Dialog::class.java)
+            val intent = Intent(this, MentorProfileRequest::class.java)
             startActivity(intent)
         }
         var backBtn = findViewById<ImageView>(R.id.leftArrow2)

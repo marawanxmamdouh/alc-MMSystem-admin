@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_admin.ui.mentorApplicationRequest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -16,9 +17,10 @@ class MentorProfileRequest : AppCompatActivity() {
         backBtn.setOnClickListener {
             this.finish()
         }
-        var chatBtn = findViewById<ImageView>(R.id.chatIcon)
+        var chatBtn = findViewById<ImageView>(R.id.imageView)
         chatBtn.setOnClickListener {
-            this.finish()
+            val intent = Intent(this, Chat::class.java)
+            startActivity(intent)
         }
     }
 }

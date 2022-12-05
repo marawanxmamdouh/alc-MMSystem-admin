@@ -9,6 +9,7 @@ import com.peculiaruc.alc_mmsystem_admin.ui.base.BaseInteractionListener
 class UserAdapter(items: List<User>, listener: UserInteractionListener) :
     BaseAdapter<User>(items, listener) {
     override val layoutID: Int = R.layout.item_user
+
 }
 
 interface UserInteractionListener : BaseInteractionListener {

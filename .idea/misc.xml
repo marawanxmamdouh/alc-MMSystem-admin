@@ -8,7 +8,7 @@
         <entry key="..\:/Users/HP/OneDrive/Desktop/NineScreens/alc-MMSystem-admin/app/src/main/res/drawable/vector.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/NineScreens/alc-MMSystem-admin/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_approval_requests.xml" value="0.23867753623188406" />
-        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2505501030394749" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.21481481481481482" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/activity_mentor_app_requests.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/activity_mentor_manager_profile_request.xml" value="0.23867753623188406" />
@@ -19,6 +19,9 @@
         <entry key="app/src/main/res/layout/dialog_add_mentor_invitation.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/dialog_add_mentor_manager.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/dialog_add_mentor_manager_invitation.xml" value="0.23867753623188406" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_certificate.xml" value="0.2275449101796407" />
+        <entry key="app/src/main/res/layout/item_mentor.xml" value="0.21799621582031253" />
         <entry key="app/src/main/res/layout/item_program_request.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.23867753623188406" />
       </map>
@@ -29,5 +32,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.23867753623188406" />
+      </ProjectState>
+    </option>
   </component>
 </project>

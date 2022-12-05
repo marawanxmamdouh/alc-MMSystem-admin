@@ -19,7 +19,8 @@ class MentorManagerProfileRequest : AppCompatActivity() {
         }
         var chatBtn = findViewById<ImageView>(R.id.chatIcon)
         chatBtn.setOnClickListener {
-            this.finish()
+            val intent = Intent(this, Chat::class.java)
+            startActivity(intent)
         }
 
     }

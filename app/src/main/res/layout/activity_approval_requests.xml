@@ -5,6 +5,7 @@
     android:layout_width="360dp"
     android:layout_height="800dp"
     android:layout_gravity="top"
+    android:theme="@style/Theme.AlcMMSystemadmin"
     tools:context=".ui.mentorApplicationRequest.Approval_Requests">
 
     <ImageView
@@ -12,10 +13,10 @@
         android:layout_width="18dp"
         android:layout_height="14dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="319dp"
-        android:layout_marginBottom="719dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/frame529"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,15 +27,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="711dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/mukta_semibold"
         android:gravity="top"
         android:text="@string/approval_requests"
         android:textColor="#333333"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frame529"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,11 +46,11 @@
         android:layout_width="320dp"
         android:layout_height="110dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="109dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="581dp"
+        android:layout_marginBottom="15dp"
         android:background="#F2F2F2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frame532"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -135,14 +136,12 @@
         android:layout_width="320dp"
         android:layout_height="110dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="234dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="456dp"
         android:background="#F2F2F2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/frame529">
 
         <TextView
             android:id="@+id/mentorRequestsTextView"
@@ -235,14 +234,14 @@
         android:layout_width="320dp"
         android:layout_height="110dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="359dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="331dp"
+        android:layout_marginBottom="365dp"
         android:background="#F2F2F2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/frame532">
 
         <TextView
             android:id="@+id/programRequestsTextView"

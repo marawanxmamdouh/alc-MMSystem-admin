@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="360dp"
     android:layout_height="391dp"
+    android:theme="@style/Theme.AlcMMSystemadmin"
     tools:context=".Add_Mentor_Manager_Invitation_Dialog">
 
     <TextView

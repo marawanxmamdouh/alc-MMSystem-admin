@@ -23,7 +23,7 @@
                 android:layout_width="18dp"
                 android:layout_height="14dp"
                 android:layout_marginStart="23dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginEnd="319dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,11 +37,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="58dp"
-                android:layout_marginTop="62dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="159dp"
                 android:fontFamily="@font/mukta_semibold"
                 android:gravity="top"
-                android:text="@string/applicant_requests"
+                android:text="Roseline Anapuna"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#333333"
                 android:textFontWeight="700"
@@ -54,7 +54,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="318dp"
-                android:layout_marginTop="66dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginEnd="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,14 +62,15 @@
                 app:srcCompat="@drawable/comment_circle_chat_message_1" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout17"
                 android:layout_width="290dp"
                 android:layout_height="112dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="106dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="61dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/mmName1">
 
                 <ImageView
                     android:id="@+id/userImage"
@@ -89,7 +90,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="55dp"
                     android:fontFamily="@font/mukta_medium"
-                    android:text="Elizabeth Ayodele"
+                    android:text="Roseline Anapuna"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="#333333"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +133,7 @@
                 android:layout_width="21dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="23dp"
-                android:layout_marginTop="241dp"
+                android:layout_marginTop="26dp"
                 android:layout_marginEnd="316dp"
                 android:fontFamily="@font/mukta_semibold"
                 android:gravity="top"
@@ -141,32 +142,33 @@
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout17" />
 
             <TextView
                 android:id="@+id/bioText"
                 android:layout_width="305dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="23dp"
-                android:layout_marginTop="271dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="32dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim  ut cursus purus efficitur et. Duis ac enim tellus. Phasellus pharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. "
                 android:textColor="#808080"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bio"
                 app:lineHeight="16.62dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout18"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="371dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="166dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/bioText">
 
                 <TextView
                     android:id="@+id/textView5"
@@ -180,7 +182,8 @@
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/techText"
@@ -197,14 +200,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout19"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="431dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginEnd="7dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout18">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -234,14 +238,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout20"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="491dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginEnd="7dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout19">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -269,14 +274,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout21"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="551dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginEnd="7dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout20">
 
                 <TextView
                     android:id="@+id/textView8"
@@ -305,14 +311,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout22"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="591dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginEnd="7dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout21">
 
                 <TextView
                     android:id="@+id/textView9"
@@ -341,14 +348,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout26"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="631dp"
                 android:layout_marginEnd="7dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout22">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -381,23 +388,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="671dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/mukta_semibold"
                 android:text="Documents "
                 android:textColor="#333333"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout26" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout25"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="696dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
 
                 <ImageView
                     android:id="@+id/imageView10"
@@ -434,13 +441,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="869dp"
+                android:layout_marginTop="29dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="110dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout23">
 
                 <Button
                     android:id="@+id/approveBtn"
@@ -477,16 +482,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout24"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="19dp"
-                android:layout_marginTop="746dp"
-                android:layout_marginEnd="173dp"
+                android:layout_marginTop="30dp"
                 android:background="#E6FDFE"
                 app:circularflow_radiusInDP="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout25">
 
                 <ImageView
                     android:id="@+id/imageView14"
@@ -522,14 +526,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout23"
                 android:layout_width="319dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="19dp"
-                android:layout_marginTop="781dp"
+                android:layout_marginTop="9dp"
                 android:layout_marginEnd="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout24">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"

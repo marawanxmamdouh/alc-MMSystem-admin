@@ -5,9 +5,10 @@
     android:layout_width="360dp"
     android:layout_height="391dp"
     android:background="#FFFFFF"
-    app:flow_horizontalGap="10dp"
     android:minWidth="360dp"
     android:minHeight="391dp"
+    android:theme="@style/Theme.AlcMMSystemadmin"
+    app:flow_horizontalGap="10dp"
     tools:context=".Add_Mentor_Manager_Application_Dialog">
 
     <TextView
@@ -107,6 +108,7 @@
         android:textColor="#035D63"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:theme="@style/Widget.Material3.TabLayout.Secondary"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
